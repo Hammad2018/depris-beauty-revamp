@@ -23,12 +23,12 @@
   }
 
   ::selection {
-    background: #e7a3a0;
-    color: #2e2822;
+    background: #afc3f2;
+    color: #1e2a44;
   }
 
   :focus-visible {
-    outline: 2px solid #c9736b;
+    outline: 2px solid #157a73;
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -63,8 +63,17 @@
 
   .glow-backdrop {
     background:
-      radial-gradient(60% 55% at 50% 0%, rgba(231,163,160,0.35) 0%, rgba(251,245,237,0) 70%),
-      radial-gradient(40% 40% at 85% 20%, rgba(176,138,91,0.18) 0%, rgba(251,245,237,0) 65%);
+      radial-gradient(60% 55% at 50% 0%, rgba(78,106,208,0.22) 0%, rgba(244,246,252,0) 70%),
+      radial-gradient(42% 42% at 85% 15%, rgba(47,163,154,0.18) 0%, rgba(244,246,252,0) 65%),
+      radial-gradient(40% 45% at 12% 30%, rgba(185,163,222,0.18) 0%, rgba(244,246,252,0) 65%);
+  }
+
+  /* Deep celestial field (indigo -> periwinkle -> teal) */
+  .celestial {
+    background:
+      radial-gradient(120% 90% at 80% -10%, #2fa39a 0%, rgba(47,163,154,0) 45%),
+      radial-gradient(120% 110% at 15% 10%, #4e6ad0 0%, rgba(78,106,208,0) 55%),
+      linear-gradient(160deg, #212b74 0%, #2e3c9e 45%, #3a56b8 100%);
   }
 
   /* Liquid-glass surfaces */
@@ -78,10 +87,10 @@
     @apply border border-white/10 bg-white/[0.06] backdrop-blur-xl;
   }
 
-  /* Animated iridescent gradient text */
+  /* Animated iridescent gradient text (brand: teal -> periwinkle -> gold -> lavender) */
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(100deg, #B0544C, #F4785C, #E0A93B, #C7B5E6, #B0544C);
+    background-image: linear-gradient(100deg, #157a73, #2fa39a, #4e6ad0, #b9a3de, #157a73);
     background-size: 220% 220%;
     animation: gradient-pan 7s ease infinite;
   }
@@ -89,7 +98,22 @@
     .text-gradient { animation: none; }
   }
 
-  /* Animated gradient ring/border */
+  /* Silver-chrome metallic text with a travelling sheen (brand wordmark feel) */
+  .text-metallic {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(100deg, #8ca0a3 0%, #e9f1f3 20%, #cbd6da 40%, #ffffff 52%, #a9b8bc 70%, #e9f1f3 86%, #8ca0a3 100%);
+    background-size: 200% 100%;
+    animation: sheen 5s linear infinite;
+    filter: drop-shadow(0 1px 1px rgba(30, 42, 68, 0.25));
+  }
+  .text-metallic-dark {
+    background-image: linear-gradient(100deg, #cfd9dc 0%, #ffffff 24%, #dfe8ea 46%, #ffffff 56%, #c3d0d3 74%, #ffffff 88%, #cfd9dc 100%);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .text-metallic, .text-metallic-dark { animation: none; }
+  }
+
+  /* Animated gradient ring/border (brand) */
   .ring-gradient {
     position: relative;
   }
@@ -99,7 +123,7 @@
     inset: 0;
     border-radius: inherit;
     padding: 1.5px;
-    background: linear-gradient(130deg, #E7A3A0, #F4785C, #E0A93B, #C7B5E6);
+    background: linear-gradient(130deg, #2fa39a, #4e6ad0, #b9a3de, #e3b34c);
     background-size: 200% 200%;
     animation: gradient-pan 6s ease infinite;
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);

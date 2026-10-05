@@ -4,15 +4,15 @@ import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { TiltCard } from "@/components/ui/TiltCard";
 import type { Collection, Concern } from "@/lib/commerce/types";
 
-// Vivid, iridescent gradient per concern.
+// Vivid, brand-aligned gradient per concern (teal / periwinkle / blush / lavender / gold).
 const concernGradient: Record<Concern, string> = {
-  dullness: "from-[#FBD38D] via-[#F6A97C] to-[#F4785C]",
-  aging: "from-[#F7B2C4] via-[#EE8E9E] to-[#C7B5E6]",
-  acne: "from-[#BFE3D0] via-[#9FD8C4] to-[#7FC8B6]",
-  redness: "from-[#F6C9A6] via-[#F3B99C] to-[#EE9E9E]",
-  pigmentation: "from-[#F8D39A] via-[#E8B36A] to-[#E0A93B]",
-  dryness: "from-[#C7B5E6] via-[#DCC8EE] to-[#F7D9D4]",
-  pores: "from-[#BFE3D0] via-[#CFE5DA] to-[#E7DBF3]",
+  dullness: "from-[#F6E0A6] via-[#ECCB86] to-[#E3B34C]",
+  aging: "from-[#F4C9C2] via-[#DDB4D2] to-[#B9A3DE]",
+  acne: "from-[#BFE8DF] via-[#8FD6CA] to-[#5CC3B8]",
+  redness: "from-[#F4D0C8] via-[#E2C3D6] to-[#C9B6E4]",
+  pigmentation: "from-[#F6DCA0] via-[#EACF8E] to-[#E3B34C]",
+  dryness: "from-[#C9D4F6] via-[#A9BAEF] to-[#8E9FE6]",
+  pores: "from-[#BFE8DF] via-[#B9D2EC] to-[#AFC3F2]",
 };
 
 export function ShopByConcern({ collections }: { collections: Collection[] }) {

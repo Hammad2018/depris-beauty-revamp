@@ -11,7 +11,7 @@ const steps = [
 export function RoutineStrip() {
   return (
     <section className="shell py-16">
-      <div className="rounded-[2.5rem] bg-gradient-to-br from-[#FBECE6] via-cream to-[#E6EEE2] p-8 sm:p-12">
+      <div className="rounded-[2.5rem] bg-gradient-to-br from-[#E7EAFB] via-cream to-[#DDEFEC] p-8 sm:p-12">
         <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
           <div className="max-w-md">
             <Eyebrow className="text-camellia">No guesswork</Eyebrow>

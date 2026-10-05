@@ -8,11 +8,11 @@ import { money } from "@/lib/format";
 import { ProductMediaMini } from "./ProductMediaMini";
 
 const toneClass: Record<Tone, string> = {
-  blush: "from-[#F7D9D4] to-[#FBECE6]",
-  bronze: "from-[#EAD6B4] to-[#F5EAD7]",
-  sage: "from-[#CBDAC9] to-[#E6EEE2]",
-  sand: "from-[#EADBC6] to-[#F5ECDD]",
-  ink: "from-[#4A4038] to-[#8A6A3E]",
+  blush: "from-[#F4D7D2] to-[#E7E9FA]",
+  bronze: "from-[#C7E9E3] to-[#E3EAFB]",
+  sage: "from-[#C9EAE3] to-[#E8F4F6]",
+  sand: "from-[#DBE4FB] to-[#EFF2FE]",
+  ink: "from-[#2E3C9E] to-[#2FA39A]",
 };
 
 export function BundleCard({

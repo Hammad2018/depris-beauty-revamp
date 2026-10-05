@@ -5,8 +5,13 @@ import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
 
-type Variant = "primary" | "ink" | "ghost";
-const cls: Record<Variant, string> = { primary: "btn-primary", ink: "btn-ink", ghost: "btn-ghost" };
+type Variant = "primary" | "ink" | "ghost" | "light";
+const cls: Record<Variant, string> = {
+  primary: "btn-primary",
+  ink: "btn-ink",
+  ghost: "btn-ghost",
+  light: "btn border border-white/40 bg-white/10 text-white backdrop-blur-md hover:bg-white/20 hover:-translate-y-0.5",
+};
 
 /** A button/link that softly pulls toward the cursor (magnetic). */
 export function MagneticLink({

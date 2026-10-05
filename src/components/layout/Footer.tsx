@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { footerGroups, site } from "@/lib/content";
 import { NewsletterForm } from "./NewsletterForm";
+import { LotusMark } from "@/components/ui/LotusMark";
 
 export function Footer() {
   return (
     <footer className="mt-20 border-t border-sand bg-porcelain">
       <div className="shell grid gap-10 py-14 lg:grid-cols-[1.3fr_2fr]">
         <div>
-          <Link href="/" className="font-display text-3xl text-ink">
+          <Link href="/" className="flex items-center gap-2 font-display text-3xl text-ink">
+            <LotusMark size={34} />
             Depris<span className="text-camellia">.</span>
           </Link>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink-soft">{site.description}</p>

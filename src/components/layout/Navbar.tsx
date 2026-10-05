@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useCart } from "@/lib/cart/CartContext";
 import { navLinks, shopMenu } from "@/lib/content";
+import { LotusMark } from "@/components/ui/LotusMark";
 
 export function Navbar() {
   const cart = useCart();
@@ -63,7 +64,8 @@ export function Navbar() {
         </div>
 
         {/* Center: wordmark */}
-        <Link href="/" className="font-display text-2xl tracking-tight text-ink">
+        <Link href="/" className="flex items-center gap-2 font-display text-2xl tracking-tight text-ink">
+          <LotusMark size={26} />
           Depris<span className="text-camellia">.</span>
         </Link>
 

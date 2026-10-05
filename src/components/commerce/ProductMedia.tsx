@@ -2,19 +2,19 @@ import Image from "next/image";
 import type { Product, Tone } from "@/lib/commerce/types";
 
 const toneGradient: Record<Tone, string> = {
-  blush: "from-[#F8C9D0] via-[#FBD9C4] to-[#F3E7D0]",
-  bronze: "from-[#F0CE97] via-[#F6D9B0] to-[#FBEBD2]",
-  sage: "from-[#BEE0CC] via-[#D8EBD4] to-[#EFF1DC]",
-  sand: "from-[#ECD7BC] via-[#F3E6D2] to-[#F7EFE0]",
-  ink: "from-[#4A4038] via-[#8A6A3E] to-[#E7CFA8]",
+  blush: "from-[#F4D7D2] via-[#EFDCED] to-[#E7E9FA]",
+  bronze: "from-[#C7E9E3] via-[#D3ECF1] to-[#E3EAFB]",
+  sage: "from-[#C9EAE3] via-[#D8F0EB] to-[#E8F4F6]",
+  sand: "from-[#DBE4FB] via-[#E6ECFC] to-[#EFF2FE]",
+  ink: "from-[#212B74] via-[#2E3C9E] to-[#2FA39A]",
 };
 
 const toneBottle: Record<Tone, string> = {
-  blush: "#C9736B",
-  bronze: "#8A6A3E",
-  sage: "#6E8A74",
-  sand: "#B08A5B",
-  ink: "#FBF5ED",
+  blush: "#E79A90",
+  bronze: "#157A73",
+  sage: "#2E8B7E",
+  sand: "#4E6AD0",
+  ink: "#CBD6DA",
 };
 
 /** A product bottle silhouette — reads as "product" without needing photography. */

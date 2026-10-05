@@ -1,12 +1,13 @@
 import Link from "next/link";
 import type { ComponentProps, ReactNode } from "react";
 
-type Variant = "primary" | "ink" | "ghost";
+type Variant = "primary" | "ink" | "ghost" | "light";
 
 const cls: Record<Variant, string> = {
   primary: "btn-primary",
   ink: "btn-ink",
   ghost: "btn-ghost",
+  light: "btn border border-white/40 bg-white/10 text-white backdrop-blur-md hover:bg-white/20 hover:-translate-y-0.5",
 };
 
 export function ButtonLink({

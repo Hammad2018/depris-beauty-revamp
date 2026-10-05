@@ -2,7 +2,7 @@ import type { ShipTier } from "./cart/totals";
 
 export const site = {
   name: "Depris Beauty",
-  tagline: "Glass-skin, backed by science.",
+  tagline: "Turning back the clock, one drop at a time.",
   description:
     "Advanced Korean skincare — copper peptides, exosomes and skin boosters — stocked in the US for immediate shipping. Clinical results, approachable luxury.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://deprisbeauty.com",

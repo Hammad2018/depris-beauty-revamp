@@ -1,11 +1,11 @@
 import type { Tone } from "@/lib/commerce/types";
 
 const toneGradient: Record<Tone, string> = {
-  blush: "from-[#F7D9D4] to-[#FBF5ED]",
-  bronze: "from-[#E7CFA8] to-[#FBF5ED]",
-  sage: "from-[#CBDAC9] to-[#FBF5ED]",
-  sand: "from-[#EADbC6] to-[#FBF5ED]",
-  ink: "from-[#8A6A3E] to-[#E7CFA8]",
+  blush: "from-[#F4D7D2] to-[#E7E9FA]",
+  bronze: "from-[#C7E9E3] to-[#E3EAFB]",
+  sage: "from-[#C9EAE3] to-[#E8F4F6]",
+  sand: "from-[#DBE4FB] to-[#EFF2FE]",
+  ink: "from-[#2E3C9E] to-[#2FA39A]",
 };
 
 export function ProductMediaMini({ tone, alt }: { tone: Tone; alt: string }) {
