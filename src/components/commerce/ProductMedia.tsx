@@ -2,10 +2,10 @@ import Image from "next/image";
 import type { Product, Tone } from "@/lib/commerce/types";
 
 const toneGradient: Record<Tone, string> = {
-  blush: "from-[#F7D9D4] via-[#FBECE6] to-[#FBF5ED]",
-  bronze: "from-[#E7CFA8] via-[#F2E4CF] to-[#FBF5ED]",
-  sage: "from-[#CBDAC9] via-[#E6EEE2] to-[#FBF5ED]",
-  sand: "from-[#EADbC6] via-[#F3E9DA] to-[#FBF5ED]",
+  blush: "from-[#F8C9D0] via-[#FBD9C4] to-[#F3E7D0]",
+  bronze: "from-[#F0CE97] via-[#F6D9B0] to-[#FBEBD2]",
+  sage: "from-[#BEE0CC] via-[#D8EBD4] to-[#EFF1DC]",
+  sand: "from-[#ECD7BC] via-[#F3E6D2] to-[#F7EFE0]",
   ink: "from-[#4A4038] via-[#8A6A3E] to-[#E7CFA8]",
 };
 

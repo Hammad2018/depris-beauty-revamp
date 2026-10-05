@@ -11,7 +11,7 @@ export function Navbar() {
   const [shopOpen, setShopOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-sand/70 bg-cream/85 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-white/40 bg-cream/70 backdrop-blur-xl">
       <nav className="shell flex items-center justify-between gap-6 py-4">
         {/* Left: mobile toggle + nav */}
         <div className="flex items-center gap-6">

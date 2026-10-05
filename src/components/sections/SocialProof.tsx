@@ -13,7 +13,7 @@ export function SocialProof() {
   return (
     <section className="py-16">
       <div className="border-y border-sand bg-porcelain/60 py-6">
-        <Marquee>
+        <Marquee className="mask-fade-x">
           {pressLogos.map((logo) => (
             <span key={logo} className="font-display text-lg tracking-[0.2em] text-ink-soft/60">
               {logo}

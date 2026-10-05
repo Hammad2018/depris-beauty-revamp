@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { AuroraBackground } from "@/components/ui/AuroraBackground";
 
 export function PageHero({
   eyebrow,
@@ -14,6 +15,7 @@ export function PageHero({
 }) {
   return (
     <section className="relative overflow-hidden border-b border-sand/60">
+      <AuroraBackground tone="light" className="opacity-50" />
       <div className="glow-backdrop absolute inset-0 -z-10 opacity-70" />
       <div className="shell py-14 text-center">
         {eyebrow && <Eyebrow className="text-camellia">{eyebrow}</Eyebrow>}

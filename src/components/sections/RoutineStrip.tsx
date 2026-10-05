@@ -27,8 +27,8 @@ export function RoutineStrip() {
           </div>
           <ol className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:w-[28rem]">
             {steps.map((s) => (
-              <li key={s.n} className="rounded-2xl bg-porcelain/70 p-4">
-                <p className="font-display text-2xl text-bronze">{s.n}</p>
+              <li key={s.n} className="rounded-2xl glass p-4 transition-transform duration-300 hover:-translate-y-1">
+                <p className="font-display text-2xl text-gradient">{s.n}</p>
                 <p className="mt-1 font-medium text-ink">{s.label}</p>
                 <p className="text-xs text-ink-soft">{s.note}</p>
               </li>

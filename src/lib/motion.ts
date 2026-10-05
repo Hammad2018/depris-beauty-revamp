@@ -14,4 +14,4 @@ export const staggerContainer: Variants = {
   show: { transition: { staggerChildren: 0.08 } },
 };
 
-export const viewportOnce = { once: true, amount: 0.15, margin: "0px 0px -80px 0px" } as const;
+export const viewportOnce = { once: true, amount: 0.01, margin: "0px 0px -40px 0px" } as const;

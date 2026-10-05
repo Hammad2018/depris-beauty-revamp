@@ -7,6 +7,7 @@ import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CartDrawer } from "@/components/commerce/CartDrawer";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -28,11 +29,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${hanken.variable}`}>
-      <body className="flex min-h-screen flex-col">
+      <body className="grain flex min-h-screen flex-col">
         <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-porcelain">
           Skip to content
         </a>
         <CartProvider>
+          <ScrollProgress />
           <AnnouncementBar />
           <Navbar />
           <main id="main" className="flex-1">
