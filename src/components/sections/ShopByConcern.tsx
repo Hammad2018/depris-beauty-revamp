@@ -18,13 +18,16 @@ const concernGradient: Record<Concern, string> = {
 export function ShopByConcern({ collections }: { collections: Collection[] }) {
   const concerns = collections.filter((c) => c.concern).slice(0, 6);
   return (
-    <section className="shell py-16">
-      <SectionHeading
-        eyebrow="Start with your skin"
-        title={<>Shop by <span className="text-gradient">concern</span></>}
-        intro="Tell us what your skin needs and we'll point you to the right actives."
-      />
-      <RevealGroup className="mt-10 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-3">
+    <section className="mesh-light">
+      <div className="shell py-20 lg:py-28">
+        <SectionHeading
+          index="01"
+          eyebrow="Start with your skin"
+          title={<>Shop by <span className="italic text-gradient">concern</span></>}
+          intro="Tell us what your skin needs and we'll point you to the right actives."
+          size="xl"
+        />
+        <RevealGroup className="mt-12 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-3">
         {concerns.map((c, i) => (
           <RevealItem key={c.handle} className={i === 0 ? "sm:col-span-2" : ""}>
             <TiltCard className="h-full" max={6}>
@@ -45,7 +48,8 @@ export function ShopByConcern({ collections }: { collections: Collection[] }) {
             </TiltCard>
           </RevealItem>
         ))}
-      </RevealGroup>
+        </RevealGroup>
+      </div>
     </section>
   );
 }

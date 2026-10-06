@@ -26,11 +26,16 @@ export function ActivesSpotlight() {
       <AuroraBackground tone="dark" className="opacity-60" />
       <div className="shell relative py-20">
         <div className="max-w-2xl">
-          <p className="eyebrow text-rose">The Depris difference</p>
-          <h2 className="mt-3 font-display text-3xl leading-tight sm:text-4xl">
-            Cosmeceutical actives most brands <span className="text-gradient">can&apos;t formulate</span>
+          <div className="mb-4 flex items-center gap-3">
+            <span className="index-num font-display italic text-white/70" style={{ WebkitTextStroke: "1.2px rgba(92,195,184,0.7)" }}>
+              03
+            </span>
+            <p className="eyebrow text-teal-glow">The science</p>
+          </div>
+          <h2 className="h-display font-display">
+            Actives most brands <span className="italic text-gradient">can&apos;t formulate</span>
           </h2>
-          <p className="mt-4 text-cream/70">
+          <p className="mt-5 text-lg text-cream/70">
             Copper peptides, exosomes and pro-grade skin boosters — clinic-level science, made for your bathroom shelf.
           </p>
         </div>

@@ -11,7 +11,7 @@ const testimonials = [
 
 export function SocialProof() {
   return (
-    <section className="py-16">
+    <section className="mesh-light py-20">
       <div className="border-y border-sand bg-porcelain/60 py-6">
         <Marquee className="mask-fade-x">
           {pressLogos.map((logo) => (
@@ -22,8 +22,8 @@ export function SocialProof() {
         </Marquee>
       </div>
 
-      <div className="shell mt-14">
-        <SectionHeading eyebrow="Loved by real skin" title="Reviews from the community" align="center" />
+      <div className="shell mt-16">
+        <SectionHeading index="04" eyebrow="Loved by real skin" title="Reviews from the community" align="center" size="xl" />
         <div className="mt-10 grid gap-5 sm:grid-cols-3">
           {testimonials.map((t) => (
             <figure key={t.author} className="flex h-full flex-col rounded-3xl bg-porcelain p-6 shadow-soft">

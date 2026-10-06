@@ -152,6 +152,62 @@
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
     mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   }
+
+  /* Oversized editorial section header */
+  .h-display {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 0.98;
+    letter-spacing: -0.015em;
+  }
+  .h-hero {
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 0.96;
+    letter-spacing: -0.02em;
+  }
+
+  /* Outline / stroked display text */
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.4px rgba(30, 42, 68, 0.35);
+  }
+  .text-outline-light {
+    color: transparent;
+    -webkit-text-stroke: 1.4px rgba(255, 255, 255, 0.45);
+  }
+
+  /* Big index numeral for section markers */
+  .index-num {
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1;
+    -webkit-text-stroke: 1.2px rgba(78, 106, 208, 0.5);
+    color: transparent;
+  }
+
+  /* Soft aurora-mesh wash for light sections (no flat white) */
+  .mesh-light {
+    background:
+      radial-gradient(42% 60% at 8% 0%, rgba(78,106,208,0.12) 0%, rgba(244,246,252,0) 60%),
+      radial-gradient(38% 55% at 95% 10%, rgba(47,163,154,0.12) 0%, rgba(244,246,252,0) 62%),
+      radial-gradient(45% 60% at 60% 100%, rgba(185,163,222,0.12) 0%, rgba(244,246,252,0) 60%),
+      #F4F6FC;
+  }
+  .mesh-tint {
+    background:
+      radial-gradient(50% 70% at 85% 0%, rgba(47,163,154,0.16) 0%, rgba(233,238,250,0) 60%),
+      radial-gradient(45% 65% at 5% 100%, rgba(78,106,208,0.14) 0%, rgba(233,238,250,0) 60%),
+      #ECF0FA;
+  }
+
+  /* Animated gradient hairline divider */
+  .sheen-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #4e6ad0, #2fa39a, #b9a3de, transparent);
+    background-size: 200% 100%;
+    animation: gradient-pan 6s ease infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .sheen-line { animation: none; }
+  }
 }
 
 /* Respect reduced motion globally */

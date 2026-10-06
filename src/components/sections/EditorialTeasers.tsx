@@ -13,9 +13,9 @@ const toneClass: Record<Tone, string> = {
 
 export function EditorialTeasers() {
   return (
-    <section className="shell py-16">
+    <section className="shell py-20">
       <div className="flex items-end justify-between">
-        <SectionHeading eyebrow="The Journal" title="Skincare, decoded" />
+        <SectionHeading index="05" eyebrow="The Journal" title="Skincare, decoded" size="xl" />
         <Link href="/blog" className="hidden text-sm font-medium text-camellia hover:underline sm:block">
           All articles →
         </Link>
