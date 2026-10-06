@@ -19,7 +19,7 @@ export function FeatureBand() {
   const yPetals = useTransform(scrollYProgress, [0, 1], [60, -120]);
 
   return (
-    <section ref={ref} className="celestial relative text-white" style={{ height: "170vh" }}>
+    <section ref={ref} className="celestial relative text-white" style={{ height: "130vh" }}>
       <div className="sticky top-0 flex h-screen items-center justify-center overflow-hidden">
         <Starfield />
         <LightRays />

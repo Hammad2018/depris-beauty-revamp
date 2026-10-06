@@ -1,24 +1,27 @@
 import { getCommerce } from "@/lib/commerce";
 import { Hero } from "@/components/sections/Hero";
 import { ShopByConcern } from "@/components/sections/ShopByConcern";
+import { BentoShowcase } from "@/components/sections/BentoShowcase";
+import { FeatureBand } from "@/components/sections/FeatureBand";
+import { Lookbook } from "@/components/sections/Lookbook";
+import { StickySteps } from "@/components/sections/StickySteps";
 import { ActivesSpotlight } from "@/components/sections/ActivesSpotlight";
-import { RoutineStrip } from "@/components/sections/RoutineStrip";
+import { ResultsSection } from "@/components/sections/ResultsSection";
 import { SocialProof } from "@/components/sections/SocialProof";
 import { EditorialTeasers } from "@/components/sections/EditorialTeasers";
-import { FeatureBand } from "@/components/sections/FeatureBand";
 import { FinaleCTA } from "@/components/sections/FinaleCTA";
-import { ProductGrid } from "@/components/commerce/ProductGrid";
 import { TrustBand } from "@/components/commerce/TrustBand";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { ButtonLink } from "@/components/ui/Button";
 import { MarqueeRibbon } from "@/components/ui/MarqueeRibbon";
+import { LotusDivider } from "@/components/ui/LotusDivider";
 
 export default async function HomePage() {
   const commerce = getCommerce();
-  const [bestsellers, collections] = await Promise.all([
+  const [bestsellers, collections, featured] = await Promise.all([
     commerce.getProducts({ collection: "bestsellers", limit: 4 }),
     commerce.getCollections(),
+    commerce.getProduct("ghk-cu-copper-peptide-serum"),
   ]);
+  const hero = featured ?? bestsellers[0];
 
   return (
     <>
@@ -28,49 +31,35 @@ export default async function HomePage() {
       {/* 01 — light mesh */}
       <ShopByConcern collections={collections} />
 
-      {/* 02 — tinted band */}
-      <section className="mesh-tint">
-        <div className="shell py-20 lg:py-24">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <SectionHeading index="02" eyebrow="Reach for these first" title="Bestsellers" size="xl" />
-            <ButtonLink href="/collections/bestsellers" variant="ghost" className="hidden sm:inline-flex">
-              View all
-            </ButtonLink>
-          </div>
-          <div className="mt-12">
-            <ProductGrid products={bestsellers} priorityCount={4} />
-          </div>
-        </div>
-      </section>
+      {/* 02 — bento edit (tint) */}
+      <BentoShowcase featured={hero} products={bestsellers} />
 
-      {/* signature pinned beat — dark celestial */}
+      {/* pinned promise — dark celestial */}
       <FeatureBand />
 
-      {/* light tint */}
-      <RoutineStrip />
+      {/* horizontal lookbook (tint, duotone) */}
+      <Lookbook />
 
-      {/* 03 — dark science */}
+      {/* how it works — sticky steps (light mesh) */}
+      <StickySteps />
+
+      {/* 03 — the science (dark) */}
       <ActivesSpotlight />
 
-      {/* light mesh */}
-      <section className="mesh-light">
-        <div className="shell py-20">
-          <SectionHeading
-            index="·"
-            eyebrow="Why Depris"
-            title="Authentic actives, delivered fast"
-            align="center"
-            size="xl"
-            className="mb-12"
-          />
-          <TrustBand />
-        </div>
+      {/* 04 — real results (warm) */}
+      <ResultsSection />
+
+      <LotusDivider />
+
+      {/* trust strip (light) */}
+      <section className="shell pb-6">
+        <TrustBand />
       </section>
 
-      {/* 04 — social proof */}
+      {/* 05 — social proof */}
       <SocialProof />
 
-      {/* 05 — editorial */}
+      {/* 06 — editorial */}
       <EditorialTeasers />
 
       <FinaleCTA />

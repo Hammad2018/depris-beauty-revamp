@@ -11,15 +11,18 @@ import { PriceBlock } from "./PriceBlock";
 import { StarRating } from "@/components/ui/StarRating";
 import { Badge } from "@/components/ui/Badge";
 import { TiltCard } from "@/components/ui/TiltCard";
+import { SparkleBurst } from "@/components/ui/SparkleBurst";
 
 export function ProductCard({ product, priority = false }: { product: Product; priority?: boolean }) {
   const cart = useCart();
   const variant = product.variants[0];
   const [added, setAdded] = useState(false);
+  const [burst, setBurst] = useState(0);
 
   function add() {
     cart.add(toLineItem(product, variant));
     setAdded(true);
+    setBurst((b) => b + 1);
     setTimeout(() => setAdded(false), 1200);
   }
 
@@ -50,16 +53,19 @@ export function ProductCard({ product, priority = false }: { product: Product; p
 
           <div className="mt-4 flex items-center justify-between">
             <PriceBlock price={product.price} compareAtPrice={product.compareAtPrice} currency={product.currency} />
-            <motion.button
-              onClick={add}
-              whileTap={{ scale: 0.92 }}
-              className={`cursor-pointer rounded-full px-4 py-2 text-sm font-medium text-porcelain transition-colors ${
-                added ? "bg-sage" : "bg-ink hover:bg-camellia"
-              }`}
-              aria-label={`Add ${product.title} to bag`}
-            >
-              {added ? "Added ✓" : "Add +"}
-            </motion.button>
+            <span className="relative inline-flex">
+              <SparkleBurst burstKey={burst} />
+              <motion.button
+                onClick={add}
+                whileTap={{ scale: 0.92 }}
+                className={`relative cursor-pointer rounded-full px-4 py-2 text-sm font-medium text-porcelain transition-colors ${
+                  added ? "bg-sage" : "bg-ink hover:bg-camellia"
+                }`}
+                aria-label={`Add ${product.title} to bag`}
+              >
+                {added ? "Added ✓" : "Add +"}
+              </motion.button>
+            </span>
           </div>
         </div>
       </article>

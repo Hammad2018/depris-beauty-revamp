@@ -208,6 +208,21 @@
   @media (prefers-reduced-motion: reduce) {
     .sheen-line { animation: none; }
   }
+
+  /* Scrollbar-less horizontal rail (reduced-motion lookbook fallback) */
+  .no-scrollbar { scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+}
+
+/* Duotone photography — plain CSS (outside @layer so it is never purged):
+   grayscale image blended (luminosity) onto a brand gradient. */
+.duotone-cool { background: linear-gradient(135deg, #212b74 0%, #4e6ad0 55%, #5cc3b8 100%); }
+.duotone-warm { background: linear-gradient(135deg, #b0544c 0%, #e79a90 50%, #e3b34c 100%); }
+.duotone-lilac { background: linear-gradient(135deg, #2e3c9e 0%, #b9a3de 60%, #f4d7d2 100%); }
+.duotone-jade { background: linear-gradient(135deg, #157a73 0%, #2fa39a 55%, #dcccef 100%); }
+.duotone-cool img, .duotone-warm img, .duotone-lilac img, .duotone-jade img {
+  filter: grayscale(1) contrast(1.08);
+  mix-blend-mode: luminosity;
 }
 
 /* Respect reduced motion globally */
