@@ -47,7 +47,7 @@ export function BentoShowcase({ featured, products }: { featured: Product; produ
                   <p className="mt-2 max-w-md text-white/75">{featured.tagline}</p>
                   <div className="mt-5 flex items-center gap-4">
                     <span className="font-display text-2xl">{money(featured.price, featured.currency)}</span>
-                    <span className="btn-primary">Shop the serum</span>
+                    <span className="btn-primary">Shop now</span>
                   </div>
                 </div>
               </Link>

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useReducedMotion } from "@/lib/useReducedMotion";
 import type { Product } from "@/lib/commerce/types";
-import { productRenders, lots } from "@/lib/renders";
+import { lots } from "@/lib/renders";
 import { ProductMedia } from "@/components/commerce/ProductMedia";
 import { PotencyCertificate } from "./PotencyCertificate";
 import { Lightbox } from "@/components/ui/Lightbox";
@@ -16,9 +16,11 @@ import { Lightbox } from "@/components/ui/Lightbox";
  */
 export function ProductStage({ product, lotId = "2611-D" }: { product: Product; lotId?: string }) {
   const reduce = useReducedMotion();
-  const renders = productRenders[product.handle];
-  const views = renders?.views ?? [];
-  const [view, setView] = useState<string>(views[0]?.id ?? "front");
+  const views = product.images
+    .filter((img) => img.url)
+    .slice(0, 5)
+    .map((img, i) => ({ id: `img-${i}`, src: img.url as string, label: i === 0 ? "Hero" : `View ${i + 1}`, alt: img.alt }));
+  const [view, setView] = useState<string>(views[0]?.id ?? "img-0");
   const [landed, setLanded] = useState(!!reduce);
   const [cert, setCert] = useState(false);
   const lot = lots[lotId];
@@ -71,7 +73,7 @@ export function ProductStage({ product, lotId = "2611-D" }: { product: Product; 
           <AnimatePresence mode="wait">
             <motion.div key={current?.id ?? "media"} initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.45 }} className="absolute inset-0">
               {current ? (
-                <Image src={current.src} alt={current.alt} fill priority sizes="(max-width:1024px) 92vw, 50vw" className={`${current.id === "front" || current.id === "dropper" ? "render-fade object-contain" : "rounded-[2rem] object-cover"}`} />
+                <Image src={current.src} alt={current.alt} fill priority sizes="(max-width:1024px) 92vw, 50vw" className="rounded-[2rem] object-cover" />
               ) : (
                 <ProductMedia product={product} priority className="h-full w-full rounded-[2rem]" />
               )}
@@ -84,7 +86,7 @@ export function ProductStage({ product, lotId = "2611-D" }: { product: Product; 
       </div>
 
       {/* views */}
-      <div className="mt-4 grid grid-cols-5 gap-2">
+      <div className="mt-4 grid grid-cols-6 gap-2">
         {views.map((v) => (
           <button
             key={v.id}

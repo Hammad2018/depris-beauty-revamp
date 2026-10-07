@@ -1,0 +1,1031 @@
+{
+  "importedAt": "2026-10-07T03:38:39.943Z",
+  "source": "https://deprisbeauty.com/wp-json/wc/store/v1",
+  "categories": [
+    {
+      "slug": "cleansers-toners",
+      "name": "Cleansers & Toners",
+      "count": 10
+    },
+    {
+      "slug": "cosmetic-peps",
+      "name": "Cosmetic Peps",
+      "count": 12
+    },
+    {
+      "slug": "devices-supplies",
+      "name": "Devices & Supplies",
+      "count": 15
+    },
+    {
+      "slug": "eyes-lips",
+      "name": "Eyes & Lips",
+      "count": 9
+    },
+    {
+      "slug": "creams-peels",
+      "name": "Face Cream & Peels",
+      "count": 19
+    },
+    {
+      "slug": "filler-lipolytics",
+      "name": "Filler & Lipolytics",
+      "count": 9
+    },
+    {
+      "slug": "gift-cards",
+      "name": "Gift Cards",
+      "count": 1
+    },
+    {
+      "slug": "hair-exosomes",
+      "name": "Hair & Exosomes",
+      "count": 10
+    },
+    {
+      "slug": "mesotherapy-skin-boosters",
+      "name": "Mesotherapy & Skin Boosters",
+      "count": 21
+    },
+    {
+      "slug": "microneedling",
+      "name": "Microneedling",
+      "count": 21
+    },
+    {
+      "slug": "promos",
+      "name": "Promos",
+      "count": 9
+    },
+    {
+      "slug": "serums",
+      "name": "Serums",
+      "count": 18
+    },
+    {
+      "slug": "sheetmasks",
+      "name": "Sheet Masks",
+      "count": 14
+    },
+    {
+      "slug": "sunscreen-bb-cc-cream",
+      "name": "Sunscreen & BB\\CC Creams",
+      "count": 10
+    },
+    {
+      "slug": "vitamins-wellness",
+      "name": "Vitamins & Wellness",
+      "count": 16
+    }
+  ],
+  "products": [
+    {
+      "id": 1071,
+      "slug": "ghk-cu-topical-cosmetic-1g",
+      "sku": "ghk-top-01",
+      "name": "GHK-Cu – Topical Cosmetic (1g)",
+      "permalink": "https://deprisbeauty.com/product/ghk-cu-topical-cosmetic-1g/",
+      "price": 18,
+      "regularPrice": 18,
+      "salePrice": 18,
+      "onSale": false,
+      "currency": "USD",
+      "inStock": true,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "categories": [
+        {
+          "slug": "cosmetic-peps",
+          "name": "Cosmetic Peps"
+        },
+        {
+          "slug": "vitamins-wellness",
+          "name": "Vitamins & Wellness"
+        }
+      ],
+      "pitchCategory": "cosmetic-peps",
+      "tags": [
+        "anti-oxidant",
+        "firming",
+        "hair-growth",
+        "skin"
+      ],
+      "images": [
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/ghk-cu-hero-blue-peptide-satin.jpg-1.png",
+          "alt": "GHK-Cu – Topical Cosmetic (1g)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/ghk-cu-formulation-blue-cream.jpg.png",
+          "alt": "GHK-Cu – Topical Cosmetic (1g)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/ghk-cu-usecase-face-neck-cream.jpg.png",
+          "alt": "GHK-Cu – Topical Cosmetic (1g)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/ghk-cu-usecase-two-women-shared-ritual.jpg.png",
+          "alt": "GHK-Cu – Topical Cosmetic (1g)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/ghk-cu-usecase-triptych-skin-renewal.jpg.png",
+          "alt": "GHK-Cu – Topical Cosmetic (1g)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/DEPRIS-GHK-1gr-121425-scaled.jpg",
+          "alt": "GHK-Cu – Topical Cosmetic (1g)"
+        }
+      ],
+      "shortDescription": "GHK-Cu – Topical Cosmetic (1g) is a high-purity copper peptide used in cosmetic formulations for its ability to promote skin regeneration, reduce signs of aging, and support hair growth and wound healing.",
+      "description": "GHK-Cu (Glycyl-L-Histidyl-L-Lysine-Cu²⁺) is a naturally occurring copper-binding tripeptide renowned in cosmetic science for its powerful skin rejuvenating and tissue-repairing properties. As a key component in many anti-aging and hair restoration products, GHK-Cu has been shown in research to stimulate collagen and elastin production, improve skin texture and tone, reduce wrinkles, and promote healing.\n\nIt is also widely studied for its anti-inflammatory and antioxidant effects, helping to protect the skin from environmental stressors and support a youthful appearance. Additionally, GHK-Cu may help strengthen hair follicles and encourage hair regrowth, making it ideal for use in hair serums and scalp treatments.\n\nThis 1g topical-grade peptide is ideal for cosmetic formulation and research, particularly in the development of anti-aging creams, serums, scar treatments, and hair care products.\n\nPotential Cosmetic Applications:\n\nSkin Rejuvenation – Boosts collagen and elastin, smooths fine lines\n\nWound Healing – Accelerates skin regeneration and repair\n\nHair Growth Support – Promotes stronger, healthier hair follicles\n\n Anti-Inflammatory & Antioxidant Effects – Protects and calms skin\n\nSkin Firmness & Elasticity – Improves overall skin structure\n\nThis product is intended for TOPICAL cosmetic formulation only!",
+      "attributes": [],
+      "variations": []
+    },
+    {
+      "id": 4551,
+      "slug": "glutanex-night-serum-30ml",
+      "sku": "glutanex-night-serum",
+      "name": "Glutanex Night Serum (30mL)",
+      "permalink": "https://deprisbeauty.com/product/glutanex-night-serum-30ml/",
+      "price": 28,
+      "regularPrice": 28,
+      "salePrice": 28,
+      "onSale": false,
+      "currency": "USD",
+      "inStock": true,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "categories": [
+        {
+          "slug": "serums",
+          "name": "Serums"
+        }
+      ],
+      "pitchCategory": "serums",
+      "tags": [
+        "brightening",
+        "hydration",
+        "moisturizing",
+        "niacinamide"
+      ],
+      "images": [
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/04/glutanex-night-serum-hero-satin.jpg.png",
+          "alt": "Glutanex Night Serum (30mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/04/glutanex-night-serum-ingredients-how-to-use.jpg.png",
+          "alt": "Glutanex Night Serum (30mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/04/glutanex-night-serum-bedtime-solo.jpg.png",
+          "alt": "Glutanex Night Serum (30mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/04/glutanex-night-serum-couple-evening.jpg.png",
+          "alt": "Glutanex Night Serum (30mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/04/glutanex-night-serum-travel-hotel.jpg.png",
+          "alt": "Glutanex Night Serum (30mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/04/glutanex-night-serum-triptych.jpg.png",
+          "alt": "Glutanex Night Serum (30mL)"
+        }
+      ],
+      "shortDescription": "Glutanex Night Serum nourishes and repairs your skin while you sleep. Glutathione, Collagen, Peptides, and Vitamins work overnight to brighten skin tone, reduce dark spots, and restore deep hydration — so you wake up glowing every morning.",
+      "description": "Glutanex Night Serum is a pro-grade overnight skin care serum made to repair and renew your skin while you sleep. It works with your skin’s natural recovery cycle. Thanks to a powerful blend of Glutathione, Collagen, Peptides, and Vitamins, it deeply nourishes the skin through the night. As a result, you wake up to skin that looks brighter, feels smoother, and glows from within.\n\nWhy Choose Glutanex Night Serum?\n\nThis serum is more than just a night cream. In fact, it is a targeted overnight treatment for those who want real, visible results by morning. Here is what makes it stand out:\n\nOvernight Brightening: First and foremost, Glutathione suppresses melanin while you sleep. This helps even out skin tone and reduce the look of dark spots over time.\n\nDeep Hydration: In addition, Hyaluronic Acid, Collagen, and Beta Glucan work together overnight. They restore moisture balance and keep skin soft and plump by morning.\n\nAnti-Aging Support: Furthermore, Peptides signal the skin to produce more collagen and elastin. This helps reduce fine lines and firms the skin with regular use.\n\nSkin Repair & Renewal: It also helps repair damaged skin cells overnight. This makes it ideal for dull, dry, or tired-looking skin.\n\nTemperature-Activated Formula: Finally, this serum is best kept cool before use. The temperature-activated formula boosts its soothing and hydrating effects on the skin.\n\nKey Ingredients & What They Do\n\nThe results of the Glutanex Night Serum come from its rich mix of overnight repair ingredients. Specifically, here is what each one does:\n\nGlutathione: Brightens skin tone and reduces dark spots. It also protects against oxidative stress caused by daily environmental damage.\n\nCollagen (Fish/Marine): Improves skin elasticity and firmness. It helps reduce the look of wrinkles and sagging with regular use.\n\nPeptides: Short chains of amino acids that boost collagen production. They firm the skin and support a stronger skin barrier.\n\nNiacinamide: Reduces breakouts and helps fade post-inflammatory marks. It also helps even out skin tone for a clearer complexion.\n\nHyaluronic Acid & Beta Glucan: Lock in deep moisture overnight. They keep skin hydrated, smooth, and balanced by morning.\n\nVitamins: Nourish and protect the skin from within. They promote a healthier, more radiant complexion over time.\n\nHow to Use Glutanex Night Serum\n\nFor best results, simply follow these easy steps:\n\nCleanse your face well before bed.\n\nTone your skin to prep it for better absorption.\n\nApply a small amount of the Night Serum to your face. Use gentle upward strokes.\n\nMassage lightly until fully absorbed into the skin.\n\nFollow up with your night cream or moisturizer to seal in the benefits.\n\nPro Tip: Keep the serum refrigerated before use. The cool temperature boosts its soothing and hydrating effects.",
+      "attributes": [],
+      "variations": []
+    },
+    {
+      "id": 4194,
+      "slug": "2xsome-skin-booster",
+      "sku": "2xsome-booster",
+      "name": "2XSOME Skin Booster",
+      "permalink": "https://deprisbeauty.com/product/2xsome-skin-booster/",
+      "price": 75,
+      "regularPrice": 75,
+      "salePrice": 75,
+      "onSale": false,
+      "currency": "USD",
+      "inStock": true,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "categories": [
+        {
+          "slug": "mesotherapy-skin-boosters",
+          "name": "Mesotherapy & Skin Boosters"
+        },
+        {
+          "slug": "microneedling",
+          "name": "Microneedling"
+        }
+      ],
+      "pitchCategory": "mesotherapy-skin-boosters",
+      "tags": [
+        "collagen",
+        "exosomes",
+        "ha",
+        "hydration",
+        "moisturizing"
+      ],
+      "images": [
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/02/2xsome_skin_booster_hero_satin_product.jpg.png",
+          "alt": "2XSOME Skin Booster"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/02/2XSOME_SKIN_BOOSTER_2.jpg",
+          "alt": "2XSOME Skin Booster"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/02/2xsome_skin_booster_usecase_post_treatment_recovery.jpg.png",
+          "alt": "2XSOME Skin Booster"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/02/2xsome_skin_booster_usecase_home_antiaging_glow.jpg.png",
+          "alt": "2XSOME Skin Booster"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/02/2xsome_skin_booster_usecase_scalp_hair_growth.jpg-1.png",
+          "alt": "2XSOME Skin Booster"
+        }
+      ],
+      "shortDescription": "2XSOME Skin Booster utilizes stem-cell-derived exosomes and a potent activating diluent to deeply hydrate, repair the skin barrier, and stimulate natural cellular regeneration.",
+      "description": "Next-Generation Cellular Repair 2XSOME Skin Booster provides a revolutionary exosome treatment for complete skin rejuvenation. It harnesses the power of stem-cell-derived exosomes to communicate directly with your cells. Consequently, it triggers natural regeneration from the inside out. The formula acts as a powerful anti-inflammatory agent. Thus, it reduces redness and heals damaged tissue quickly.\n\nTwo-Part Activating System This premium booster uses a unique two-step mixing process. First, the 1SOME Exosome Powder delivers highly concentrated, freeze-dried exosomes mixed with Sodium Hyaluronate. Second, the 2SOME Activating Diluent maximizes cellular absorption. This fluid contains Hydrolyzed Collagen, Sodium DNA, and Copper Tripeptide-1. Therefore, combining them right before application ensures maximum potency and deep penetration.\n\nComprehensive Anti-Aging Power The treatment targets multiple signs of aging simultaneously. It boosts natural collagen production to restore firmness and elasticity. Furthermore, it floods the dermis with deep hydration to smooth out fine lines and wrinkles. It also repairs compromised skin barriers effectively. As a result, your complexion becomes brighter, tighter, and more resilient against environmental stress.\n\nVersatile Professional Application Professionals use this booster alongside microneedling or mesotherapy for optimal results. It works beautifully on the face, neck, and hands to reverse visible aging. Moreover, you can apply it directly to the scalp to stimulate hair follicles and encourage healthy growth. So, it offers a highly versatile solution for total aesthetic renewal.\n\nKey Benefits:\n\nCellular Healing: Stem-cell exosomes trigger rapid skin regeneration and repair damaged tissue.\n\nDeep Hydration: Sodium Hyaluronate plumps the dermis and smooths fine wrinkles.\n\nPotent Activation: Copper Tripeptide-1 and Hydrolyzed Collagen maximize active ingredient absorption.\n\nCalming Effect: Powerful anti-inflammatory properties soothe redness and post-treatment irritation.\n\nMulti-Use: Highly effective for facial anti-aging, hand rejuvenation, and scalp hair restoration.",
+      "attributes": [],
+      "variations": []
+    },
+    {
+      "id": 38,
+      "slug": "bellmona-cc-cream-sunscreen-50ml",
+      "sku": "bellmona-cc-cream-sunscreen",
+      "name": "Bellmona CC Cream Sunscreen (50mL)",
+      "permalink": "https://deprisbeauty.com/product/bellmona-cc-cream-sunscreen-50ml/",
+      "price": 28,
+      "regularPrice": 28,
+      "salePrice": 28,
+      "onSale": false,
+      "currency": "USD",
+      "inStock": true,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "categories": [
+        {
+          "slug": "sunscreen-bb-cc-cream",
+          "name": "Sunscreen & BB\\CC Creams"
+        }
+      ],
+      "pitchCategory": "sunscreen-bb-cc-cream",
+      "tags": [
+        "brightening",
+        "niacinamide",
+        "skin",
+        "skin-protection",
+        "uv-protection",
+        "whitening",
+        "wrinkles"
+      ],
+      "images": [
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/Bellmona_Cream_Product_Hero_Image-e1767618373952.png",
+          "alt": "Bellmona CC Cream Sunscreen (50mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/Bellmona_Cream_Spa_Serenity_Nature_Essence_Image.png",
+          "alt": "Bellmona CC Cream Sunscreen (50mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/Bellmona_Cream_Model_Campaign_Image.png",
+          "alt": "Bellmona CC Cream Sunscreen (50mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/Bellmona_Cream_SelfCare_Routine_RealLife_Image.png",
+          "alt": "Bellmona CC Cream Sunscreen (50mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/Bellmona_Sunscreen_Lifestyle_Outdoor_Protection_Image.png",
+          "alt": "Bellmona CC Cream Sunscreen (50mL)"
+        }
+      ],
+      "shortDescription": "Bellmona CC Cream Sunscreen is a multi-functional color-correcting cream that provides high UV protection while evening out skin tone for a radiant, natural finish.",
+      "description": "Flawless Skin Correction – Bellmona CC Cream Sunscreen provides an all-in-one solution for achieving a perfectly even and radiant complexion. It utilizes advanced color-correcting technology to mask imperfections and neutralize redness instantly. Consequently, it adapts to your unique skin tone to provide natural, seamless coverage. Thus, you achieve a bright and polished appearance that looks completely effortless.\n\nComplete Environmental Shield The formula features high-level SPF protection to guard the skin against harmful solar radiation. First, it blocks UVA and UVB rays to prevent premature aging and sunspots. Second, it creates a breathable barrier that defends the skin from daily environmental pollutants. Furthermore, it contains antioxidants to nourish the dermal layers throughout the day. Therefore, your skin remains healthy, protected, and youthful.\n\nLightweight Daily Hydration This premium CC cream delivers essential moisture without the heavy feel of traditional foundations. It absorbs quickly to leave a soft, dewy finish that enhances your natural glow. As a result, it feels weightless on the skin, making it perfect for comfortable all-day wear. The non-greasy consistency prevents clogged pores and maintains a fresh look. So, it serves as the ideal daily base for a revitalized and energized face.\n\nKey Benefits:\n\nColor Correction: Instantly evens out skin tone and covers minor blemishes for a flawless finish.\n\nBroad-Spectrum Defense: Provides reliable sun protection to prevent sun damage and dark spots.\n\nDeep Hydration: Infuses the skin with moisture to keep it soft, supple, and glowing.\n\nNatural Glow: Leaves a radiant, dewy appearance that enhances your complexion without looking heavy.\n\nSensitive-Safe: Formulated to be gentle on the skin, making it suitable for daily use on all skin types.",
+      "attributes": [
+        {
+          "name": "Packages",
+          "terms": [
+            "1-Pack"
+          ]
+        }
+      ],
+      "variations": []
+    },
+    {
+      "id": 2518,
+      "slug": "glutanex-glow-therapy-toner",
+      "sku": "glutanex-glow-toner",
+      "name": "Glutanex Glow Therapy Toner (150mL)",
+      "permalink": "https://deprisbeauty.com/product/glutanex-glow-therapy-toner/",
+      "price": 32,
+      "regularPrice": 32,
+      "salePrice": 32,
+      "onSale": false,
+      "currency": "USD",
+      "inStock": true,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "categories": [
+        {
+          "slug": "cleansers-toners",
+          "name": "Cleansers & Toners"
+        }
+      ],
+      "pitchCategory": "cleansers-toners",
+      "tags": [
+        "cica",
+        "glutathione",
+        "ha",
+        "hydration",
+        "niacinamide",
+        "pdrn",
+        "toning"
+      ],
+      "images": [
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/12/Glutanex_GlowTherapy_Toner_Luxury_Satin_Hero_Image.png",
+          "alt": "Glutanex Glow Therapy Toner (150mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/12/Glutanex_GlowTherapy_Toner_Ingredient_Infusion_Science_Image.png",
+          "alt": "Glutanex Glow Therapy Toner (150mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/12/Glutanex_GlowTherapy_Toner_Morning_Routine_Glow_Prep_Image.png",
+          "alt": "Glutanex Glow Therapy Toner (150mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/12/Glutanex_GlowTherapy_Toner_Mens_Skincare_Calm_Balance_Image.png",
+          "alt": "Glutanex Glow Therapy Toner (150mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/12/Glutanex_GlowTherapy_Toner_MultiEthnic_GlassSkin_Lifestyle_Image.png",
+          "alt": "Glutanex Glow Therapy Toner (150mL)"
+        }
+      ],
+      "shortDescription": "Glutanex Glow Therapy Toner – This low-pH, hydrating toner is packed with Glutathione, PDRN (Salmon DNA), and Triple Hyaluronic Acid to instantly soothe and plump the skin after cleansing; restoring balance, tightening pores, and delivering a burst of brightness for a dewy, healthy complexion.",
+      "description": "Unlock instant luminosity with the Glutanex Glow Therapy Toner, a powerful non-irritating essence designed to brighten, hydrate, and repair in one step. Formulated by Nexus Pharma (the global leaders in glutathione science), this is more than just a toner—it is a pre-treatment that preps your skin to absorb serums up to 3x more effectively.\n\nThe \"Glass Skin\" Starter Dull, tired-looking skin? This toner is packed with Glutathione, the master antioxidant that suppresses melanin production to fight dark spots and pigmentation. Combined with Niacinamide, it works immediately to even out skin tone and restore a natural, healthy radiance.\n\nRepair & Regenerate with PDRN While most toners just clean, Glutanex repairs. Enriched with PDRN (Salmon DNA), this formula stimulates cell regeneration and speeds up tissue repair. It fights inflammation and strengthens the skin barrier, making it the perfect post-cleansing step for sensitive or acne-prone skin.\n\nTriple-Layer Hydration Say goodbye to tightness. Infused with Triple Hyaluronic Acid, this toner penetrates multiple layers of the dermis to lock in moisture. The low pH (5.4) formula balances your skin immediately after washing, preventing dryness and keeping your skin plump and dewy.\n\nKey Benefits:\n\nInstant Brightening: Glutathione and Niacinamide target dullness and dark spots.\n\nDeep Repair: PDRN (Salmon DNA) accelerates healing and reduces redness.\n\nIntense Moisture: Triple Hyaluronic Acid prevents tight, dry skin after cleansing.\n\nPrep & Prime: Exfoliates gently to maximize the absorption of your next skincare steps.",
+      "attributes": [],
+      "variations": []
+    },
+    {
+      "id": 4554,
+      "slug": "glutanex-snow-white-cream-50ml",
+      "sku": "glutanex-snow-white-cream",
+      "name": "Glutanex Snow White Cream (50mL)",
+      "permalink": "https://deprisbeauty.com/product/glutanex-snow-white-cream-50ml/",
+      "price": 34,
+      "regularPrice": 34,
+      "salePrice": 34,
+      "onSale": false,
+      "currency": "USD",
+      "inStock": true,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "categories": [
+        {
+          "slug": "creams-peels",
+          "name": "Face Cream & Peels"
+        }
+      ],
+      "pitchCategory": "creams-peels",
+      "tags": [
+        "alpha-lipoic-acid",
+        "arbutin",
+        "glutathione",
+        "niacinamide",
+        "vitamin-c"
+      ],
+      "images": [
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/04/glutanex-snow-white-cream-hero-satin.jpg.png",
+          "alt": "Glutanex Snow White Cream (50mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/04/glutanex-snow-white-cream-ingredients-how-to-use.jpg.png",
+          "alt": "Glutanex Snow White Cream (50mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/04/glutanex-snow-white-cream-morning-glow.jpg.png",
+          "alt": "Glutanex Snow White Cream (50mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/04/glutanex-snow-white-cream-hyperpigmentation-duo.jpg.png",
+          "alt": "Glutanex Snow White Cream (50mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/04/glutanex-snow-white-cream-post-treatment-prep.jpg.png",
+          "alt": "Glutanex Snow White Cream (50mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/04/glutanex-snow-white-cream-triptych.jpg.png",
+          "alt": "Glutanex Snow White Cream (50mL)"
+        }
+      ],
+      "shortDescription": "Glutanex Snow White Cream delivers instant skin brightening with a powerful trio of Glutathione, Thioctic Acid, and Vitamin C. This non-sticky, tone-up day cream suppresses melanin, reduces dark spots, and leaves skin looking radiant and evenly toned from the very first use.",
+      "description": "Glutanex Snow White Cream is a pro-grade, whitening tone-up face cream made to brighten skin fast. It works from the very first use. Thanks to three powerful antioxidants — Glutathione, Thioctic Acid, and Vitamin C — it suppresses melanin and delivers an instant glow. As a result, skin looks brighter, feels lighter, and stays hydrated all day without any sticky residue.\n\nWhy Choose Glutanex Snow White Cream?\n\nThis cream is more than just a day moisturizer. In fact, it is a targeted brightening treatment for those who want a clearer, more even skin tone. Here is what makes it stand out:\n\nInstant Brightening Effect: First and foremost, the triple antioxidant formula works fast. It delivers a visible tone-up from the very first application.\n\nMelanin Suppression: In addition, Glutathione and Vitamin C block melanin production. This helps reduce dark spots, pigmentation, and uneven skin tone over time.\n\nAnti-Aging Benefits: Furthermore, Thioctic Acid helps keep skin cells young. It also helps reduce the look of fine lines and wrinkles with regular use.\n\nNon-Sticky Formula: It also absorbs cleanly into the skin. It provides light, comfortable hydration — ideal for all climates and skin types.\n\nPigmentation Prevention: Finally, this cream helps treat existing dark spots. It also helps stop new pigmentation from forming, especially after skin treatments.\n\nKey Ingredients & What They Do\n\nThe results of the Glutanex Snow White Cream come from its triple antioxidant formula. Specifically, here is what each one does:\n\nGlutathione: Suppresses melanin to brighten and even out skin tone. It also reduces dark spots and protects against daily environmental damage.\n\nThioctic Acid (Alpha Lipoic Acid): A strong antioxidant that fights free radicals. It also boosts Glutathione’s activity in the skin for stronger brightening results.\n\nAscorbic Acid (Vitamin C): Protects against environmental damage and sun exposure. It also inhibits melanin production and supports the skin’s natural collagen levels.\n\nNiacinamide: Reduces redness and refines pores. It also helps improve skin tone and supports a stronger, healthier skin barrier.\n\nArbutin: A gentle brightening agent that targets dark spots and hyperpigmentation. It is ideal for daily use without causing skin irritation.\n\nPeptides: Short chains of amino acids that boost collagen and elastin. They firm the skin and help reduce the look of fine lines over time.\n\nHow to Use Glutanex Snow White Cream\n\nFor best results, simply follow these easy steps:\n\nCleanse your face well to remove all dirt and impurities.\n\nTone your skin to prep it for better absorption.\n\nApply a small, dime-sized amount of the Snow White Cream to your face.\n\nSpread evenly using gentle upward strokes until fully absorbed.\n\nFollow up with SPF in the morning to protect your results from sun damage.\n\nPro Tip: Keep the cream cool before use for a more soothing and refreshing application. On deeper skin tones, apply SPF or a BB cream on top to avoid any chalky finish.",
+      "attributes": [],
+      "variations": []
+    },
+    {
+      "id": 1587,
+      "slug": "medisco-skin-glow-mask-100ml",
+      "sku": "medisco-skinglow-mask",
+      "name": "Medisco Skin Glow Mask (100mL)",
+      "permalink": "https://deprisbeauty.com/product/medisco-skin-glow-mask-100ml/",
+      "price": 35,
+      "regularPrice": 35,
+      "salePrice": 35,
+      "onSale": false,
+      "currency": "USD",
+      "inStock": true,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "categories": [
+        {
+          "slug": "sheetmasks",
+          "name": "Sheet Masks"
+        }
+      ],
+      "pitchCategory": "sheetmasks",
+      "tags": [
+        "adenosine",
+        "cica",
+        "collagen",
+        "niacinamide",
+        "pdrn",
+        "soothing"
+      ],
+      "images": [
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/medisco-skin-glow-mask-main-satin-infused.jpg.png",
+          "alt": "Medisco Skin Glow Mask (100mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/medisco-skin-glow-mask-ingredients-botanical-only.jpg.png",
+          "alt": "Medisco Skin Glow Mask (100mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/medisco-skin-glow-mask-usecase-parlor-finish.jpg.png",
+          "alt": "Medisco Skin Glow Mask (100mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/medisco-skin-glow-mask-usecase-home-selfcare.jpg.png",
+          "alt": "Medisco Skin Glow Mask (100mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/medisco-skin-glow-mask-usecase-event-prep.jpg.png",
+          "alt": "Medisco Skin Glow Mask (100mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/09/medisco-skin-glow-mask-usecase-triptych.jpg.png",
+          "alt": "Medisco Skin Glow Mask (100mL)"
+        }
+      ],
+      "shortDescription": "Medisco Skin Glow Mask is an innovative peel-off treatment that uses collagen and Niacinamide to deeply hydrate, firm, and deliver an instant \"glass skin\" radiant glow.",
+      "description": "Instant Glass Skin Radiance Medisco Skin Glow Mask provides a luxurious, peel-off treatment designed to deliver an instant \"glass skin\" effect. It infuses the skin with deep hydration and a radiant glow immediately. Consequently, it serves as the perfect finishing step for professional facials or microneedling sessions. Thus, you achieve a flawless, luminous complexion easily and safely.\n\nNourishing and Brightening Ingredients The formula features a powerful blend of skin-loving ingredients. First, it contains Hydrolyzed Collagen to support natural elasticity and firmness. Second, Niacinamide works actively to brighten the overall skin tone and fade dullness. Furthermore, Centella Asiatica extracts calm and soothe any underlying irritation. Therefore, this mask provides comprehensive care that both repairs and protects your delicate skin barrier.\n\nInnovative Lift and Lock Technology This unique mask applies as a smooth, rich cream and dries into a tight, lifting film. Unlike messy traditional sheet masks, it peels off cleanly in one seamless piece. This firming action traps moisture and active ingredients in the dermis effectively. As a result, it maximizes the absorption of any serums or ampoules applied underneath it. So, your face feels incredibly soft, plump, and visibly lifted for days.\n\nKey Benefits:\n\nGlass Skin Effect: Delivers a brilliant, luminous glow for a healthy and flawless complexion.\n\nDeep Hydration: Forms a protective film that locks moisture deep into the skin layers.\n\nBrightening Power: Uses Niacinamide to even out skin tone and reduce visible dullness.\n\nFirming Action: Hydrolyzed collagen improves elasticity to provide a natural, youthful lift.\n\nSoothing Relief: Centella Asiatica calms redness safely, making it ideal for post-treatment care.",
+      "attributes": [],
+      "variations": []
+    },
+    {
+      "id": 3762,
+      "slug": "puri-eyes-pdrn-eye-patch",
+      "sku": "purieyes-patch",
+      "name": "Puri Eyes PDRN Eye Patch",
+      "permalink": "https://deprisbeauty.com/product/puri-eyes-pdrn-eye-patch/",
+      "price": 34,
+      "regularPrice": 34,
+      "salePrice": 34,
+      "onSale": false,
+      "currency": "USD",
+      "inStock": true,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "categories": [
+        {
+          "slug": "eyes-lips",
+          "name": "Eyes & Lips"
+        }
+      ],
+      "pitchCategory": "eyes-lips",
+      "tags": [
+        "hydration",
+        "moisturizing",
+        "niacinamide",
+        "pdrn"
+      ],
+      "images": [
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/01/aeter-puri-eyes-patch-main-satin.jpg.png",
+          "alt": "Puri Eyes PDRN Eye Patch"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/01/aeter-puri-eyes-patch-main-hydration.jpg.png",
+          "alt": "Puri Eyes PDRN Eye Patch"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/01/aeter-puri-eyes-patch-usecase-night-selfcare.jpg.png",
+          "alt": "Puri Eyes PDRN Eye Patch"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/01/aeter-puri-eyes-patch-usecase-spa-day.jpg.png",
+          "alt": "Puri Eyes PDRN Eye Patch"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/01/aeter-puri-eyes-patch-usecase-triptych.jpg.png",
+          "alt": "Puri Eyes PDRN Eye Patch"
+        }
+      ],
+      "shortDescription": "Puri Eyes PDRN Patch – Soothe and repair your eyes with this medical-grade hydrogel mask. It features PDRN, Niacinamide, and Hyaluronic Acid for instant brightening and deep regeneration.",
+      "description": "Professional Post-Care at Home The Puri Eyes PDRN Patch is a high-performance hydrogel mask. It is designed specifically for the delicate under-eye area. This product serves as the perfect aftercare following aesthetic treatments. However, it is also excellent for daily home use. It soothes redness and irritation instantly. Consequently, it speeds up the skin’s recovery process.\n\nThe Power of Salmon DNA (PDRN) The core ingredient in this patch is PDRN (Polydeoxyribonucleotide). This is extracted from salmon DNA. It is famous for its regenerative properties. Unlike standard eye masks, this patch does not just hydrate. Instead, it actively repairs the skin barrier. Therefore, it helps thicken the skin and restore elasticity effectively.\n\nBrightening and Hydrating Complex This formula revitalizes tired eyes. It contains Niacinamide to target dark circles. Additionally, it features Hyaluronic Acid for deep moisture. The patch uses a smart hydrogel technology. It melts slightly at body temperature. As a result, the active essence penetrates deep into the dermis. This leaves your eyes looking bright and rested.\n\nKey Benefits:\n\nInstant Soothing: Calms redness immediately after skin procedures.\n\nDeep Regeneration: PDRN stimulates cell repair to thicken thin skin.\n\nDark Circle Care: Niacinamide brightens the under-eye area visible.\n\nSmart Absorption: Hydrogel melts into the skin for maximum delivery.\n\nIntense Moisture: Hyaluronic Acid locks in hydration to smooth fine lines.",
+      "attributes": [],
+      "variations": []
+    },
+    {
+      "id": 5018,
+      "slug": "plenaris-exosome-hgf",
+      "sku": "plenaris-hgf-main",
+      "name": "Plenaris Exosome HGF",
+      "permalink": "https://deprisbeauty.com/product/plenaris-exosome-hgf/",
+      "price": 65,
+      "regularPrice": 65,
+      "salePrice": 65,
+      "onSale": false,
+      "currency": "USD",
+      "inStock": true,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "categories": [
+        {
+          "slug": "hair-exosomes",
+          "name": "Hair & Exosomes"
+        }
+      ],
+      "pitchCategory": "hair-exosomes",
+      "tags": [
+        "hair"
+      ],
+      "images": [
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/05/plenaris-exosome-hero-satin.jpg.png",
+          "alt": "Plenaris Exosome HGF"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/05/plenaris-exosome-hgf-ingredients-how-to-use.jpg.png",
+          "alt": "Plenaris Exosome HGF"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/05/plenaris-exosome-hgf-personal-ritual.jpg.png",
+          "alt": "Plenaris Exosome HGF"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/05/plenaris-exosome-hgf-vials-preparation.jpg.png",
+          "alt": "Plenaris Exosome HGF"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/05/plenaris-exosome-hgf-scalp-session-duo.jpg.png",
+          "alt": "Plenaris Exosome HGF"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/05/plenaris-exosome-hgf-triptych.jpg.png",
+          "alt": "Plenaris Exosome HGF"
+        }
+      ],
+      "shortDescription": "Plenaris Exosome HGF is a next-generation hair regeneration treatment combining Umbilical Cord-derived MSC Exosomes, Hair Growth Factors, Plant Stem Cells, and Peptides. It awakens dormant follicles, improves scalp microcirculation, and promotes thicker, healthier hair growth — developed through Root Cause Analysis to target the underlying causes of hair loss.",
+      "description": "Plenaris Exosome HGF is a pro-grade, next-generation hair regeneration treatment made to combat hair thinning and stimulate real hair growth. It works at the root. Thanks to a powerful blend of Umbilical Cord-derived MSC Exosomes, Hair Growth Factors, Peptides, Plant Stem Cells, and a Cell Nutrient Complex, it delivers bioactive molecules directly to the hair follicle and scalp tissue. As a result, dormant follicles are reawakened, scalp health improves, and hair grows back thicker, stronger, and healthier — naturally.\n\nWhy Choose Plenaris Exosome HGF?\n\nThis treatment is more than just a hair loss solution. In fact, it is a complete scalp regeneration therapy developed through advanced regenerative medicine research. Here is what makes it stand out:\n\nMSC Exosome Technology: First and foremost, exosomes derived from Umbilical Cord Mesenchymal Stromal Cells are used. These nano-sized vesicles carry peptides, microRNAs, and signaling molecules that penetrate deep into the scalp to stimulate cellular repair and renewal.\n\nRoot Cause Analysis (RCA) Approach: In addition, Plenaris Exosome HGF is uniquely developed based on Root Cause Analysis. It targets the underlying causes of hair loss — including follicle aging, inflammation, and poor cellular activity — not just the symptoms.\n\nHair Growth Factor (HGF): Furthermore, Hair Growth Factors stimulate hair follicle cell regeneration and support the natural hair growth cycle. This helps transition follicles from the resting phase back into the active growth phase.\n\nScalp Revitalization & Microcirculation: It also nourishes hair follicles and improves blood microcirculation in the scalp. This creates a healthier environment for consistent, sustained hair growth over time.\n\nPlant Stem Cells & Cell Nutrient Complex: Finally, plant stem cells and a targeted nutrient complex support and amplify the effects of the exosomes. They help strengthen follicles, reduce scalp inflammation, and improve overall hair density and vitality.\n\nKey Ingredients & What They Do\n\nThe results of Plenaris Exosome HGF come from its advanced regenerative formula. Specifically, here is what each component does:\n\nMSC-CM Exosomes (Umbilical Cord-Derived): Nano-sized vesicles rich in peptides, microRNAs, and growth signaling molecules. They improve intercellular communication, combat scalp inflammation, regenerate hair follicle cells, and create the ideal biological environment for new hair growth.\n\nHair Growth Factor (HGF): Stimulates hair follicle activity and promotes the natural anagen (growth) phase of the hair cycle. It helps reactivate dormant follicles for visibly thicker and denser hair.\n\nPlant Stem Cells: Protect follicle stem cells from oxidative stress and aging. They support long-term follicle vitality and help maintain results between treatment sessions.\n\nPeptides: Support scalp tissue repair and strengthen hair follicle structure. They also reduce inflammation and improve the overall health of the scalp environment.\n\nCell Nutrient Complex: Delivers essential vitamins and nutrients directly to the scalp and follicles. This fuels cellular energy and supports sustained hair growth activity over time.\n\nWhat Hair & Scalp Concerns Does It Address?\n\nPlenaris Exosome HGF is suited for a wide range of hair loss and scalp health concerns. Specifically, it is ideal for treating:\n\nMale and female pattern hair loss (androgenetic alopecia)\n\nHair thinning and reduced hair density\n\nDormant or weakened hair follicles\n\nPost-partum hair loss\n\nStress-related or diffuse hair shedding\n\nPoor scalp health and microcirculation\n\nHow to Use Plenaris Exosome HGF\n\nFor best results, simply follow these easy steps:\n\nMix Formula 1 (Powder) and Formula 2 (Solvent) together before use.\n\nCleanse the scalp well to remove product buildup and prepare for absorption.\n\nAdminister via scalp injection or topical application — depending on the protocol recommended by your practitioner.\n\nMassage gently into the scalp after application to encourage absorption and stimulate circulation.\n\nRepeat every 3 weeks for initial sessions. Maintain results with sessions every 3 to 4 months.\n\nPro Tip: For maximum absorption, combine Plenaris Exosome HGF with a microneedling or derma roller session on the scalp. The micro-channels created allow the exosomes and growth factors to penetrate more deeply for stronger, faster hair growth results.",
+      "attributes": [
+        {
+          "name": "Packages",
+          "terms": [
+            "1-Pack",
+            "5-Pack"
+          ]
+        }
+      ],
+      "variations": [
+        {
+          "id": 5023,
+          "title": "1-pack",
+          "price": 65,
+          "regularPrice": 65,
+          "inStock": true
+        },
+        {
+          "id": 5024,
+          "title": "5-pack",
+          "price": 249,
+          "regularPrice": 249,
+          "inStock": true
+        }
+      ]
+    },
+    {
+      "id": 5085,
+      "slug": "plenaris-pro-80",
+      "sku": "plenaris-pro-80",
+      "name": "Plenaris Pro 80 (1 x 2.5mL)",
+      "permalink": "https://deprisbeauty.com/product/plenaris-pro-80/",
+      "price": 48,
+      "regularPrice": 48,
+      "salePrice": 48,
+      "onSale": false,
+      "currency": "USD",
+      "inStock": true,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "categories": [
+        {
+          "slug": "mesotherapy-skin-boosters",
+          "name": "Mesotherapy & Skin Boosters"
+        },
+        {
+          "slug": "microneedling",
+          "name": "Microneedling"
+        }
+      ],
+      "pitchCategory": "microneedling",
+      "tags": [
+        "collagen",
+        "firming",
+        "ha",
+        "hydration"
+      ],
+      "images": [
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/05/plenaris-pro80-hero-satin-main.jpg.png",
+          "alt": "Plenaris Pro 80 (1 x 2.5mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/05/plenaris-pro80-infographic-howitworks.jpg.jpg",
+          "alt": "Plenaris Pro 80 (1 x 2.5mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/05/plenaris-pro80-usecase-triptych-journey.jpg.png",
+          "alt": "Plenaris Pro 80 (1 x 2.5mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/05/plenaris-pro80-usecase-lifestyle-confidence.jpg.png",
+          "alt": "Plenaris Pro 80 (1 x 2.5mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/05/plenaris-pro80-usecase-spa-glow.jpg.png",
+          "alt": "Plenaris Pro 80 (1 x 2.5mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/05/plenaris-pro80-usecase-consultation.jpg.png",
+          "alt": "Plenaris Pro 80 (1 x 2.5mL)"
+        }
+      ],
+      "shortDescription": "Plenaris Pro 80 is a pure, BDDE-free Dual HA skin booster delivering 80mg of stabilized High and Low Molecular Weight Hyaluronic Acid per 2.5ml. Its unique thermal-to-cooling manufacturing process ensures natural skin integration with no swelling — stimulating collagen and elastin production for firmer, deeply hydrated skin with results lasting 6 to 9 months.",
+      "description": "Plenaris Pro 80 is a pro-grade, pure hyaluronic acid skin booster made to deeply hydrate, firm, and revitalise the skin. It works differently from standard HA products. Thanks to a high concentration of 80mg of stabilized Dual Molecular Weight Hyaluronic Acid per 2.5ml — produced through a unique thermal-to-cooling manufacturing process — it integrates naturally into the skin without swelling. As a result, skin looks firmer, feels deeply hydrated, and glows with renewed elasticity — with results lasting up to 6 to 9 months.\n\nWhy Choose Plenaris Pro 80?\n\nThis skin booster is more than just a hydration treatment. In fact, it is a complete bio-stimulation solution made for those who want real, long-lasting skin quality improvement. Here is what makes it stand out:\n\nHigh-Dose 80mg Dual HA Formula: First and foremost, Plenaris Pro 80 contains 80mg of Hyaluronic Acid per 2.5ml — combining 40mg of High Molecular Weight HA and 40mg of Low Molecular Weight HA. This gives the formula a dual-action effect that works at multiple skin depths at the same time.\n\nUnique Thermal-to-Cooling Manufacturing Process: In addition, the HA is produced using an innovative thermal-to-cooling stabilization method. This protects the structure of the HA molecules, preserving their performance, durability, and effectiveness without the need for chemical modification.\n\nBDDE-Free & Biologically Fermented: Furthermore, the formula is completely free from BDDE cross-linking agents. It is made through a pure biological fermentation process, ensuring excellent skin compatibility and a very low risk of adverse reactions.\n\nSustained Collagen & Elastin Stimulation: It also provides a slow and sustained release of natural HA. This promotes increased elastin and collagen expression over time for firmer, smoother, and more resilient skin.\n\nNatural Integration — No Swelling: Finally, when injected correctly into the malar-submalar area, Plenaris Pro 80 integrates naturally with no swelling. Results look smooth, balanced, and completely natural from the very first session.\n\nKey Ingredient & What It Does\n\nThe results of Plenaris Pro 80 come from a single, highly refined active ingredient. Specifically, here is how it works:\n\nHigh Molecular Weight HA — H-HA (40mg): Works at the surface and mid-dermis level to provide structural support and long-lasting volumisation. Its strong viscoelasticity helps lift and support the treated area for a natural, plump appearance.\n\nLow Molecular Weight HA — L-HA (40mg): Penetrates deeper into the skin for immediate, widespread hydration and enhanced distribution. It ensures active ingredients are evenly delivered throughout the dermis for balanced, consistent results.\n\nWhat Skin Concerns Does It Address?\n\nPlenaris Pro 80 is suited for a wide range of hydration and anti-aging concerns. Specifically, it is ideal for treating:\n\nDry, dull, or dehydrated skin\n\nFine lines and early signs of aging\n\nLoss of skin firmness and elasticity\n\nUneven skin texture and tone\n\nSkin laxity on the face, neck, and hands\n\nOverall skin quality improvement and bio-stimulation\n\nPro Tip: Avoid saunas, steam baths, and strenuous exercise for at least 48 hours after treatment. These can cause temporary redness or swelling at the injection sites and may affect the natural integration of the HA.",
+      "attributes": [],
+      "variations": []
+    },
+    {
+      "id": 2419,
+      "slug": "tesoro-collagen",
+      "sku": "tesoro-collagen",
+      "name": "Tesoro Collagen (1 x 2.5mL)",
+      "permalink": "https://deprisbeauty.com/product/tesoro-collagen/",
+      "price": 62,
+      "regularPrice": 62,
+      "salePrice": 62,
+      "onSale": false,
+      "currency": "USD",
+      "inStock": true,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "categories": [
+        {
+          "slug": "filler-lipolytics",
+          "name": "Filler & Lipolytics"
+        },
+        {
+          "slug": "mesotherapy-skin-boosters",
+          "name": "Mesotherapy & Skin Boosters"
+        }
+      ],
+      "pitchCategory": "filler-lipolytics",
+      "tags": [
+        "fine-lines",
+        "firming",
+        "ha",
+        "niacinamide",
+        "wrinkles"
+      ],
+      "images": [
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/11/TesoroCollagen_Luxury_Satin_Firm_Renewal_Hero_Image.png",
+          "alt": "Tesoro Collagen (1 x 2.5mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/11/Gemini_Generated_Image_nintmbnintmbnint.png",
+          "alt": "Tesoro Collagen (1 x 2.5mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/11/TesoroCollagen_Display_SpaClinical_Elegant_Renewal_Image.png",
+          "alt": "Tesoro Collagen (1 x 2.5mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/11/TesoroCollagen_Ritual_Rejuvenation_Confidence_Consultation_Image.png",
+          "alt": "Tesoro Collagen (1 x 2.5mL)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/11/TesoroCollagen_Treatment_Precision_Safe_Experience_Image.png",
+          "alt": "Tesoro Collagen (1 x 2.5mL)"
+        }
+      ],
+      "shortDescription": "Tesoro Collagen – This advanced skin booster features Recombinant Human-Like Collagen (RHLC) to safely and effectively rebuild the dermis by stimulating your own natural collagen production, smoothing wrinkles, tightening pores, and delivering a firm, radiant complexion without puffiness.",
+      "description": "Rebuild Your Skin’s Foundation True anti-aging requires more than just filling wrinkles; it demands structural repair. Tesoro Collagen is an advanced skin booster formulated to rebuild the dermis from within. Unlike traditional fillers that add temporary volume, this biostimulator activates the skin’s natural regeneration process. Consequently, it restores elasticity and firmness for a naturally youthful appearance.\n\nThe Power of Recombinant Human-Like Collagen\n\nThe key to this product’s efficacy is Recombinant Human-Like Collagen (RHLC). This cutting-edge ingredient is biologically identical to the collagen found in human skin. Therefore, it is highly biocompatible and carries a minimal risk of allergic reactions compared to animal-derived collagens. By mimicking the body’s own proteins, it effectively stimulates fibroblasts to produce new collagen fibers.\n\nDeep Hydration and Brightening\n\nTesoro Collagen does not stop at structural repair. The formula is enriched with Sodium Hyaluronate and Trehalose to provide intense, long-lasting hydration. Furthermore, the addition of Niacinamide helps to brighten the complexion and even out skin tone. As a result, users experience a comprehensive improvement in texture, moisture levels, and radiance.\n\nVersatile Treatment Areas\n\nThis booster is suitable for addressing various signs of aging across the face and body. It is particularly effective for treating fine lines, acne scars, and loose skin. Common application areas include the face, neck, décolletage, and even the backs of hands. A standard protocol involves three sessions spaced four weeks apart to achieve optimal, lasting results.\n\nKey Benefits:\n\nStructural Repair: Rebuilds the dermal layer for improved density.\n\nSafety: Non-animal origin ensures high biocompatibility.\n\nHydration: Hyaluronic Acid locks in moisture for a plump look.\n\nBrightening: Niacinamide reduces dullness and uneven tone.\n\nElasticity: Restores bounce and firmness to aging skin.",
+      "attributes": [],
+      "variations": []
+    },
+    {
+      "id": 2339,
+      "slug": "multivita-korean-multivitamin-3-vials",
+      "sku": "multivita-3-pk",
+      "name": "MULTIVITA Korean Multivitamin (3 Vials)",
+      "permalink": "https://deprisbeauty.com/product/multivita-korean-multivitamin-3-vials/",
+      "price": 75,
+      "regularPrice": 75,
+      "salePrice": 75,
+      "onSale": false,
+      "currency": "USD",
+      "inStock": true,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "categories": [
+        {
+          "slug": "vitamins-wellness",
+          "name": "Vitamins & Wellness"
+        }
+      ],
+      "pitchCategory": "vitamins-wellness",
+      "tags": [
+        "anti-aging",
+        "anti-oxidant",
+        "revitalizing",
+        "vitamin-c"
+      ],
+      "images": [
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/11/multivita-inj-main-satin-infused.jpg.png",
+          "alt": "MULTIVITA Korean Multivitamin (3 Vials)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/11/multivita-inj-vitamin-spectrum-chart.jpg.png",
+          "alt": "MULTIVITA Korean Multivitamin (3 Vials)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/11/multivita-inj-usecase-daily-vitality-couple.jpg.png",
+          "alt": "MULTIVITA Korean Multivitamin (3 Vials)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/11/multivita-inj-usecase-recovery-clinic-lounge.jpg.png",
+          "alt": "MULTIVITA Korean Multivitamin (3 Vials)"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/11/multivita-inj-usecase-triptych-energy-flow.jpg.png",
+          "alt": "MULTIVITA Korean Multivitamin (3 Vials)"
+        }
+      ],
+      "shortDescription": "🌟 MULTIVITA Korean Injectable Multivitamin\n\n💊 Vitamin A | 💛 B-Complex | 🍊 Vitamin C | ☀️ Vitamin D₂ | ✨ Vitamin E",
+      "description": "Complete Vitamin Maintenance Maintaining optimal health requires more than just a balanced diet. Multivita Vitamin Maintenance Therapy is a professional-grade solution designed to prevent and treat vitamin deficiencies efficiently. Formulated for patients who require immediate nutritional support, this lyophilized powder contains a comprehensive mix of essential vitamins. Consequently, it supports the body’s natural functions and boosts overall vitality.\n\n13 Essential Vitamins in One Vial\n\nThis powerful formula delivers a broad spectrum of nutrients directly into your system.\n\nImmune Support: Includes Ascorbic Acid (Vitamin C) and Tocopherol (Vitamin E) to fight free radicals.\n\nEnergy Metabolism: Packed with Vitamin B1, B2, B6, and Nicotinamide to convert food into energy.\n\nCellular Health: Contains Retinol (Vitamin A) and Ergocalciferol (Vitamin D) for healthy cell growth and bone maintenance.\n\nVitality Boost: Fortified with Biotin, Folic Acid, and Cyanocobalamin (B12) to support nerve health and prevent fatigue.\n\nHigh-Potency Formulation\n\nOral supplements can take time to absorb and are often degraded during digestion. However, Multivita offers a high-concentration alternative that ensures maximum bioavailability. The product comes as a yellow lyophilized powder that is dissolved in sterile water and mixed with a compatible solution. Therefore, it provides a rapid and effective way to restore nutrient levels in a professional setting.\n\nWho Should Use Multivita?\n\nThis therapy is ideal for individuals who are suffering from fatigue, malnutrition, or specific vitamin deficiencies (excluding Vitamin K). It is widely used in clinics to aid recovery after illness or surgery. Furthermore, it serves as excellent maintenance therapy for those wishing to boost their immune system during high-stress periods.",
+      "attributes": [],
+      "variations": []
+    },
+    {
+      "id": 2878,
+      "slug": "red-light-therapy-hair-brush",
+      "sku": "red-light-brush",
+      "name": "Red Light Therapy Hair Brush",
+      "permalink": "https://deprisbeauty.com/product/red-light-therapy-hair-brush/",
+      "price": 65,
+      "regularPrice": 65,
+      "salePrice": 65,
+      "onSale": false,
+      "currency": "USD",
+      "inStock": true,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "categories": [
+        {
+          "slug": "devices-supplies",
+          "name": "Devices & Supplies"
+        }
+      ],
+      "pitchCategory": "devices-supplies",
+      "tags": [
+        "hair"
+      ],
+      "images": [
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/01/hairbrush-main-satin-hero.jpg.png",
+          "alt": "Red Light Therapy Hair Brush"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/01/brush2.jpg",
+          "alt": "Red Light Therapy Hair Brush"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/01/hairbrush-usecase-event-prep-event.jpg.png",
+          "alt": "Red Light Therapy Hair Brush"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/01/hairbrush-usecase-medium-hair-caucasian.jpg.png",
+          "alt": "Red Light Therapy Hair Brush"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/01/hairbrush-usecase-short-hair-asian.jpg.png",
+          "alt": "Red Light Therapy Hair Brush"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/01/hairbrush-usecase-long-hair-black.jpg.png",
+          "alt": "Red Light Therapy Hair Brush"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/01/brush_manual_1.jpg",
+          "alt": "Red Light Therapy Hair Brush"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/01/brush_manual_2.jpg",
+          "alt": "Red Light Therapy Hair Brush"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/01/brush_manual_3.jpg",
+          "alt": "Red Light Therapy Hair Brush"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2026/01/brush_manual_4.jpg",
+          "alt": "Red Light Therapy Hair Brush"
+        }
+      ],
+      "shortDescription": "Hair Beauty Comb – Revitalize your scalp with a 3-in-1 therapy brush featuring Red & Blue LED lights and vibration massage. Its unique high/low teeth design reduces hair loss and stimulates follicles.",
+      "description": "Revitalize Your Scalp Naturally Red Light Therapy Hair Brush provides a powerful, non-invasive solution for thinning hair. It combines advanced red light technology with gentle scalp massage. Consequently, it stimulates dormant hair follicles from the root. This process increases blood circulation across the scalp effectively. Thus, it creates the perfect environment for thicker, healthier hair growth.\n\nAdvanced Light and Massage Technology This innovative device uses medical-grade red light diodes. First, the light waves penetrate deep into the scalp tissue. Second, they deliver cellular energy to weakened or aging follicles. Furthermore, the built-in massager relieves tension and daily stress. Therefore, it enhances the absorption of your favorite hair growth serums. As a result, your daily routine becomes a relaxing, spa-like experience.\n\nSafe and Easy Daily Use Unlike messy topical treatments, this brush is clean and effortless to use. It features a lightweight, ergonomic design for a comfortable grip. Moreover, it is completely painless and safe for all hair types. You only need a few minutes a day to see results. So, achieving a fuller, more vibrant head of hair is incredibly easy.\n\nKey Benefits:\n\nHair Growth: Stimulates dormant follicles to encourage natural, thicker hair growth.\n\nDeep Penetration: Medical-grade red light reaches deep into the scalp tissue.\n\nScalp Massage: Built-in vibration relieves tension and boosts blood circulation.\n\nEnhanced Absorption: Maximizes the effectiveness of topical hair serums and oils.\n\nSafe Application: Painless, non-invasive treatment suitable for all hair types.",
+      "attributes": [],
+      "variations": []
+    },
+    {
+      "id": 2647,
+      "slug": "2-pack-offer-ghk-cu-1gram-ahk-cu-1gram-topical-applications",
+      "sku": "1ahk-1ghk",
+      "name": "2 Pack Offer – GHK-Cu 1gram + AHK-Cu 1gram – Topical Applications",
+      "permalink": "https://deprisbeauty.com/product/2-pack-offer-ghk-cu-1gram-ahk-cu-1gram-topical-applications/",
+      "price": 37,
+      "regularPrice": 43,
+      "salePrice": 37,
+      "onSale": true,
+      "currency": "USD",
+      "inStock": true,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "categories": [
+        {
+          "slug": "cosmetic-peps",
+          "name": "Cosmetic Peps"
+        },
+        {
+          "slug": "promos",
+          "name": "Promos"
+        },
+        {
+          "slug": "vitamins-wellness",
+          "name": "Vitamins & Wellness"
+        }
+      ],
+      "pitchCategory": "promos",
+      "tags": [
+        "hair",
+        "skin"
+      ],
+      "images": [
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/12/AHK-GHK-1-gram-each-2-vials-New.png",
+          "alt": "2 Pack Offer – GHK-Cu 1gram + AHK-Cu 1gram – Topical Applications"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/12/DEPRIS-GHK-1gr-121425-scaled-1.jpg",
+          "alt": "2 Pack Offer – GHK-Cu 1gram + AHK-Cu 1gram – Topical Applications"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/12/copper-peptide-hair-serum-dropper-application.jpg.png",
+          "alt": "2 Pack Offer – GHK-Cu 1gram + AHK-Cu 1gram – Topical Applications"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/12/copper-peptide-hair-mist-daily-spray.jpg.png",
+          "alt": "2 Pack Offer – GHK-Cu 1gram + AHK-Cu 1gram – Topical Applications"
+        },
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/12/copper-peptide-haircare-usecase-triptych-results.jpg.png",
+          "alt": "2 Pack Offer – GHK-Cu 1gram + AHK-Cu 1gram – Topical Applications"
+        }
+      ],
+      "shortDescription": "",
+      "description": "Includes 1 gram of GHK-Cu raws and 1 gram of AHK-Cu raws",
+      "attributes": [],
+      "variations": []
+    },
+    {
+      "id": 2677,
+      "slug": "depris-beauty-gift-card",
+      "sku": "DB-giftcard",
+      "name": "Depris Beauty Gift Card",
+      "permalink": "https://deprisbeauty.com/product/depris-beauty-gift-card/",
+      "price": 50,
+      "regularPrice": 50,
+      "salePrice": 50,
+      "onSale": false,
+      "currency": "USD",
+      "inStock": true,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "categories": [
+        {
+          "slug": "devices-supplies",
+          "name": "Devices & Supplies"
+        },
+        {
+          "slug": "gift-cards",
+          "name": "Gift Cards"
+        },
+        {
+          "slug": "promos",
+          "name": "Promos"
+        }
+      ],
+      "pitchCategory": "gift-cards",
+      "tags": [
+        "gift",
+        "gift-card"
+      ],
+      "images": [
+        {
+          "src": "https://deprisbeauty.com/wp-content/uploads/2025/12/GC-Main.jpeg",
+          "alt": "Depris Beauty Gift Card"
+        }
+      ],
+      "shortDescription": "",
+      "description": "Digital Gift Card – Give the ultimate gift of choice with a store-wide gift card!  Let the recipient of your choice select their perfect skincare treatments and tools instantly!\n\nDoes not qualify for additional discounts.\n\nDelivered via email.",
+      "attributes": [
+        {
+          "name": "Amount",
+          "terms": [
+            "$100",
+            "$150",
+            "$200",
+            "$50",
+            "$75"
+          ]
+        }
+      ],
+      "variations": [
+        {
+          "id": 2707,
+          "title": "50",
+          "price": 50,
+          "regularPrice": 50,
+          "inStock": true
+        },
+        {
+          "id": 2708,
+          "title": "75",
+          "price": 75,
+          "regularPrice": 75,
+          "inStock": true
+        },
+        {
+          "id": 2709,
+          "title": "100",
+          "price": 100,
+          "regularPrice": 100,
+          "inStock": true
+        },
+        {
+          "id": 2710,
+          "title": "150",
+          "price": 150,
+          "regularPrice": 150,
+          "inStock": true
+        },
+        {
+          "id": 2711,
+          "title": "200",
+          "price": 200,
+          "regularPrice": 200,
+          "inStock": true
+        }
+      ]
+    }
+  ]
+}

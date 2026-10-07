@@ -9,14 +9,14 @@ import { MoonPhase } from "@/components/ui/MoonPhase";
 import { MagneticLink } from "@/components/ui/MagneticButton";
 
 const steps = [
-  { n: "01", time: "21:00", title: "Cleanse", body: "A low-pH gel lifts the day without stripping the barrier your actives need.", product: "Low-pH Gentle Gel Cleanser", href: "/products/gentle-gel-cleanser", img: "/renders/lotus.webp" },
-  { n: "02", time: "21:05", title: "Activate", body: "Three drops of GHK-Cu while skin is still damp. Copper tripeptides signal collagen as you sleep.", product: "GHK-Cu Copper Peptide Serum", href: "/products/ghk-cu-copper-peptide-serum", img: "/renders/dropper-out.webp" },
-  { n: "03", time: "21:10", title: "Restore", body: "Exosome booster on alternate nights for radiance that reads clinic-grade by morning.", product: "2XSOME Skin Booster", href: "/products/2xsome-skin-booster", img: "/renders/swirl.webp" },
-  { n: "04", time: "07:00", title: "Seal", body: "Daylight: luminous SPF locks the night's work in and evens tone for the day.", product: "Bellmona CC Cream Sunscreen", href: "/products/bellmona-cc-cream-sunscreen", img: "/renders/still-life.webp" },
+  { n: "01", time: "21:00", title: "Prep", body: "A low-pH glutathione and PDRN toner clears the day and primes skin for actives.", product: "Glutanex Glow Therapy Toner", href: "/products/glutanex-glow-therapy-toner" },
+  { n: "02", time: "21:05", title: "Activate", body: "A pea of GHK-Cu while skin is still damp. Copper tripeptides signal collagen as you sleep.", product: "GHK-Cu Topical Cosmetic", href: "/products/ghk-cu-topical-cosmetic-1g" },
+  { n: "03", time: "21:10", title: "Restore", body: "Exosome booster on alternate nights for radiance that reads clinic-grade by morning.", product: "2XSOME Skin Booster", href: "/products/2xsome-skin-booster" },
+  { n: "04", time: "07:00", title: "Seal", body: "Daylight: luminous SPF locks the night's work in and evens tone for the day.", product: "Bellmona CC Cream Sunscreen", href: "/products/bellmona-cc-cream-sunscreen-50ml" },
 ];
 
 /** Night protocol: moon waxes as the four steps scroll past a pinned stage. */
-export function NightProtocol() {
+export function NightProtocol({ media = {} }: { media?: Record<string, string> }) {
   const reduce = useReducedMotion();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress: p } = useScroll({ target: ref, offset: ["start 0.6", "end 0.9"] });
@@ -27,6 +27,7 @@ export function NightProtocol() {
   });
   const skyY = useTransform(p, [0, 1], ["0%", "-12%"]);
   const s = steps[active];
+  const imgOf = (href: string) => media[href.replace("/products/", "")] ?? "/renders/sky.webp";
 
   return (
     <section ref={ref} className="relative overflow-clip bg-navy-deep text-white">
@@ -67,14 +68,14 @@ export function NightProtocol() {
           <div className="relative mt-6 aspect-[16/9] max-h-[30vh] w-full overflow-hidden rounded-[1.5rem] shadow-lift">
             <AnimatePresence mode="wait">
               <motion.div
-                key={s.img}
+                key={s.href}
                 initial={{ opacity: 0, scale: 1.05 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.6, ease: [0.2, 0.8, 0.2, 1] }}
                 className="absolute inset-0"
               >
-                <Image src={s.img} alt={s.product} fill sizes="(max-width:1024px) 90vw, 40vw" className="liquid object-cover" />
+                <Image src={imgOf(s.href)} alt={s.product} fill sizes="(max-width:1024px) 90vw, 40vw" className="liquid object-cover" />
               </motion.div>
             </AnimatePresence>
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-deep/80 to-transparent p-5">

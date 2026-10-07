@@ -14,13 +14,13 @@ import { LotusMark } from "@/components/ui/LotusMark";
 import { TrustPills } from "@/components/ui/TrustPills";
 
 const callouts = [
-  { label: "GHK-Cu · 3.0%", sub: "signal peptide", pos: "left-[2%] top-[22%]", line: "right" },
-  { label: "pH 5.5", sub: "barrier-friendly", pos: "right-[0%] top-[38%]", line: "left" },
-  { label: "Lotus extract", sub: "botanical antioxidant", pos: "left-[4%] bottom-[20%]", line: "right" },
+  { label: "GHK-Cu · 1 g", sub: "copper tripeptide, topical grade", pos: "left-[2%] top-[22%]", line: "right" },
+  { label: "Cosmetic Peps", sub: "the Depris signature line", pos: "right-[0%] top-[38%]", line: "left" },
+  { label: "Ships same-day", sub: "from Cheyenne, WY", pos: "left-[4%] bottom-[20%]", line: "right" },
 ];
 
 /** Hero: peptide constellation + the drop, lit like a specimen. */
-export function Hero() {
+export function Hero({ image, imageAlt = "GHK-Cu Topical Cosmetic" }: { image: string; imageAlt?: string }) {
   const reduce = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
   const mx = useMotionValue(0);
@@ -49,7 +49,7 @@ export function Hero() {
       <div className="shell relative grid items-center gap-8 pb-10 pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:pb-14 lg:pt-20">
         <div className="relative z-10">
           <motion.p initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mono-label text-teal-glow">
-            Advanced Korean skincare · The science of one drop
+            Luxury Korean skincare · Peptides · Boosters · Pro aesthetics
           </motion.p>
 
           <h1 className="mt-6 text-5xl leading-[1.0] sm:text-6xl xl:text-[5.4rem]">
@@ -82,7 +82,7 @@ export function Hero() {
             transition={{ delay: 0.62, duration: 0.6 }}
             className="mt-8 flex flex-wrap items-center gap-3"
           >
-            <MagneticLink href="/products/ghk-cu-copper-peptide-serum" variant="primary">Shop the serum</MagneticLink>
+            <MagneticLink href="/products/ghk-cu-topical-cosmetic-1g" variant="primary">Shop GHK-Cu</MagneticLink>
             <MagneticLink href="/quiz" variant="light">Build my ritual</MagneticLink>
           </motion.div>
 
@@ -106,12 +106,12 @@ export function Hero() {
           >
             <div className="animate-float h-full w-full">
               <Image
-                src="/renders/bottle-front.webp"
-                alt="GHK-Cu Copper Peptide Serum — frosted glass dropper bottle with glowing teal serum"
+                src={image}
+                alt={imageAlt}
                 fill
                 priority
                 sizes="(max-width: 1024px) 90vw, 40vw"
-                className="render-fade object-contain"
+                className="rounded-[2.5rem] object-cover shadow-lift"
               />
             </div>
           </motion.div>
@@ -140,8 +140,8 @@ export function Hero() {
             transition={{ delay: 1.5, duration: 0.6 }}
             className="absolute bottom-[6%] right-[4%] rounded-2xl glass-dark px-5 py-3 text-center"
           >
-            <p className="font-display text-2xl text-white"><AnimatedCounter value={92} suffix="%" /></p>
-            <p className="mono-label mono-label-plain text-[9px] text-white/70">firmer in 4 wks*</p>
+            <p className="font-display text-2xl text-white"><AnimatedCounter value={145} suffix="+" /></p>
+            <p className="mono-label mono-label-plain text-[9px] text-white/70">products · 15 categories</p>
           </motion.div>
 
           <div className="absolute left-1/2 top-[6%] -translate-x-1/2 opacity-80">

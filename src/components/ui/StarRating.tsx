@@ -9,6 +9,9 @@ export function StarRating({
   className?: string;
   showValue?: boolean;
 }) {
+  if (!rating) {
+    return <span className={`mono-label mono-label-plain text-ink-soft/70 ${className}`}>No reviews yet</span>;
+  }
   const full = Math.round(rating);
   return (
     <span className={`inline-flex items-center gap-1.5 text-sm text-sage ${className}`}>

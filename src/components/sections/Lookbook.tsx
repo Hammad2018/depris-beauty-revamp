@@ -10,14 +10,14 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 type Palette = "cool" | "warm" | "lilac" | "jade";
 
 const panels: { n: string; title: string; copy: string; product: string; href: string; palette: Palette }[] = [
-  { n: "01", title: "Cleanse", copy: "A low-pH gel that lifts the day without stripping the barrier.", product: "Low-pH Gentle Gel Cleanser", href: "/products/gentle-gel-cleanser", palette: "jade" },
-  { n: "02", title: "Treat", copy: "Copper tripeptides that support collagen and firmness — the signature.", product: "GHK-Cu Copper Peptide Serum", href: "/products/ghk-cu-copper-peptide-serum", palette: "cool" },
+  { n: "01", title: "Prep", copy: "A low-pH glutathione + PDRN toner that preps skin for actives.", product: "Glutanex Glow Therapy Toner", href: "/products/glutanex-glow-therapy-toner", palette: "jade" },
+  { n: "02", title: "Treat", copy: "Copper tripeptides that support collagen and firmness — the signature.", product: "GHK-Cu Topical Cosmetic", href: "/products/ghk-cu-topical-cosmetic-1g", palette: "cool" },
   { n: "03", title: "Boost", copy: "Exosome-powered radiance for a next-level, clinic-grade glow.", product: "2XSOME Skin Booster", href: "/products/2xsome-skin-booster", palette: "lilac" },
-  { n: "04", title: "Protect", copy: "Luminous daily SPF that evens tone and locks the ritual in.", product: "Bellmona CC Cream Sunscreen", href: "/products/bellmona-cc-cream-sunscreen", palette: "warm" },
+  { n: "04", title: "Protect", copy: "Luminous daily SPF that evens tone and locks the ritual in.", product: "Bellmona CC Cream Sunscreen", href: "/products/bellmona-cc-cream-sunscreen-50ml", palette: "warm" },
 ];
 
 /** Vertical scroll drives a horizontal editorial rail of duotone "ritual" panels. */
-export function Lookbook() {
+export function Lookbook({ media = {} }: { media?: Record<string, string> }) {
   const reduce = useReducedMotion();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
@@ -31,7 +31,7 @@ export function Lookbook() {
           key={p.n}
           className="group relative h-[68vh] w-[86vw] shrink-0 overflow-hidden rounded-[2rem] shadow-lift sm:w-[72vw]"
         >
-          <DuotoneImage alt={`${p.title} — ${p.product}`} palette={p.palette} className="liquid absolute inset-0" />
+          <DuotoneImage src={media[p.href.replace("/products/", "")]} alt={`${p.title} — ${p.product}`} palette={p.palette} className="liquid absolute inset-0" />
           <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/70 via-navy-deep/10 to-transparent" />
           <div className="relative flex h-full flex-col justify-between p-7 text-white sm:p-10">
             <span className="index-num font-display italic" style={{ WebkitTextStroke: "1.2px rgba(255,255,255,0.6)" }}>

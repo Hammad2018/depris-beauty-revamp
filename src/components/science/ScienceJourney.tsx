@@ -5,11 +5,12 @@ import Image from "next/image";
 import { motion, useScroll, useTransform, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import { useReducedMotion } from "@/lib/useReducedMotion";
 import { Starfield } from "@/components/ui/Starfield";
+import { signature } from "@/lib/brand";
 
 const stages = [
   { k: "molecule", label: "01 · The molecule", title: "Three amino acids, one copper ion.", body: "GHK-Cu is a tripeptide — glycine, histidine, lysine — carrying a copper ion. Small enough to reach where it matters, specific enough to act like a message." },
   { k: "cell", label: "02 · The signal", title: "It tells fibroblasts to get back to work.", body: "In skin, GHK-Cu is read as a repair signal: collagen and elastin production rises, and the enzymes that break them down settle. Night is when that signal lands best." },
-  { k: "drop", label: "03 · The drop", title: "Dosed at 3.0%, pH 5.5, lot-tested.", body: "A peptide only works at the concentration the studies used, in a base the barrier tolerates. One drop carries the dose; the certificate proves it." },
+  { k: "drop", label: "03 · The drop", title: "High-purity, topical grade, lot-tested.", body: "GHK-Cu – Topical Cosmetic (1g) is the real Depris signature: a cosmetic-grade copper peptide you fold into your nightly routine. The lot certificate proves what is in the tube." },
 ];
 
 function Molecule({ active }: { active: boolean }) {
@@ -73,7 +74,7 @@ export function ScienceJourney() {
 
   const visual = (k: string, active: boolean) =>
     k === "molecule" ? <Molecule active={active} /> : k === "cell" ? <Cell active={active} /> : (
-      <div className="relative h-full w-full"><Image src="/renders/dropper-out.webp" alt="" fill sizes="50vw" className="render-fade object-contain" /></div>
+      <div className="relative h-full w-full overflow-hidden rounded-[2rem]"><Image src={signature.image} alt={signature.title} fill sizes="50vw" className="object-cover" /></div>
     );
 
   if (reduce) {

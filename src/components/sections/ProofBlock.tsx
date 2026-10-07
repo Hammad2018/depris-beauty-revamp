@@ -78,7 +78,7 @@ export function ProofBlock() {
             Illustrative panel from the 4-week study protocol: one drop of GHK-Cu, nightly, after cleansing. Real
             participant imagery drops in here once the client supplies it.
           </p>
-          <div className="mt-6"><MagneticLink href="/products/ghk-cu-copper-peptide-serum" variant="primary">Start week one</MagneticLink></div>
+          <div className="mt-6"><MagneticLink href="/products/ghk-cu-topical-cosmetic-1g" variant="primary">Start week one</MagneticLink></div>
           <p className="mt-3 text-[11px] text-white/40">*Illustrative claims for concept pitch.</p>
         </Reveal>
       </div>

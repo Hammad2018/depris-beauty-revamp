@@ -14,9 +14,9 @@ import { StarRating } from "@/components/ui/StarRating";
 import { SparkleBurst } from "@/components/ui/SparkleBurst";
 
 const labels = [
-  { k: "01", name: "Copper Tripeptide-1", role: "GHK-Cu · signal peptide", note: "Supports collagen and firmness", at: { x: 14, y: 30 }, from: { x: 44, y: 46 } },
-  { k: "02", name: "Sodium Hyaluronate", role: "multi-weight HA", note: "Cushioning, lasting hydration", at: { x: 80, y: 24 }, from: { x: 56, y: 40 } },
-  { k: "03", name: "Nelumbo Nucifera", role: "lotus extract", note: "Botanical antioxidant, calms", at: { x: 82, y: 72 }, from: { x: 55, y: 66 } },
+  { k: "01", name: "Copper Tripeptide-1", role: "GHK-Cu · signal peptide", note: "Supports collagen and firmness", at: { x: 14, y: 30 }, from: { x: 40, y: 42 } },
+  { k: "02", name: "High-purity topical base", role: "cosmetic grade · 1 g", note: "Mixes into your serum or cream", at: { x: 80, y: 24 }, from: { x: 60, y: 38 } },
+  { k: "03", name: "Pairs with AHK-Cu", role: "2-pack offer · save $6", note: "Skin by night, scalp and hair by day", at: { x: 82, y: 72 }, from: { x: 58, y: 66 } },
 ];
 
 function OfferCard({ product }: { product: Product }) {
@@ -92,7 +92,7 @@ export function InsideTheDrop({ product }: { product: Product }) {
                 </li>
               ))}
             </ul>
-            <div className="relative mx-auto aspect-square w-full max-w-md"><Image src="/renders/dropper-out.webp" alt="" fill sizes="40vw" className="render-fade object-contain" /></div>
+            <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-[2rem]"><Image src={product.images[1]?.url ?? product.images[0]?.url ?? "/renders/sky.webp"} alt={product.title} fill sizes="40vw" className="object-cover" /></div>
             <OfferCard product={product} />
           </div>
         </div>
@@ -117,7 +117,7 @@ export function InsideTheDrop({ product }: { product: Product }) {
         {/* stage */}
         <div className="relative mx-auto flex w-full max-w-6xl flex-1 items-center justify-center px-4">
           <motion.div style={{ filter, scale, opacity, x: bottleX }} className="relative aspect-square w-[min(72vh,92vw)] will-change-transform">
-            <Image src="/renders/bottle-front.webp" alt="GHK-Cu Copper Peptide Serum" fill sizes="70vh" className="render-fade object-contain" />
+            <Image src={product.images[0]?.url ?? "/renders/sky.webp"} alt={product.title} fill sizes="70vh" className="rounded-[2.5rem] object-cover shadow-lift" />
           </motion.div>
 
           {/* leader lines + labels */}

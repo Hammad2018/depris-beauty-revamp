@@ -15,24 +15,27 @@ import { LotusDivider } from "@/components/ui/LotusDivider";
 
 export default async function HomePage() {
   const commerce = getCommerce();
-  const [bestsellers, collections, featured] = await Promise.all([
+  const [bestsellers, collections, featured, all] = await Promise.all([
     commerce.getProducts({ collection: "bestsellers", limit: 4 }),
     commerce.getCollections(),
-    commerce.getProduct("ghk-cu-copper-peptide-serum"),
+    commerce.getProduct("ghk-cu-topical-cosmetic-1g"),
+    commerce.getProducts(),
   ]);
   const hero = featured ?? bestsellers[0];
+  // real product photos for the story sections, keyed by handle
+  const media = Object.fromEntries(all.filter((p) => p.images[0]?.url).map((p) => [p.handle, p.images[0].url as string]));
 
   // Story spine: the drop → what's inside → the edit → proof → the night ritual → the standard.
   return (
     <>
-      <Hero />
+      <Hero image={hero.images[0]?.url ?? "/renders/sky.webp"} imageAlt={hero.title} />
       <MarqueeRibbon />
       <InsideTheDrop product={hero} />
       <BentoShowcase featured={hero} products={bestsellers} />
       <ShopByConcern collections={collections} />
       <ProofBlock />
-      <NightProtocol />
-      <Lookbook />
+      <NightProtocol media={media} />
+      <Lookbook media={media} />
       <DeprisStandard />
       <LotusDivider />
       <SocialProof />
