@@ -3,8 +3,9 @@ import "./globals.css";
 import { fraunces, hanken, plexMono } from "@/lib/fonts";
 import { site } from "@/lib/content";
 import { CartProvider } from "@/lib/cart/CartContext";
-import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { Navbar } from "@/components/layout/Navbar";
+import { getCommerce } from "@/lib/commerce";
+import { buildNavData } from "@/lib/nav";
 import { Footer } from "@/components/layout/Footer";
 import { CartDrawer } from "@/components/commerce/CartDrawer";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
@@ -28,7 +29,10 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title: site.name, description: site.description },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const commerce = getCommerce();
+  const [products, collections] = await Promise.all([commerce.getProducts(), commerce.getCollections()]);
+  const nav = buildNavData(products, collections);
   return (
     <html lang="en" className={`${fraunces.variable} ${hanken.variable} ${plexMono.variable}`}>
       <body className="grain flex min-h-screen flex-col">
@@ -39,8 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SmoothScroll />
           <ScrollVelocity />
           <ScrollProgress />
-          <AnnouncementBar />
-          <Navbar />
+          <Navbar data={nav} />
           <main id="main" className="flex-1">
             {children}
           </main>
