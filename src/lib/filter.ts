@@ -6,6 +6,8 @@ export interface Facets {
   skinTypes?: SkinType[];
   routineSteps?: RoutineStep[];
   priceMax?: number;
+  categories?: string[];
+  query?: string;
 }
 
 export type SortKey = "featured" | "bestselling" | "rating" | "price-asc" | "price-desc" | "newest";
@@ -22,6 +24,11 @@ export function filterProducts(products: Product[], facets: Facets): Product[] {
     if (facets.skinTypes?.length && !anyOverlap(facets.skinTypes, p.skinTypes)) return false;
     if (facets.routineSteps?.length && !facets.routineSteps.includes(p.routineStep)) return false;
     if (typeof facets.priceMax === "number" && p.price > facets.priceMax) return false;
+    if (facets.categories?.length && !facets.categories.includes(p.category)) return false;
+    if (facets.query?.trim()) {
+      const hay = `${p.title} ${p.brand} ${p.tagline} ${p.category.replace(/-/g, " ")} ${p.ingredients.join(" ")}`.toLowerCase();
+      if (!facets.query.trim().toLowerCase().split(/\s+/).every((t) => hay.includes(t))) return false;
+    }
     return true;
   });
 }

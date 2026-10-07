@@ -36,3 +36,14 @@ describe("sortProducts", () => {
     expect(res[0].rating).toBeGreaterThanOrEqual(res[res.length - 1].rating);
   });
 });
+
+describe("filterProducts — category + query (real catalog)", () => {
+  it("filters by category and free-text query", async () => {
+    const { createWooSource } = await import("./commerce/wooSource");
+    const all = await createWooSource().getProducts();
+    expect(filterProducts(all, { categories: ["serums"] }).map((p) => p.handle)).toEqual(["glutanex-night-serum-30ml"]);
+    expect(filterProducts(all, { query: "glutanex night" })[0].handle).toBe("glutanex-night-serum-30ml");
+    expect(filterProducts(all, { query: "exosome" }).length).toBeGreaterThanOrEqual(2);
+    expect(filterProducts(all, { categories: ["serums"], query: "exosome" })).toEqual([]);
+  });
+});

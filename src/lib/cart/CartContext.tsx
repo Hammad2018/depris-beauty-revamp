@@ -16,6 +16,7 @@ export interface CartItem {
   quantity: number;
   subscribe: boolean;
   tone: Tone;
+  image?: string;
 }
 
 type Action =

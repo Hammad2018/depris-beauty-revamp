@@ -8,9 +8,14 @@ import { money } from "@/lib/format";
 import { shipTiers, samples } from "@/lib/content";
 import { FreeShipProgress } from "./FreeShipProgress";
 import { ProductMediaMini } from "./ProductMediaMini";
+import Image from "next/image";
+import type { NavProduct } from "@/lib/nav";
+import { quickAddItem } from "@/lib/cart/item";
 
-export function CartDrawer() {
+export function CartDrawer({ recommendations = [] }: { recommendations?: NavProduct[] }) {
   const cart = useCart();
+  const inBag = new Set(cart.items.map((i) => i.productHandle));
+  const suggest = recommendations.filter((r) => !inBag.has(r.handle)).slice(0, 3);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -77,7 +82,13 @@ export function CartDrawer() {
                   <ul className="space-y-4">
                     {cart.items.map((item) => (
                       <li key={item.id} className="flex gap-4">
-                        <ProductMediaMini tone={item.tone} alt={item.title} />
+                        {item.image ? (
+                          <Link href={`/products/${item.productHandle}`} onClick={cart.closeCart} className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl bg-sand">
+                            <Image src={item.image} alt={item.title} fill sizes="80px" className="object-cover" />
+                          </Link>
+                        ) : (
+                          <ProductMediaMini tone={item.tone} alt={item.title} />
+                        )}
                         <div className="flex-1">
                           <p className="eyebrow text-bronze-deep">{item.brand}</p>
                           <p className="font-medium leading-snug text-ink">{item.title}</p>
@@ -115,6 +126,26 @@ export function CartDrawer() {
                       </li>
                     ))}
                   </ul>
+
+                  {suggest.length > 0 && (
+                    <div>
+                      <p className="eyebrow mb-2 text-camellia">Complete the ritual</p>
+                      <ul className="space-y-2">
+                        {suggest.map((r) => (
+                          <li key={r.handle} className="flex items-center gap-3 rounded-2xl border border-sand p-2">
+                            <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-xl bg-sand">
+                              {r.image && <Image src={r.image} alt="" fill sizes="48px" className="object-cover" />}
+                            </span>
+                            <span className="min-w-0 flex-1">
+                              <span className="block truncate text-sm font-medium text-ink">{r.title}</span>
+                              <span className="text-xs text-ink-soft">{money(r.price, r.currency)}</span>
+                            </span>
+                            <button onClick={() => cart.add(quickAddItem(r), 1)} className="rounded-full bg-ink px-3 py-1.5 text-xs font-medium text-porcelain hover:bg-camellia">Add +</button>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
                   <div>
                     <p className="eyebrow mb-2 text-camellia">Add a free sample</p>

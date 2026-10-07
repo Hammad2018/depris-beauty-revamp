@@ -8,6 +8,8 @@ import { ProofBlock } from "@/components/sections/ProofBlock";
 import { NightProtocol } from "@/components/sections/NightProtocol";
 import { Lookbook } from "@/components/sections/Lookbook";
 import { DeprisStandard } from "@/components/sections/DeprisStandard";
+import { ProBand } from "@/components/sections/ProBand";
+import { PRO_CATEGORIES } from "@/lib/nav";
 import { SocialProof } from "@/components/sections/SocialProof";
 import { EditorialTeasers } from "@/components/sections/EditorialTeasers";
 import { FinaleCTA } from "@/components/sections/FinaleCTA";
@@ -23,6 +25,9 @@ export default async function HomePage() {
   ]);
   const hero = featured ?? bestsellers[0];
   // real product photos for the story sections, keyed by handle
+  const pro = ["2xsome-skin-booster", "plenaris-pro-80", "tesoro-collagen", "plenaris-exosome-hgf"]
+    .map((h) => all.find((p) => p.handle === h))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p) && PRO_CATEGORIES.includes(p!.category));
   const media = Object.fromEntries(all.filter((p) => p.images[0]?.url).map((p) => [p.handle, p.images[0].url as string]));
 
   // Story spine: the drop → what's inside → the edit → proof → the night ritual → the standard.
@@ -37,6 +42,7 @@ export default async function HomePage() {
       <NightProtocol media={media} />
       <Lookbook media={media} />
       <DeprisStandard />
+      <ProBand products={pro} />
       <LotusDivider />
       <SocialProof />
       <EditorialTeasers />

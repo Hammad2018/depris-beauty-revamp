@@ -33,6 +33,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const commerce = getCommerce();
   const [products, collections] = await Promise.all([commerce.getProducts(), commerce.getCollections()]);
   const nav = buildNavData(products, collections);
+  const recommendations = nav.index.filter((p) => ["ghk-cu-topical-cosmetic-1g", "glutanex-glow-therapy-toner", "bellmona-cc-cream-sunscreen-50ml", "glutanex-night-serum-30ml"].includes(p.handle));
   return (
     <html lang="en" className={`${fraunces.variable} ${hanken.variable} ${plexMono.variable}`}>
       <body className="grain flex min-h-screen flex-col">
@@ -48,7 +49,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             {children}
           </main>
           <Footer />
-          <CartDrawer />
+          <CartDrawer recommendations={recommendations} />
         </CartProvider>
       </body>
     </html>
