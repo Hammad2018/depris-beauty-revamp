@@ -1,7 +1,7 @@
 "use client";
 
+import { useReducedMotion } from "@/lib/useReducedMotion";
 import { useEffect, useRef } from "react";
-import { useReducedMotion } from "framer-motion";
 
 type Node = { x: number; y: number; vx: number; vy: number; r: number; hx: number; hy: number };
 

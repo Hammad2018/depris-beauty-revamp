@@ -2,7 +2,8 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 import { MagneticLink } from "@/components/ui/MagneticButton";
 import { WordReveal } from "@/components/ui/WordReveal";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";

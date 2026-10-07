@@ -3,7 +3,8 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useTransform, useMotionValueEvent, useReducedMotion, AnimatePresence } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionValueEvent, AnimatePresence } from "framer-motion";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 import { MoonPhase } from "@/components/ui/MoonPhase";
 import { MagneticLink } from "@/components/ui/MagneticButton";
 
@@ -73,7 +74,7 @@ export function NightProtocol() {
                 transition={{ duration: 0.6, ease: [0.2, 0.8, 0.2, 1] }}
                 className="absolute inset-0"
               >
-                <Image src={s.img} alt={s.product} fill sizes="(max-width:1024px) 90vw, 40vw" className="object-cover" />
+                <Image src={s.img} alt={s.product} fill sizes="(max-width:1024px) 90vw, 40vw" className="liquid object-cover" />
               </motion.div>
             </AnimatePresence>
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-deep/80 to-transparent p-5">

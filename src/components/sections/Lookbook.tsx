@@ -2,7 +2,8 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 import { DuotoneImage } from "@/components/ui/DuotoneImage";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 
@@ -30,7 +31,7 @@ export function Lookbook() {
           key={p.n}
           className="group relative h-[68vh] w-[86vw] shrink-0 overflow-hidden rounded-[2rem] shadow-lift sm:w-[72vw]"
         >
-          <DuotoneImage alt={`${p.title} — ${p.product}`} palette={p.palette} className="absolute inset-0" />
+          <DuotoneImage alt={`${p.title} — ${p.product}`} palette={p.palette} className="liquid absolute inset-0" />
           <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/70 via-navy-deep/10 to-transparent" />
           <div className="relative flex h-full flex-col justify-between p-7 text-white sm:p-10">
             <span className="index-num font-display italic" style={{ WebkitTextStroke: "1.2px rgba(255,255,255,0.6)" }}>

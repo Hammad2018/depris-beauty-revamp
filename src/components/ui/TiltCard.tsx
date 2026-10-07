@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 import type { ReactNode } from "react";
 
 /** 3D tilt-on-hover wrapper. Falls back to a static div for reduced-motion. */

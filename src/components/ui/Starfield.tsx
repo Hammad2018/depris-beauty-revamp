@@ -1,7 +1,7 @@
 "use client";
 
+import { useReducedMotion } from "@/lib/useReducedMotion";
 import { useEffect, useRef } from "react";
-import { useReducedMotion } from "framer-motion";
 
 /** Celestial twinkling starfield on a <canvas>. Lightweight, reduced-motion safe. */
 export function Starfield({ className = "", density = 0.00014 }: { className?: string; density?: number }) {

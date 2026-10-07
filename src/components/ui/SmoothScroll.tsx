@@ -1,8 +1,8 @@
 "use client";
 
+import { useReducedMotion } from "@/lib/useReducedMotion";
 import { useEffect } from "react";
 import Lenis from "lenis";
-import { useReducedMotion } from "framer-motion";
 
 /** Global smooth-scroll (Lenis). Disabled under reduced-motion. */
 export function SmoothScroll() {

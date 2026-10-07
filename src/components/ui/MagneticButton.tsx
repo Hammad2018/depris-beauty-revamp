@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useRef } from "react";
-import { motion, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 import type { ReactNode } from "react";
 
 type Variant = "primary" | "ink" | "ghost" | "light";

@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/Footer";
 import { CartDrawer } from "@/components/commerce/CartDrawer";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
+import { ScrollVelocity } from "@/components/ui/ScrollVelocity";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <CartProvider>
           <SmoothScroll />
+          <ScrollVelocity />
           <ScrollProgress />
           <AnnouncementBar />
           <Navbar />

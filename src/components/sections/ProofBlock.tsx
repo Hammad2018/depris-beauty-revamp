@@ -17,7 +17,7 @@ export function ProofBlock() {
   return (
     <section className="relative overflow-hidden bg-navy-deep text-white">
       <div className="relative min-h-[88vh]">
-        <Image src="/renders/skin.webp" alt="" fill sizes="100vw" className="object-cover opacity-80" />
+        <Image src="/renders/skin.webp" alt="" fill sizes="100vw" className="liquid object-cover opacity-80" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/60 to-navy-deep/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-navy-deep/40" />
 

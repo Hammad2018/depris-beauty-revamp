@@ -246,6 +246,13 @@
     .sheen-line { animation: none; }
   }
 
+  /* Liquid displacement on imagery, strength follows scroll velocity (see ScrollVelocity) */
+  .liquid { filter: url(#liquid); will-change: filter; }
+  @media (prefers-reduced-motion: reduce) { .liquid { filter: none; } }
+
+  /* Marquee leans with scroll velocity */
+  .vel-skew { transform: skewX(calc(var(--scroll-vel, 0) * -0.35deg)); transition: transform 120ms linear; }
+
   /* Scrollbar-less horizontal rail (reduced-motion lookbook fallback) */
   .no-scrollbar { scrollbar-width: none; }
   .no-scrollbar::-webkit-scrollbar { display: none; }

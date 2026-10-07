@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 import type { ReactNode } from "react";
 
 /** Reveals text word-by-word with a staggered rise. Reduced-motion → plain text. */

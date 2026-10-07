@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useInView, useReducedMotion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 
 /** A single-stroke lotus + hairline that draws itself in when scrolled into view. */
 export function LotusDivider({ tone = "ink", className = "" }: { tone?: "ink" | "light"; className?: string }) {

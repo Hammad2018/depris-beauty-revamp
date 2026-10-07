@@ -9,7 +9,7 @@ const words = [
 export function MarqueeRibbon() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo via-periwinkle to-teal py-5 text-white">
-      <Marquee className="mask-fade-x">
+      <Marquee className="mask-fade-x vel-skew">
         {words.map((w) => (
           <span key={w} className="flex items-center gap-5 font-display text-2xl italic sm:text-3xl">
             {w}

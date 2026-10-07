@@ -2,7 +2,8 @@
 
 import { useRef } from "react";
 import type { ReactNode } from "react";
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 
 /** Scroll-linked vertical parallax. `speed` = px of travel each direction. */
 export function Parallax({

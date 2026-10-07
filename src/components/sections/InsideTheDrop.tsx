@@ -3,7 +3,8 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useTransform, useReducedMotion, useMotionTemplate } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 import type { Product } from "@/lib/commerce/types";
 import { useCart } from "@/lib/cart/CartContext";
 import { toLineItem } from "@/lib/cart/item";
