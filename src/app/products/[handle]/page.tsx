@@ -2,16 +2,22 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCommerce } from "@/lib/commerce";
-import { money } from "@/lib/format";
 import { site } from "@/lib/content";
-import { ProductMedia } from "@/components/commerce/ProductMedia";
+import { lots } from "@/lib/renders";
 import { ProductPurchase } from "@/components/commerce/ProductPurchase";
 import { ReviewsPanel } from "@/components/commerce/ReviewsPanel";
 import { ClinicalClaim } from "@/components/commerce/ClinicalClaim";
 import { CrossSell } from "@/components/commerce/CrossSell";
 import { StarRating } from "@/components/ui/StarRating";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Accordion } from "@/components/ui/Accordion";
+import { LabTicker } from "@/components/ui/LabTicker";
+import { RotatingSeal } from "@/components/ui/RotatingSeal";
+import { Reveal } from "@/components/ui/Reveal";
+import { ProductStage } from "@/components/product/ProductStage";
+import { IngredientDossier } from "@/components/product/IngredientDossier";
+import { DispatchCountdown } from "@/components/product/DispatchCountdown";
+import { StickyBuyBar } from "@/components/product/StickyBuyBar";
+import { PotencyCertificate } from "@/components/product/PotencyCertificate";
 
 export async function generateStaticParams() {
   const products = await getCommerce().getProducts();
@@ -37,6 +43,10 @@ export default async function ProductPage({ params }: { params: { handle: string
     await Promise.all((product.pairsWith ?? []).map((h) => commerce.getProduct(h)))
   ).filter((p): p is NonNullable<typeof p> => Boolean(p));
 
+  const lotEntry = Object.values(lots).find((l) => l.handle === product.handle);
+  const lotId = lotEntry?.lot ?? "2611-D";
+  const lot = lots[lotId];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -53,72 +63,71 @@ export default async function ProductPage({ params }: { params: { handle: string
     },
   };
 
+  const ticker = [
+    `LOT ${lot.lot}`, `pH ${lot.ph}`, lot.assay.toUpperCase(), `BOTTLED ${lot.bottled.slice(0, 7)}`,
+    "DERM-TESTED", "FRAGRANCE-FREE", product.routineStep.toUpperCase() + " STEP", "FORMULATED IN KOREA",
+  ];
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="shell py-6">
-        <nav className="text-sm text-ink-soft">
-          <Link href="/shop" className="hover:text-ink">
-            Shop
-          </Link>{" "}
-          / <span className="text-ink">{product.title}</span>
-        </nav>
-      </div>
+      {/* Stage */}
+      <section className="celestial relative overflow-hidden text-white">
+        <div className="shell pt-5">
+          <nav className="text-xs text-white/60">
+            <Link href="/shop" className="hover:text-white">Shop</Link> / <span className="text-white/90">{product.title}</span>
+          </nav>
+        </div>
+        <div className="shell grid items-start gap-10 py-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:py-12">
+          <ProductStage product={product} lotId={lotId} />
 
-      <section className="shell grid gap-10 pb-6 lg:grid-cols-2">
-        <div className="lg:sticky lg:top-28 lg:self-start">
-          <div className="aspect-square overflow-hidden rounded-3xl">
-            <ProductMedia product={product} priority className="h-full w-full" />
+          <div className="lg:sticky lg:top-24">
+            <p className="mono-label text-teal-glow">{product.brand} · {product.category.replace(/-/g, " ")}</p>
+            <h1 className="mt-3 font-display text-4xl leading-[1.02] sm:text-5xl">{product.title}</h1>
+            <div className="mt-3 text-white/80"><StarRating rating={product.rating} count={product.reviewCount} /></div>
+            <p className="mt-4 text-lg text-white/75">{product.tagline}</p>
+
+            <div id="buy-box" className="glass-strong mt-6 rounded-3xl p-5 text-ink sm:p-6">
+              <ProductPurchase product={product} />
+              <DispatchCountdown className="mt-4" />
+            </div>
+
+            <div className="mt-5 flex items-center gap-4 text-sm text-white/70">
+              <RotatingSeal light size={92} />
+              <div>
+                <p className="mono-label mono-label-plain text-white">Lot {lot.lot} · verified</p>
+                <p>Authorized retailer · Sourced from Korea · Ships same-day from the US</p>
+                <Link href={`/verify?lot=${lot.lot}`} className="text-teal-glow underline-offset-4 hover:underline">Verify your serum →</Link>
+              </div>
+            </div>
           </div>
         </div>
+        <LabTicker items={ticker} />
+      </section>
 
-        <div className="flex flex-col">
-          <Eyebrow className="text-bronze-deep">{product.brand}</Eyebrow>
-          <h1 className="mt-2 font-display text-3xl leading-tight text-ink sm:text-4xl">{product.title}</h1>
-          <div className="mt-3">
-            <StarRating rating={product.rating} count={product.reviewCount} />
-          </div>
-          <p className="mt-4 text-lg text-ink-soft">{product.tagline}</p>
-
-          <div className="mt-6">
-            <ProductPurchase product={product} />
-          </div>
-
-          <p className="mt-4 text-xs text-sage">✓ Authorized retailer · Sourced from Korea · Ships same-day from the US</p>
-
-          {product.heroIngredients.length > 0 && (
+      {/* Dossier + proof */}
+      <section className="mesh-light">
+        <div className="shell grid gap-10 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+          <Reveal>
+            <IngredientDossier ingredients={product.heroIngredients} />
             <div className="mt-8">
-              <Eyebrow>Key ingredients</Eyebrow>
-              <ul className="mt-3 space-y-3">
-                {product.heroIngredients.map((ing) => (
-                  <li key={ing.name} className="rounded-2xl bg-porcelain/70 p-4">
-                    <p className="font-medium text-ink">
-                      {ing.name} <span className="font-normal text-ink-soft">— {ing.benefit}</span>
-                    </p>
-                    <p className="mt-0.5 text-xs text-ink-soft/70">INCI: {ing.inci}</p>
-                  </li>
-                ))}
-              </ul>
+              <Accordion title="How to use" defaultOpen>{product.howToUse}</Accordion>
+              <Accordion title="Description">{product.description}</Accordion>
+              <Accordion title="Shipping & returns">
+                Ships same-day from Cheyenne, WY in an insulated mailer. Free US shipping over $50. 30-day returns on unopened items.
+              </Accordion>
             </div>
-          )}
-
-          {product.clinicalClaim && (
-            <div className="mt-5">
-              <ClinicalClaim claim={product.clinicalClaim} />
-              <p className="mt-1.5 text-[11px] text-ink-soft/60">*Illustrative claim for concept pitch.</p>
-            </div>
-          )}
-
-          <div className="mt-6">
-            <Accordion title="How to use" defaultOpen>
-              {product.howToUse}
-            </Accordion>
-            <Accordion title="Description">{product.description}</Accordion>
-            <Accordion title="Shipping & returns">
-              Ships same-day from Cheyenne, WY. Free US shipping over $50. 30-day returns on unopened items.
-            </Accordion>
-          </div>
+          </Reveal>
+          <Reveal>
+            {product.clinicalClaim && (
+              <div className="mb-6">
+                <ClinicalClaim claim={product.clinicalClaim} />
+                <p className="mt-1.5 text-[11px] text-ink-soft/60">*Illustrative claim for concept pitch.</p>
+              </div>
+            )}
+            <PotencyCertificate lot={lot} compact />
+          </Reveal>
         </div>
       </section>
 
@@ -126,7 +135,8 @@ export default async function ProductPage({ params }: { params: { handle: string
         <ReviewsPanel reviews={product.reviews} rating={product.rating} reviewCount={product.reviewCount} />
       )}
 
-      <CrossSell title="Pairs well with" eyebrow="Complete the routine" products={pairs} />
+      <CrossSell title="Pairs well with" eyebrow="Complete the ritual" products={pairs} />
+      <StickyBuyBar product={product} />
     </>
   );
 }
