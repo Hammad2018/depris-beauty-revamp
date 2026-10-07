@@ -1,17 +1,16 @@
 import { getCommerce } from "@/lib/commerce";
 import { Hero } from "@/components/sections/Hero";
-import { ShopByConcern } from "@/components/sections/ShopByConcern";
+import { MarqueeRibbon } from "@/components/ui/MarqueeRibbon";
+import { InsideTheDrop } from "@/components/sections/InsideTheDrop";
 import { BentoShowcase } from "@/components/sections/BentoShowcase";
-import { FeatureBand } from "@/components/sections/FeatureBand";
+import { ShopByConcern } from "@/components/sections/ShopByConcern";
+import { ProofBlock } from "@/components/sections/ProofBlock";
+import { NightProtocol } from "@/components/sections/NightProtocol";
 import { Lookbook } from "@/components/sections/Lookbook";
-import { StickySteps } from "@/components/sections/StickySteps";
-import { ActivesSpotlight } from "@/components/sections/ActivesSpotlight";
-import { ResultsSection } from "@/components/sections/ResultsSection";
+import { DeprisStandard } from "@/components/sections/DeprisStandard";
 import { SocialProof } from "@/components/sections/SocialProof";
 import { EditorialTeasers } from "@/components/sections/EditorialTeasers";
 import { FinaleCTA } from "@/components/sections/FinaleCTA";
-import { TrustBand } from "@/components/commerce/TrustBand";
-import { MarqueeRibbon } from "@/components/ui/MarqueeRibbon";
 import { LotusDivider } from "@/components/ui/LotusDivider";
 
 export default async function HomePage() {
@@ -23,45 +22,21 @@ export default async function HomePage() {
   ]);
   const hero = featured ?? bestsellers[0];
 
+  // Story spine: the drop → what's inside → the edit → proof → the night ritual → the standard.
   return (
     <>
       <Hero />
       <MarqueeRibbon />
-
-      {/* 01 — light mesh */}
-      <ShopByConcern collections={collections} />
-
-      {/* 02 — bento edit (tint) */}
+      <InsideTheDrop product={hero} />
       <BentoShowcase featured={hero} products={bestsellers} />
-
-      {/* pinned promise — dark celestial */}
-      <FeatureBand />
-
-      {/* horizontal lookbook (tint, duotone) */}
+      <ShopByConcern collections={collections} />
+      <ProofBlock />
+      <NightProtocol />
       <Lookbook />
-
-      {/* how it works — sticky steps (light mesh) */}
-      <StickySteps />
-
-      {/* 03 — the science (dark) */}
-      <ActivesSpotlight />
-
-      {/* 04 — real results (warm) */}
-      <ResultsSection />
-
+      <DeprisStandard />
       <LotusDivider />
-
-      {/* trust strip (light) */}
-      <section className="shell pb-6">
-        <TrustBand />
-      </section>
-
-      {/* 05 — social proof */}
       <SocialProof />
-
-      {/* 06 — editorial */}
       <EditorialTeasers />
-
       <FinaleCTA />
     </>
   );

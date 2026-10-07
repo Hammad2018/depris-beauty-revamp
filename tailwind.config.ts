@@ -44,6 +44,7 @@ const config: Config = {
       fontFamily: {
         display: ["var(--font-fraunces)", "Georgia", "serif"],
         sans: ["var(--font-hanken)", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "monospace"],
       },
       borderRadius: {
         xl: "1rem",

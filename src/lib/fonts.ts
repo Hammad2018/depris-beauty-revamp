@@ -1,4 +1,4 @@
-import { Fraunces, Hanken_Grotesk } from "next/font/google";
+import { Fraunces, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
 
 export const fraunces = Fraunces({
   subsets: ["latin"],
@@ -12,5 +12,13 @@ export const hanken = Hanken_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-hanken",
+  display: "swap",
+});
+
+/** Mono for lab-data micro-labels (lot codes, pH, study n). */
+export const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
   display: "swap",
 });
