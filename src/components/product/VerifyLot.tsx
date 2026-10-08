@@ -56,7 +56,7 @@ export function VerifyLot({ initial = "" }: { initial?: string }) {
                   <span className="mono-label mono-label-plain text-ink-soft">best by {win?.bestBy} · {win?.daysLeft} days</span>
                 </div>
                 <div className="mt-2 h-2 overflow-hidden rounded-full bg-ink/10">
-                  <motion.div initial={{ width: 0 }} animate={{ width: `${pct}%` }} transition={{ duration: 0.9, ease: [0.2, 0.8, 0.2, 1] }} className="h-full rounded-full bg-gradient-to-r from-camellia via-teal-glow to-periwinkle" />
+                  <motion.div initial={{ transform: "scaleX(0)" }} animate={{ transform: `scaleX(${pct / 100})` }} transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }} style={{ transformOrigin: "left" }} className="h-full w-full rounded-full bg-gradient-to-r from-camellia via-teal-glow to-periwinkle" />
                 </div>
                 <p className="mt-2 text-xs text-ink-soft">Peptides and exosomes keep their potency longest sealed and cold. Opened serums: use within 6 months refrigerated, 3 at room temperature.</p>
               </div>

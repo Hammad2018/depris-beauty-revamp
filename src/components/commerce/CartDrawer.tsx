@@ -40,7 +40,8 @@ export function CartDrawer({ recommendations = [] }: { recommendations?: NavProd
           className="fixed inset-0 z-[60]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          exit={{ opacity: 0, transition: { duration: 0.18 } }}
+          transition={{ duration: 0.22 }}
           role="dialog"
           aria-modal="true"
           aria-label="Shopping bag"
@@ -52,10 +53,10 @@ export function CartDrawer({ recommendations = [] }: { recommendations?: NavProd
           />
           <motion.aside
             className="absolute right-0 top-0 flex h-full w-full max-w-md flex-col bg-cream shadow-lift"
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ type: "spring", stiffness: 260, damping: 32 }}
+            initial={{ transform: "translateX(100%)" }}
+            animate={{ transform: "translateX(0%)" }}
+            exit={{ transform: "translateX(100%)", transition: { duration: 0.26, ease: [0.32, 0.72, 0, 1] } }}
+            transition={{ duration: 0.42, ease: [0.32, 0.72, 0, 1] }}
           >
             <header className="flex items-center justify-between border-b border-sand px-6 py-5">
               <h2 className="font-display text-xl text-ink">Your bag ({cart.count})</h2>
@@ -80,8 +81,17 @@ export function CartDrawer({ recommendations = [] }: { recommendations?: NavProd
                   <FreeShipProgress subtotal={cart.subtotal} tiers={shipTiers} />
 
                   <ul className="space-y-4">
+                    <AnimatePresence initial={false}>
                     {cart.items.map((item) => (
-                      <li key={item.id} className="flex gap-4">
+                      <motion.li
+                        key={item.id}
+                        layout
+                        initial={{ opacity: 0, transform: "scale(0.97)" }}
+                        animate={{ opacity: 1, transform: "scale(1)" }}
+                        exit={{ opacity: 0, transform: "scale(0.97)", transition: { duration: 0.16 } }}
+                        transition={{ duration: 0.22, ease: [0.23, 1, 0.32, 1] }}
+                        className="flex gap-4"
+                      >
                         {item.image ? (
                           <Link href={`/products/${item.productHandle}`} onClick={cart.closeCart} className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl bg-sand">
                             <Image src={item.image} alt={item.title} fill sizes="80px" className="object-cover" />
@@ -123,8 +133,9 @@ export function CartDrawer({ recommendations = [] }: { recommendations?: NavProd
                         <p className="font-medium text-ink">
                           {money(item.price * item.quantity * (item.subscribe ? 0.9 : 1), undefined)}
                         </p>
-                      </li>
+                      </motion.li>
                     ))}
+                    </AnimatePresence>
                   </ul>
 
                   {suggest.length > 0 && (

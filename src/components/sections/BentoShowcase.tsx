@@ -87,7 +87,7 @@ export function BentoShowcase({ featured, products }: { featured: Product; produ
           <RevealItem className="lg:col-span-4">
             <Link
               href="/science"
-              className="group flex h-full flex-col justify-between overflow-hidden rounded-3xl bg-gradient-to-br from-[#C9EAE3] via-[#D8F0EB] to-[#E8F4F6] p-6 shadow-soft transition-all hover:-translate-y-1 hover:shadow-glow"
+              className="group flex h-full flex-col justify-between overflow-hidden rounded-3xl bg-gradient-to-br from-[#C9EAE3] via-[#D8F0EB] to-[#E8F4F6] p-6 shadow-soft transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-glow"
             >
               <p className="eyebrow">The science</p>
               <p className="font-display text-2xl leading-tight text-ink">Copper peptides, exosomes &amp; skin boosters — explained.</p>

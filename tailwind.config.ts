@@ -6,6 +6,7 @@ import type { Config } from "tailwindcss";
  * floral pastels). "Turning back the clock, one drop at a time."
  */
 const config: Config = {
+  future: { hoverOnlyWhenSupported: true },
   content: ["./src/**/*.{ts,tsx,mdx}"],
   theme: {
     extend: {
@@ -129,6 +130,9 @@ const config: Config = {
       },
       transitionTimingFunction: {
         glow: "cubic-bezier(0.22, 1, 0.36, 1)",
+        out: "cubic-bezier(0.23, 1, 0.32, 1)",
+        "in-out": "cubic-bezier(0.77, 0, 0.175, 1)",
+        drawer: "cubic-bezier(0.32, 0.72, 0, 1)",
       },
     },
   },

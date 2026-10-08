@@ -22,7 +22,7 @@ export default async function BrandsPage() {
           <Link
             key={brand}
             href={`/brands/${slugify(brand)}`}
-            className="group rounded-3xl bg-porcelain p-8 shadow-soft transition-all hover:-translate-y-1 hover:shadow-glow"
+            className="group rounded-3xl bg-porcelain p-8 shadow-soft transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-glow"
           >
             <p className="font-display text-2xl text-ink group-hover:text-camellia">{brand}</p>
             <p className="mt-1 text-sm text-ink-soft">{count} product{count > 1 ? "s" : ""}</p>

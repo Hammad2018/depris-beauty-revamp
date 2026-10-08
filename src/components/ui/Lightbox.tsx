@@ -24,15 +24,16 @@ export function Lightbox({ open, onClose, children, label = "Preview" }: { open:
           aria-label={label}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          exit={{ opacity: 0, transition: { duration: 0.14 } }}
+          transition={{ duration: 0.2 }}
           className="fixed inset-0 z-[80] flex items-center justify-center bg-navy-deep/80 p-4 backdrop-blur-md"
           onClick={onClose}
         >
           <motion.div
-            initial={{ scale: 0.94, y: 12 }}
-            animate={{ scale: 1, y: 0 }}
-            exit={{ scale: 0.96, y: 8 }}
-            transition={{ type: "spring", stiffness: 220, damping: 24 }}
+            initial={{ opacity: 0, transform: "translateY(10px) scale(0.96)" }}
+            animate={{ opacity: 1, transform: "translateY(0px) scale(1)" }}
+            exit={{ opacity: 0, transform: "translateY(6px) scale(0.98)", transition: { duration: 0.14, ease: [0.23, 1, 0.32, 1] } }}
+            transition={{ duration: 0.22, ease: [0.23, 1, 0.32, 1] }}
             className="relative max-h-[90vh] w-full max-w-2xl overflow-auto"
             onClick={(e) => e.stopPropagation()}
           >

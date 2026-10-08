@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Product } from "@/lib/commerce/types";
 import { useCart } from "@/lib/cart/CartContext";
 import { toLineItem } from "@/lib/cart/item";
@@ -11,6 +11,19 @@ export function ProductPurchase({ product }: { product: Product }) {
   const [variant, setVariant] = useState(product.variants[0]);
   const [subscribe, setSubscribe] = useState(false);
   const [qty, setQty] = useState(1);
+  // "Add to bag" → "Added ✓": a 2px blur bridges the label swap so it reads as one morph, not two labels.
+  const [added, setAdded] = useState(false);
+  const [swapping, setSwapping] = useState(false);
+  useEffect(() => {
+    if (!added) return;
+    const t = setTimeout(() => { setSwapping(true); setTimeout(() => { setAdded(false); setSwapping(false); }, 180); }, 1400);
+    return () => clearTimeout(t);
+  }, [added]);
+  function onAdd() {
+    cart.add({ ...toLineItem(product, variant, subscribe), price: effectivePrice }, qty);
+    setSwapping(true);
+    setTimeout(() => { setAdded(true); setSwapping(false); }, 180);
+  }
 
   const effectivePrice = subscribe ? Math.round(variant.price * 0.9 * 100) / 100 : variant.price;
 
@@ -71,11 +84,17 @@ export function ProductPurchase({ product }: { product: Product }) {
           </button>
         </div>
         <button
-          onClick={() => cart.add({ ...toLineItem(product, variant, subscribe), price: effectivePrice }, qty)}
+          onClick={onAdd}
           className="btn-primary flex-1"
           disabled={!variant.available}
+          aria-live="polite"
         >
-          {variant.available ? "Add to bag" : "Sold out"}
+          <span
+            className="inline-block transition-[opacity,filter] duration-200 ease-out"
+            style={swapping ? { filter: "blur(2px)", opacity: 0.6 } : undefined}
+          >
+            {!variant.available ? "Sold out" : added ? "Added ✓" : "Add to bag"}
+          </span>
         </button>
       </div>
     </div>

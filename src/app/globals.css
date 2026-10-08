@@ -4,6 +4,12 @@
 
 :root {
   --shell-pad: clamp(1rem, 5vw, 4rem);
+  /* Motion tokens — strong curves; built-in easings are too weak for deliberate UI motion */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --dur-press: 160ms;
+  --dur-ui: 200ms;
 }
 
 @layer base {
@@ -44,9 +50,10 @@
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium
-      transition-all duration-300 ease-glow focus-visible:outline-offset-4;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium focus-visible:outline-offset-4;
+    transition: transform var(--dur-press) var(--ease-out), background-color var(--dur-ui) ease, color var(--dur-ui) ease, box-shadow var(--dur-ui) ease, border-color var(--dur-ui) ease;
   }
+  .btn:active { transform: scale(0.97); }
   .btn-primary {
     @apply btn bg-camellia text-porcelain hover:bg-ink hover:-translate-y-0.5 hover:shadow-glow;
   }
@@ -174,6 +181,30 @@
   }
 }
 
+@layer base {
+  /* Press feedback: every pressable scales 0.97 on :active (subtle, 160ms strong ease-out) */
+  button:not(:disabled),
+  [role="button"],
+  summary {
+    transition-property: transform, background-color, color, border-color, box-shadow;
+    transition-duration: var(--dur-press), var(--dur-ui), var(--dur-ui), var(--dur-ui), var(--dur-ui);
+    transition-timing-function: var(--ease-out), ease, ease, ease, ease;
+  }
+  button:not(:disabled):active,
+  [role="button"]:active,
+  summary:active {
+    transform: scale(0.97);
+  }
+  /* <details> content: a short settle instead of a snap (occasional, so motion is justified) */
+  details[open] > :not(summary) {
+    animation: details-in 200ms var(--ease-out) both;
+  }
+  @keyframes details-in {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
 @layer utilities {
   /* Film grain overlay */
   .grain::after {
@@ -269,14 +300,16 @@
   mix-blend-mode: luminosity;
 }
 
-/* Respect reduced motion globally */
+/* Reduced motion: fewer and gentler, not zero. Decorative loops stop; transforms are
+   removed from transitions; opacity/colour transitions stay (they aid comprehension). */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
+    transition-property: opacity, color, background-color, border-color, box-shadow !important;
+    transition-duration: 160ms !important;
     scroll-behavior: auto !important;
   }
 }

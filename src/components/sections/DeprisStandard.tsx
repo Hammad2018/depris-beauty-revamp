@@ -53,15 +53,15 @@ export function DeprisStandard() {
                       <span className={`h-2.5 w-2.5 shrink-0 rounded-full transition ${isOpen ? "bg-teal-glow shadow-[0_0_14px_rgba(92,195,184,1)]" : "bg-white/30"}`} />
                       <span className="flex-1 font-display text-2xl sm:text-3xl">{r.k}</span>
                       <span className="mono-label mono-label-plain hidden text-white/50 sm:block">{r.tag}</span>
-                      <motion.span animate={{ rotate: isOpen ? 45 : 0 }} className="text-2xl text-white/60">+</motion.span>
+                      <motion.span animate={{ transform: isOpen ? "rotate(45deg)" : "rotate(0deg)" }} transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }} className="inline-block text-2xl text-white/60">+</motion.span>
                     </button>
                     <AnimatePresence initial={false}>
                       {isOpen && (
                         <motion.div
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.4, ease: [0.2, 0.8, 0.2, 1] }}
+                          exit={{ height: 0, opacity: 0, transition: { duration: 0.18, ease: [0.23, 1, 0.32, 1] } }}
+                          transition={{ duration: 0.26, ease: [0.23, 1, 0.32, 1] }}
                           className="overflow-hidden"
                         >
                           <p className="max-w-xl pb-7 pl-7 text-white/70">{r.body}</p>

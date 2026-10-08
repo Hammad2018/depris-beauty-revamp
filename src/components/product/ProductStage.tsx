@@ -71,7 +71,7 @@ export function ProductStage({ product, lotId = "2611-D" }: { product: Product; 
           aria-label="Drag to tilt the bottle"
         >
           <AnimatePresence mode="wait">
-            <motion.div key={current?.id ?? "media"} initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.45 }} className="absolute inset-0">
+            <motion.div key={current?.id ?? "media"} initial={{ opacity: 0, filter: "blur(2px)", transform: "scale(0.98)" }} animate={{ opacity: 1, filter: "blur(0px)", transform: "scale(1)" }} exit={{ opacity: 0, filter: "blur(2px)", transition: { duration: 0.14 } }} transition={{ duration: 0.22, ease: [0.23, 1, 0.32, 1] }} className="absolute inset-0">
               {current ? (
                 <Image src={current.src} alt={current.alt} fill priority sizes="(max-width:1024px) 92vw, 50vw" className="rounded-[2rem] object-cover" />
               ) : (

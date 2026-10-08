@@ -35,7 +35,7 @@ export function ShopByConcern({ collections }: { collections: Collection[] }) {
                 href={`/collections/${c.handle}`}
                 className={`ring-gradient group relative flex h-full min-h-[10rem] flex-col justify-end overflow-hidden rounded-3xl bg-gradient-to-br ${
                   concernGradient[c.concern as Concern]
-                } p-6 shadow-soft transition-all duration-300 ease-glow hover:-translate-y-1.5 hover:shadow-glow`}
+                } p-6 shadow-soft transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1.5 hover:shadow-glow`}
               >
                 <span className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-white/30 blur-2xl transition-transform duration-500 group-hover:scale-150" />
                 <h3 className="relative font-display text-xl text-ink">{c.title}</h3>

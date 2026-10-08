@@ -28,7 +28,7 @@ export function ProductCard({ product, priority = false }: { product: Product; p
 
   return (
     <TiltCard className="group h-full [transform-style:preserve-3d]">
-      <article className="ring-gradient relative flex h-full flex-col overflow-hidden rounded-3xl bg-porcelain shadow-soft transition-all duration-300 ease-glow group-hover:-translate-y-1.5 group-hover:shadow-glow">
+      <article className="ring-gradient relative flex h-full flex-col overflow-hidden rounded-3xl bg-porcelain shadow-soft transition-[transform,box-shadow] duration-200 ease-out group-hover:-translate-y-1.5 group-hover:shadow-glow">
         <Link href={`/products/${product.handle}`} className="block" aria-label={product.title}>
           <div className="relative aspect-square overflow-hidden">
             <ProductMedia product={product} priority={priority} className="h-full w-full" />

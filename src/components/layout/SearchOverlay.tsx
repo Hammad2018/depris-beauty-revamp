@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { money } from "@/lib/format";
 import { searchIndex, type NavProduct } from "@/lib/nav";
 
@@ -47,15 +47,13 @@ export function SearchOverlay({ open, onClose, index }: { open: boolean; onClose
   return (
     <AnimatePresence>
       {open && (
-        <motion.div
+        /* ⌘K is keyboard-initiated and used constantly: it opens and closes instantly, no animation. */
+        <div
           role="dialog" aria-modal="true" aria-label="Search"
-          initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
           className="fixed inset-0 z-[90] flex items-start justify-center bg-navy-deep/70 px-4 pt-[12vh] backdrop-blur-md"
           onClick={onClose}
         >
-          <motion.div
-            initial={{ y: -16, scale: 0.98, opacity: 0 }} animate={{ y: 0, scale: 1, opacity: 1 }} exit={{ y: -10, opacity: 0 }}
-            transition={{ type: "spring", stiffness: 260, damping: 26 }}
+          <div
             className="w-full max-w-2xl overflow-hidden rounded-3xl border border-white/60 bg-cream shadow-lift"
             onClick={(e) => e.stopPropagation()}
           >
@@ -114,8 +112,8 @@ export function SearchOverlay({ open, onClose, index }: { open: boolean; onClose
                 </div>
               </div>
             )}
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       )}
     </AnimatePresence>
   );

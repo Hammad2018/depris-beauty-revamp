@@ -36,8 +36,8 @@ export function WordReveal({
           <motion.span
             className="inline-block"
             variants={{
-              hidden: { y: "110%", opacity: 0 },
-              show: { y: "0%", opacity: 1, transition: { type: "spring", stiffness: 140, damping: 18 } },
+              hidden: { transform: "translateY(110%)", opacity: 0 },
+              show: { transform: "translateY(0%)", opacity: 1, transition: { duration: 0.5, ease: [0.23, 1, 0.32, 1] } },
             }}
           >
             {w}

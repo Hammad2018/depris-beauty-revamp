@@ -49,7 +49,7 @@ export function Navbar({ data }: { data: NavData }) {
   return (
     <header className="sticky top-0 z-50">
       {/* announcement strip */}
-      <motion.div animate={{ height: condensed ? 0 : 32, opacity: condensed ? 0 : 1 }} transition={{ duration: 0.3 }} className="overflow-hidden bg-ink text-porcelain">
+      <motion.div animate={{ height: condensed ? 0 : 32, opacity: condensed ? 0 : 1 }} transition={{ duration: 0.24, ease: [0.23, 1, 0.32, 1] }} className="overflow-hidden bg-ink text-porcelain">
         <p className="shell flex h-8 items-center justify-center text-center text-xs font-medium tracking-wide">
           <AnimatePresence mode="wait">
             <motion.span key={tick} initial={{ y: 8, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: -8, opacity: 0 }} transition={{ duration: 0.3 }} aria-live="polite">
@@ -80,7 +80,7 @@ export function Navbar({ data }: { data: NavData }) {
           </div>
 
           {/* centre: the real lock-up */}
-          <motion.div animate={{ scale: condensed ? 0.82 : 1 }} transition={{ duration: 0.3 }} className="justify-self-center">
+          <motion.div animate={{ transform: condensed ? "scale(0.82)" : "scale(1)" }} transition={{ duration: 0.24, ease: [0.23, 1, 0.32, 1] }} className="justify-self-center">
             <Logo height={46} priority />
           </motion.div>
 
@@ -100,7 +100,7 @@ export function Navbar({ data }: { data: NavData }) {
               Bag
               <AnimatePresence>
                 {cart.count > 0 && (
-                  <motion.span key="count" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-teal-glow px-1 text-xs font-semibold text-ink">
+                  <motion.span key="count" initial={{ opacity: 0, transform: "scale(0.9)" }} animate={{ opacity: 1, transform: "scale(1)" }} exit={{ opacity: 0, transform: "scale(0.95)" }} transition={{ duration: 0.16, ease: [0.23, 1, 0.32, 1] }} className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-teal-glow px-1 text-xs font-semibold text-ink">
                     {cart.count}
                   </motion.span>
                 )}
@@ -115,9 +115,9 @@ export function Navbar({ data }: { data: NavData }) {
       {/* mobile drawer */}
       <AnimatePresence>
         {mobile && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[80] bg-navy-deep/60 backdrop-blur-sm lg:hidden" onClick={() => setMobile(false)}>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, transition: { duration: 0.15 } }} transition={{ duration: 0.2 }} className="fixed inset-0 z-[80] bg-navy-deep/60 backdrop-blur-sm lg:hidden" onClick={() => setMobile(false)}>
             <motion.aside
-              initial={{ x: "-100%" }} animate={{ x: 0 }} exit={{ x: "-100%" }} transition={{ type: "spring", stiffness: 260, damping: 30 }}
+              initial={{ transform: "translateX(-100%)" }} animate={{ transform: "translateX(0%)" }} exit={{ transform: "translateX(-100%)", transition: { duration: 0.25, ease: [0.32, 0.72, 0, 1] } }} transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
               className="h-full w-[88vw] max-w-sm overflow-auto bg-cream p-6" onClick={(e) => e.stopPropagation()} aria-label="Menu"
             >
               <div className="flex items-center justify-between"><Logo height={34} /><button onClick={() => setMobile(false)} className="rounded-full px-3 py-1 text-sm text-ink-soft hover:bg-sand" aria-label="Close menu">Close ✕</button></div>

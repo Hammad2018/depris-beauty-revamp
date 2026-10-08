@@ -14,8 +14,11 @@ export function MegaMenu({ data, onNavigate }: { data: NavData; onNavigate: () =
   const link = "block rounded-lg px-2 py-1 text-sm text-ink-soft transition hover:bg-sand/60 hover:text-ink";
   return (
     <motion.div
-      initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 6 }}
-      transition={{ duration: 0.22, ease: [0.2, 0.8, 0.2, 1] }}
+      initial={{ opacity: 0, transform: "translateY(6px) scale(0.98)" }}
+      animate={{ opacity: 1, transform: "translateY(0px) scale(1)" }}
+      exit={{ opacity: 0, transform: "translateY(4px) scale(0.99)", transition: { duration: 0.14, ease: [0.23, 1, 0.32, 1] } }}
+      transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }}
+      style={{ transformOrigin: "top left" }}
       className="absolute left-0 top-full w-[min(64rem,calc(100vw-2rem))] pt-3"
     >
       <div className="grid grid-cols-[1fr_1fr_1fr_1.2fr] gap-6 rounded-3xl border border-white/70 bg-cream/95 p-7 shadow-lift backdrop-blur-2xl">

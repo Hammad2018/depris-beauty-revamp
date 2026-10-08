@@ -12,8 +12,8 @@ export function FreeShipProgress({ subtotal, tiers }: { subtotal: number; tiers:
       <p className="text-sm font-medium text-ink">{message}</p>
       <div className="relative mt-3 h-2 w-full rounded-full bg-porcelain">
         <div
-          className="h-2 rounded-full bg-gradient-to-r from-blush to-camellia transition-all duration-500 ease-glow"
-          style={{ width: `${progress.percent}%` }}
+          className="h-2 w-full origin-left rounded-full bg-gradient-to-r from-blush to-camellia transition-transform duration-300 ease-out"
+          style={{ transform: `scaleX(${progress.percent / 100})` }}
           role="progressbar"
           aria-valuenow={progress.percent}
           aria-valuemin={0}
