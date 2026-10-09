@@ -55,12 +55,12 @@ export default function SciencePage() {
           </Reveal>
           <RevealGroup className="mt-10 grid gap-5 sm:grid-cols-2">
             {scienceIngredients.map((ing, i) => (
-              <RevealItem key={ing.name} className="group rounded-3xl border border-ink/10 bg-porcelain/70 p-7 shadow-soft transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-lift">
+              <RevealItem key={ing.name} className="group scroll-mt-28 rounded-3xl border border-ink/10 bg-porcelain/70 p-7 shadow-soft transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-lift">
                 <div className="flex items-center gap-3">
                   <span className="index-num font-display italic">{String(i + 1).padStart(2, "0")}</span>
                   <span className="sheen-line w-12" />
                 </div>
-                <h3 className="mt-4 font-display text-2xl text-ink">{ing.name}</h3>
+                <h3 id={ing.id} className="mt-4 scroll-mt-32 font-display text-2xl text-ink">{ing.name}</h3>
                 <p className="mt-3 leading-relaxed text-ink-soft">{ing.body}</p>
               </RevealItem>
             ))}

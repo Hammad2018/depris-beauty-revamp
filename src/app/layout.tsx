@@ -11,6 +11,7 @@ import { CartDrawer } from "@/components/commerce/CartDrawer";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import { ScrollVelocity } from "@/components/ui/ScrollVelocity";
+import { PetalDefs } from "@/components/petals/PetalDefs";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -40,6 +41,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-porcelain">
           Skip to content
         </a>
+        <PetalDefs />
         <CartProvider>
           <SmoothScroll />
           <ScrollVelocity />

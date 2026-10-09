@@ -15,7 +15,8 @@ import { SearchOverlay } from "./SearchOverlay";
 const primary = [
   { label: "Concerns", href: "/shop?view=concern" },
   { label: "Science", href: "/science" },
-  { label: "Bundles", href: "/bundles" },
+  { label: "Guides", href: "/guides" },
+  { label: "Circle", href: "/community" },
   { label: "Pro", href: "/pro" },
 ];
 

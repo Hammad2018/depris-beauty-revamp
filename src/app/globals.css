@@ -264,6 +264,16 @@
     .group:hover > .spot-ring, .group:hover .spot-ring { opacity: 1; }
   }
 
+  /* Petal silhouettes (clip paths defined once in PetalDefs) and petal-like asymmetric radii */
+  .petal-mask { clip-path: url(#petal-clip); }
+  .leaf-mask { clip-path: url(#leaf-clip); }
+  .lotus-mask { clip-path: url(#lotus-clip); }
+  .r-petal { border-radius: 3rem 1rem 3rem 1rem; }
+  .r-petal-alt { border-radius: 1rem 3rem 1rem 3rem; }
+  .r-leaf { border-radius: 4rem 0.75rem; }
+  .sticker { transform: rotate(-4deg); }
+  .sticker-alt { transform: rotate(3deg); }
+
   /* Big index numeral for section markers */
   .index-num {
     font-size: clamp(2rem, 4vw, 3.25rem);

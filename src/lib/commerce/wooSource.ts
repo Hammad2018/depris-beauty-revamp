@@ -2,6 +2,7 @@ import type { CommerceSource, Collection, Concern, HeroIngredient, Ingredient, P
 import { createSeedSource } from "./seedSource";
 import { collections as seedCollections } from "./seed/collections";
 import snapshot from "./seed/woo-catalog.json";
+import { reviewsFor, summarize } from "@/lib/reviews";
 
 /** Shape written by scripts/import-woo.mjs (WooCommerce Store API snapshot). */
 export interface WooProduct {
@@ -79,7 +80,7 @@ const INGREDIENT_RULES: [RegExp, Ingredient, HeroIngredient][] = [
   [/glycolic|salicylic|\baha\b|\bbha\b|exfoliat/i, "aha-bha", { name: "AHA / BHA", inci: "Glycolic / Salicylic Acid", benefit: "Gentle resurfacing" }],
   [/ginseng/i, "ginseng", { name: "Ginseng", inci: "Panax Ginseng Root Extract", benefit: "Energises tired skin" }],
   [/snail/i, "snail-mucin", { name: "Snail mucin", inci: "Snail Secretion Filtrate", benefit: "Repairs and hydrates" }],
-  [/spf|sunscreen|sun ?block|uv/i, "spf", { name: "Broad-spectrum SPF", inci: "Zinc Oxide / Titanium Dioxide", benefit: "Daily UV protection" }],
+  [/\bspf\b|sunscreen|sun ?block|\buv\b/i, "spf", { name: "Broad-spectrum SPF", inci: "Zinc Oxide / Titanium Dioxide", benefit: "Daily UV protection" }],
 ];
 
 const EXTRA_HERO: [RegExp, HeroIngredient][] = [
@@ -153,8 +154,8 @@ export function mapWooProduct(p: WooProduct): Product {
     routineStep: /cleanser|cleansing|foam/i.test(p.name) ? "cleanse" : STEP[category] ?? "treat",
     skinTypes,
     howToUse: howTo ?? (PRO_CATEGORIES.has(category) ? "For professional or trained use. Follow the enclosed protocol and your practitioner's guidance." : "Apply to clean skin as directed on the pack, AM and/or PM."),
-    rating: p.averageRating,
-    reviewCount: p.reviewCount,
+    rating: p.averageRating || summarize(reviewsFor(p.slug)).average,
+    reviewCount: p.reviewCount || summarize(reviewsFor(p.slug)).count,
     bestseller: BESTSELLERS.has(p.slug),
     subscribable: !PRO_CATEGORIES.has(category) && category !== "gift-cards",
     pairsWith: PAIRS[p.slug],

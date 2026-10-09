@@ -79,21 +79,25 @@ export const pressLogos = ["ALLURE", "VOGUE", "COSMOPOLITAN", "REFINERY29", "BYR
 export const scienceIngredients = [
   {
     name: "Copper Peptides (GHK-Cu / AHK-Cu)",
+    id: "copper-peptides",
     tone: "bronze" as const,
     body: "Our signature. Copper tripeptides support collagen, firmness and renewal, the advanced active most brands can't formulate well.",
   },
   {
     name: "Exosomes",
+    id: "exosomes",
     tone: "sage" as const,
     body: "Next-generation cell-signaling boosters for radiance, elasticity and recovery after procedures like microneedling.",
   },
   {
     name: "Skin Boosters & Mesotherapy",
+    id: "skin-boosters",
     tone: "sage" as const,
     body: "Pro-grade hydration and elasticity treatments that bring clinic results into your routine.",
   },
   {
     name: "Niacinamide & Centella",
+    id: "niacinamide-centella",
     tone: "blush" as const,
     body: "The everyday workhorses, brighten, refine pores and calm the barrier for balanced, healthy skin.",
   },
@@ -118,12 +122,23 @@ export const footerGroups = [
     ],
   },
   {
-    title: "Discover",
+    title: "Learn",
     links: [
-      { label: "Skin Quiz", href: "/quiz" },
+      { label: "Guides", href: "/guides" },
       { label: "The Science", href: "/science" },
-      { label: "Brands", href: "/brands" },
+      { label: "FAQ", href: "/faq" },
       { label: "Journal", href: "/blog" },
+      { label: "Skin Quiz", href: "/quiz" },
+    ],
+  },
+  {
+    title: "Circle",
+    links: [
+      { label: "The Depris Circle", href: "/community" },
+      { label: "Share your ritual", href: "/community#share" },
+      { label: "The Monthly Drop", href: "/newsletter" },
+      { label: "For Clinics", href: "/pro" },
+      { label: "Brands", href: "/brands" },
     ],
   },
   {

@@ -18,6 +18,13 @@ import { IngredientDossier } from "@/components/product/IngredientDossier";
 import { DispatchCountdown } from "@/components/product/DispatchCountdown";
 import { StickyBuyBar } from "@/components/product/StickyBuyBar";
 import { PotencyCertificate } from "@/components/product/PotencyCertificate";
+import { FeaturedIn } from "@/components/product/FeaturedIn";
+import { IngredientChips } from "@/components/product/IngredientChips";
+import { WishlistButton } from "@/components/personal/WishlistButton";
+import { ViewTracker } from "@/components/personal/ViewTracker";
+import { PersonalShelf } from "@/components/personal/PersonalShelf";
+import { PetalSeam } from "@/components/petals/PetalSeam";
+import { reviewsFor, summarize } from "@/lib/reviews";
 
 export async function generateStaticParams() {
   const products = await getCommerce().getProducts();
@@ -43,6 +50,11 @@ export default async function ProductPage({ params }: { params: { handle: string
     await Promise.all((product.pairsWith ?? []).map((h) => commerce.getProduct(h)))
   ).filter((p): p is NonNullable<typeof p> => Boolean(p));
 
+  const reviews = reviewsFor(product.handle);
+  const summary = summarize(reviews);
+  const realOnly = reviews.filter((r) => !r.sample);
+  const all = await commerce.getProducts();
+
   const lotEntry = Object.values(lots).find((l) => l.handle === product.handle);
   const lotId = lotEntry?.lot ?? "2611-D";
   const lot = lots[lotId];
@@ -53,7 +65,9 @@ export default async function ProductPage({ params }: { params: { handle: string
     name: product.title,
     brand: { "@type": "Brand", name: product.brand },
     description: product.description,
-    aggregateRating: { "@type": "AggregateRating", ratingValue: product.rating, reviewCount: product.reviewCount },
+    ...(realOnly.length > 0
+      ? { aggregateRating: { "@type": "AggregateRating", ratingValue: summarize(realOnly).average, reviewCount: realOnly.length } }
+      : {}),
     offers: {
       "@type": "Offer",
       price: product.price,
@@ -71,6 +85,7 @@ export default async function ProductPage({ params }: { params: { handle: string
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <ViewTracker handle={product.handle} />
 
       {/* Stage */}
       <section className="celestial relative overflow-hidden text-white">
@@ -85,11 +100,18 @@ export default async function ProductPage({ params }: { params: { handle: string
           <div className="lg:sticky lg:top-24">
             <p className="mono-label text-teal-glow">{product.brand} · {product.category.replace(/-/g, " ")}</p>
             <h1 className="mt-3 font-display text-4xl leading-[1.02] sm:text-5xl">{product.title}</h1>
-            <div className="mt-3 text-white/80"><StarRating rating={product.rating} count={product.reviewCount} /></div>
+            <div className="mt-3 flex items-center gap-4 text-white/80">
+              <a href="#reviews" className="hover:text-white"><StarRating rating={summary.average} count={summary.count} /></a>
+              {summary.hasSample && <span className="font-mono text-[10px] uppercase tracking-wide text-white/50">includes sample reviews</span>}
+            </div>
             <p className="mt-4 text-lg text-white/75">{product.tagline}</p>
+            <div className="mt-4"><IngredientChips ingredients={product.ingredients} /></div>
 
             <div id="buy-box" className="glass-strong mt-6 rounded-3xl p-5 text-ink sm:p-6">
-              <ProductPurchase product={product} />
+              <div className="flex items-start gap-3">
+                <div className="min-w-0 flex-1"><ProductPurchase product={product} /></div>
+                <WishlistButton handle={product.handle} className="mt-0.5 shrink-0" />
+              </div>
               <DispatchCountdown className="mt-4" />
             </div>
 
@@ -107,7 +129,8 @@ export default async function ProductPage({ params }: { params: { handle: string
       </section>
 
       {/* Dossier + proof */}
-      <section className="mesh-light">
+      <section className="mesh-light relative">
+        <PetalSeam position="top" />
         <div className="shell grid gap-10 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <Reveal>
             <IngredientDossier ingredients={product.heroIngredients} />
@@ -131,11 +154,10 @@ export default async function ProductPage({ params }: { params: { handle: string
         </div>
       </section>
 
-      {product.reviews && product.reviews.length > 0 && (
-        <ReviewsPanel reviews={product.reviews} rating={product.rating} reviewCount={product.reviewCount} />
-      )}
-
+      <ReviewsPanel reviews={reviews} productTitle={product.title} />
+      <FeaturedIn handle={product.handle} />
       <CrossSell title="Pairs well with" eyebrow="Complete the ritual" products={pairs} />
+      <PersonalShelf products={all} exclude={product.handle} compact />
       <StickyBuyBar product={product} />
     </>
   );

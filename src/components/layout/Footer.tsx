@@ -6,7 +6,7 @@ import { Logo } from "./Logo";
 export function Footer() {
   return (
     <footer className="mt-20 border-t border-sand bg-porcelain">
-      <div className="shell grid gap-10 py-14 lg:grid-cols-[1.3fr_2fr]">
+      <div className="shell grid gap-10 py-14 lg:grid-cols-[1.1fr_2.4fr]">
         <div>
           <Logo height={40} />
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink-soft">{site.description}</p>
@@ -16,7 +16,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
           {footerGroups.map((g) => (
             <div key={g.title}>
               <p className="eyebrow mb-3">{g.title}</p>

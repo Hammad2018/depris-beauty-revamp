@@ -1,0 +1,58 @@
+{
+  "source": "https://deprisbeauty.com/wp-json/wc/store/v1/products/reviews",
+  "importedAt": "2026-10-09",
+  "reviews": [
+    {
+      "id": 9104,
+      "productId": 36,
+      "productSlug": "bellmona-stem-cell-serum-200ml",
+      "productName": "Bellmona Stem Cell Serum (200mL)",
+      "productImage": "https://deprisbeauty.com/wp-content/uploads/2025/07/Bellmona_StemCellSerum_Luxury_Satin_Hero_Image.png",
+      "productUrl": "https://deprisbeauty.com/product/bellmona-stem-cell-serum-200ml/",
+      "author": "amberfb1979",
+      "rating": 5,
+      "verified": true,
+      "date": "2026-03-24",
+      "body": "I can’t say enough about this,  1) you won’t find it any cheaper ever and 2) once you use this, you won’t use anything else. When I’m doing my skin care purchasing I never check out without a bottle of this my entire family love it, including my husband. His hands are so dry if you’re looking for something good with results get this."
+    },
+    {
+      "id": 3079,
+      "productId": 85,
+      "productSlug": "glutanex-lip-glow-balm",
+      "productName": "Glutanex Lip Glow Balm – Clear",
+      "productImage": "https://deprisbeauty.com/wp-content/uploads/2025/07/Glutanex_LipGlowBalm_Satin_Hero_Image.png",
+      "productUrl": "https://deprisbeauty.com/product/glutanex-lip-glow-balm/",
+      "author": "Stephen Stumpf",
+      "rating": 5,
+      "verified": true,
+      "date": "2025-10-03",
+      "body": "Best lip balm ever!"
+    },
+    {
+      "id": 3078,
+      "productId": 386,
+      "productSlug": "dermaline-dlexo-exo-pdrn-mask",
+      "productName": "Dermaline D’LEXO Exo PDRN Mask",
+      "productImage": "https://deprisbeauty.com/wp-content/uploads/2025/07/Dermaline_ExoPDRNMask_Luxury_Satin_Hydration_Hero_Image.png",
+      "productUrl": "https://deprisbeauty.com/product/dermaline-dlexo-exo-pdrn-mask/",
+      "author": "Stephen Stumpf",
+      "rating": 5,
+      "verified": true,
+      "date": "2025-10-03",
+      "body": "Super hydrating, great for using after treatments."
+    },
+    {
+      "id": 3077,
+      "productId": 43,
+      "productSlug": "bellmona-soothing-ampoule",
+      "productName": "Bellmona Soothing Ampoule",
+      "productImage": "https://deprisbeauty.com/wp-content/uploads/2025/07/Bellmona_Vial_Box_Luxury_Satin_Hero_Image-2.png",
+      "productUrl": "https://deprisbeauty.com/product/bellmona-soothing-ampoule/",
+      "author": "Stephen Stumpf",
+      "rating": 5,
+      "verified": true,
+      "date": "2025-10-03",
+      "body": "Great for post MN!"
+    }
+  ]
+}

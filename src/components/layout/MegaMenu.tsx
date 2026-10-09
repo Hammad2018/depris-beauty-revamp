@@ -19,9 +19,9 @@ export function MegaMenu({ data, onNavigate }: { data: NavData; onNavigate: () =
       exit={{ opacity: 0, transform: "translateY(4px) scale(0.99)", transition: { duration: 0.14, ease: [0.23, 1, 0.32, 1] } }}
       transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }}
       style={{ transformOrigin: "top left" }}
-      className="absolute left-0 top-full w-[min(64rem,calc(100vw-2rem))] pt-3"
+      className="absolute left-0 top-full w-[min(72rem,calc(100vw-2rem))] pt-3"
     >
-      <div className="grid grid-cols-[1fr_1fr_1fr_1.2fr] gap-6 rounded-3xl border border-white/70 bg-cream/95 p-7 shadow-lift backdrop-blur-2xl">
+      <div className="grid grid-cols-[1fr_1fr_1fr_1fr_1.2fr] gap-6 rounded-3xl border border-white/70 bg-cream/95 p-7 shadow-lift backdrop-blur-2xl">
         <div>
           <p className="mono-label text-camellia">Skincare</p>
           <ul className={`mt-3 ${col}`}>
@@ -47,6 +47,18 @@ export function MegaMenu({ data, onNavigate }: { data: NavData; onNavigate: () =
               <li key={c.handle}><Link href={`/collections/${c.handle}`} onClick={onNavigate} className={link}>{c.title}</Link></li>
             ))}
             <li><Link href="/pro" onClick={onNavigate} className={`${link} font-medium text-ink`}>For clinics →</Link></li>
+          </ul>
+        </div>
+        <div>
+          <p className="mono-label text-camellia">Learn</p>
+          <ul className={`mt-3 ${col}`}>
+            <li><Link href="/guides" onClick={onNavigate} className={link}>Guides</Link></li>
+            <li><Link href="/science" onClick={onNavigate} className={link}>The Science</Link></li>
+            <li><Link href="/faq" onClick={onNavigate} className={link}>FAQ</Link></li>
+            <li><Link href="/blog" onClick={onNavigate} className={link}>Journal</Link></li>
+            <li><Link href="/community" onClick={onNavigate} className={link}>The Circle</Link></li>
+            <li><Link href="/newsletter" onClick={onNavigate} className={link}>The Monthly Drop</Link></li>
+            <li><Link href="/bundles" onClick={onNavigate} className={`${link} font-medium text-ink`}>Bundles →</Link></li>
           </ul>
         </div>
         {data.featured && (

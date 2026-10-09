@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { Product, Concern, SkinType } from "@/lib/commerce/types";
 import { recommendRoutine, CONCERN_OPTIONS, SKIN_TYPE_OPTIONS } from "@/lib/quiz/logic";
 import { RoutineResult } from "./RoutineResult";
+import { rememberQuiz } from "@/lib/personal";
 
 export function QuizFlow({ products }: { products: Product[] }) {
   const [step, setStep] = useState(0);
@@ -78,7 +79,7 @@ export function QuizFlow({ products }: { products: Product[] }) {
             <button className="btn-ghost" onClick={() => setStep(0)}>
               Back
             </button>
-            <button className="btn-primary" onClick={() => setStep(2)}>
+            <button className="btn-primary" onClick={() => { rememberQuiz(skinType, concerns); setStep(2); }}>
               See my routine
             </button>
           </div>

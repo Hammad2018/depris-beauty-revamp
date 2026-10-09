@@ -12,6 +12,11 @@ import { ProBand } from "@/components/sections/ProBand";
 import { PRO_CATEGORIES } from "@/lib/nav";
 import { EditorialTeasers } from "@/components/sections/EditorialTeasers";
 import { FinaleCTA } from "@/components/sections/FinaleCTA";
+import { GuidesTeaser } from "@/components/sections/GuidesTeaser";
+import { FaqSection } from "@/components/sections/FaqSection";
+import { CircleSection } from "@/components/community/CircleSection";
+import { PersonalShelf } from "@/components/personal/PersonalShelf";
+import { PetalSeam } from "@/components/petals/PetalSeam";
 
 export default async function HomePage() {
   const commerce = getCommerce();
@@ -27,6 +32,7 @@ export default async function HomePage() {
     .map((h) => all.find((p) => p.handle === h))
     .filter((p): p is NonNullable<typeof p> => Boolean(p) && PRO_CATEGORIES.includes(p!.category));
   const media = Object.fromEntries(all.filter((p) => p.images[0]?.url).map((p) => [p.handle, p.images[0].url as string]));
+  const titles = Object.fromEntries(all.map((p) => [p.handle, p.title]));
 
   // Three acts: dark (the drop, the facts, the night) → light (the shelf, concerns, the ritual,
   // the standard, the journal) → dark (professionals, finale). One deliberate theme switch each way.
@@ -37,12 +43,16 @@ export default async function HomePage() {
       <InsideTheDrop product={hero} />
       <ProofBlock />
       <NightProtocol media={media} />
+      <div className="relative"><PetalSeam position="top" /><PersonalShelf products={all} /></div>
       <BentoShowcase featured={hero} products={bestsellers} />
       <ShopByConcern collections={collections} />
+      <GuidesTeaser />
       <Lookbook media={media} />
       <DeprisStandard />
+      <FaqSection />
       <EditorialTeasers />
-      <ProBand products={pro} />
+      <CircleSection titles={titles} />
+      <div className="relative"><PetalSeam position="top" /><ProBand products={pro} /></div>
       <FinaleCTA />
     </>
   );
