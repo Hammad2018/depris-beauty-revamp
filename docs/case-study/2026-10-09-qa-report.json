@@ -1,0 +1,393 @@
+{
+  "/": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]"
+    ],
+    "title": "Depris Beauty · Turning back the clock, one drop at a time."
+  },
+  "/about": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]"
+    ],
+    "title": "About & Authenticity · Depris Beauty"
+  },
+  "/account": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]"
+    ],
+    "title": "Account · Depris Beauty"
+  },
+  "/blog": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]"
+    ],
+    "title": "The Journal · Depris Beauty"
+  },
+  "/blog/build-your-k-beauty-routine": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]"
+    ],
+    "title": "How to build a K-beauty routine that actually fits your skin · Depris Beauty"
+  },
+  "/blog/copper-peptides-explained": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]"
+    ],
+    "title": "Copper peptides, explained: why GHK-Cu is the active to know · Depris Beauty"
+  },
+  "/blog/exosomes-after-microneedling": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]"
+    ],
+    "title": "Exosomes after microneedling: the recovery glow-up · Depris Beauty"
+  },
+  "/brands": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]"
+    ],
+    "title": "Brands · Depris Beauty"
+  },
+  "/bundles": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Bundles & Routines · Depris Beauty"
+  },
+  "/collections/bestsellers": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Bestsellers · Depris Beauty"
+  },
+  "/collections/concern-acne": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Clear & Calm · Depris Beauty"
+  },
+  "/collections/concern-aging": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Firm & Renew · Depris Beauty"
+  },
+  "/collections/concern-dryness": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Hydrate & Plump · Depris Beauty"
+  },
+  "/collections/concern-dullness": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Glow & Radiance · Depris Beauty"
+  },
+  "/collections/concern-pigmentation": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Even & Bright · Depris Beauty"
+  },
+  "/collections/concern-redness": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Soothe & Strengthen · Depris Beauty"
+  },
+  "/collections/cosmetic-peps": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Cosmetic Peps · Depris Beauty"
+  },
+  "/collections/promos": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Promos · Depris Beauty"
+  },
+  "/collections/skin-boosters": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]",
+      "no meta description"
+    ],
+    "title": "Collection · Depris Beauty"
+  },
+  "/community": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]"
+    ],
+    "title": "The Depris Circle · Depris Beauty"
+  },
+  "/contact": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]"
+    ],
+    "title": "Contact · Depris Beauty"
+  },
+  "/does-not-exist": {
+    "status": 404,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]",
+      "360: console: Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "768: console: Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "1024: console: Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "1440: console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "title": "Depris Beauty · Turning back the clock, one drop at a time."
+  },
+  "/faq": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]"
+    ],
+    "title": "FAQ · Depris Beauty"
+  },
+  "/guides": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Guides · Depris Beauty"
+  },
+  "/guides/choosing-a-skin-booster": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]"
+    ],
+    "title": "Choosing a skin booster · Depris Beauty"
+  },
+  "/guides/exosome-aftercare": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]"
+    ],
+    "title": "Exosome aftercare for clinics · Depris Beauty"
+  },
+  "/guides/ghk-cu-starter": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]"
+    ],
+    "title": "The GHK-Cu starter guide · Depris Beauty"
+  },
+  "/guides/glass-skin-routine": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]"
+    ],
+    "title": "A glass-skin routine in five steps · Depris Beauty"
+  },
+  "/guides/layering-actives": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]"
+    ],
+    "title": "Layering actives without the sting · Depris Beauty"
+  },
+  "/guides/sunscreen-decoded": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]"
+    ],
+    "title": "Sunscreen, decoded · Depris Beauty"
+  },
+  "/newsletter": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]"
+    ],
+    "title": "The Monthly Drop · Depris Beauty"
+  },
+  "/pro": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]"
+    ],
+    "title": "For professionals · Depris Beauty"
+  },
+  "/products/2-pack-offer-ghk-cu-1gram-ahk-cu-1gram-topical-applications": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"Shop\"]",
+      "1 heading level jumps"
+    ],
+    "title": "2 Pack Offer – GHK-Cu 1gram + AHK-Cu 1gram – Topical Applications · Depris Beauty"
+  },
+  "/products/2xsome-skin-booster": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"Shop\"]",
+      "1 heading level jumps"
+    ],
+    "title": "2XSOME Skin Booster · Depris Beauty"
+  },
+  "/products/bellmona-cc-cream-sunscreen-50ml": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"Shop\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Bellmona CC Cream Sunscreen (50mL) · Depris Beauty"
+  },
+  "/products/depris-beauty-gift-card": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"Shop\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Depris Beauty Gift Card · Depris Beauty"
+  },
+  "/products/ghk-cu-topical-cosmetic-1g": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"Shop\"]",
+      "1 heading level jumps"
+    ],
+    "title": "GHK-Cu – Topical Cosmetic (1g) · Depris Beauty"
+  },
+  "/products/glutanex-glow-therapy-toner": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"Shop\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Glutanex Glow Therapy Toner (150mL) · Depris Beauty"
+  },
+  "/products/glutanex-night-serum-30ml": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"Shop\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Glutanex Night Serum (30mL) · Depris Beauty"
+  },
+  "/products/glutanex-snow-white-cream-50ml": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"Shop\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Glutanex Snow White Cream (50mL) · Depris Beauty"
+  },
+  "/products/medisco-skin-glow-mask-100ml": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"Shop\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Medisco Skin Glow Mask (100mL) · Depris Beauty"
+  },
+  "/products/multivita-korean-multivitamin-3-vials": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"Shop\"]",
+      "1 heading level jumps"
+    ],
+    "title": "MULTIVITA Korean Multivitamin (3 Vials) · Depris Beauty"
+  },
+  "/products/plenaris-exosome-hgf": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"Shop\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Plenaris Exosome HGF · Depris Beauty"
+  },
+  "/products/plenaris-pro-80": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"Shop\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Plenaris Pro 80 (1 x 2.5mL) · Depris Beauty"
+  },
+  "/products/puri-eyes-pdrn-eye-patch": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"Shop\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Puri Eyes PDRN Eye Patch · Depris Beauty"
+  },
+  "/products/red-light-therapy-hair-brush": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"Shop\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Red Light Therapy Hair Brush · Depris Beauty"
+  },
+  "/products/tesoro-collagen": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"Shop\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Tesoro Collagen (1 x 2.5mL) · Depris Beauty"
+  },
+  "/quiz": {
+    "status": 200,
+    "issues": [
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]",
+      "h1 count 0"
+    ],
+    "title": "Skin Quiz · Depris Beauty"
+  },
+  "/science": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]"
+    ],
+    "title": "The Science · Depris Beauty"
+  },
+  "/shop": {
+    "status": 200,
+    "issues": [
+      "360: 1 tiny tap targets e.g. [\"Skip to content\"]",
+      "1 heading level jumps"
+    ],
+    "title": "Shop all · Depris Beauty"
+  },
+  "/verify": {
+    "status": 200,
+    "issues": [
+      "360: horizontal scroll 416>360 [\"flex min-w-full shrink-0 animate-marquee items-cen\",\"mono-label mono-label-plain flex items-center gap-\",\"mono-label mono-label-plain flex items-center gap-\",\"mono-label mono-label-plain flex items-center gap-\"]",
+      "360: 2 tiny tap targets e.g. [\"Skip to content\",\"FAQ\"]"
+    ],
+    "title": "Verify your serum · Depris Beauty"
+  }
+}
