@@ -1,0 +1,499 @@
+<title>Depris Beauty Case Study</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+  /* Layout: a calm, one-column reading document with wide side-by-side comparison plates. Big type, few colours. */
+  :root {
+    --bg: #F6F7FC;
+    --paper: #FFFFFF;
+    --ink: #1E2A44;
+    --ink-soft: #566079;
+    --line: #DCE1F0;
+    --jade: #157A73;
+    --jade-soft: #DDF1EE;
+    --periwinkle: #4E6AD0;
+    --blush: #EBB7B0;
+    --gold: #E3B34C;
+    --today: #8A6B5B;
+    --today-soft: #F3EBE6;
+    --display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --sans: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121A2E; --paper: #1A2440; --ink: #EEF1FA; --ink-soft: #AEB7D1; --line: #2C3756;
+      --jade: #5CC3B8; --jade-soft: #15302F; --periwinkle: #8E9FE6; --today: #D8B39F; --today-soft: #2E2520;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121A2E; --paper: #1A2440; --ink: #EEF1FA; --ink-soft: #AEB7D1; --line: #2C3756;
+    --jade: #5CC3B8; --jade-soft: #15302F; --periwinkle: #8E9FE6; --today: #D8B39F; --today-soft: #2E2520;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 19px; line-height: 1.6; margin: 0; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding-block: 0 64px; padding-inline: clamp(16px, 4vw, 40px); }
+  h1, h2, h3 { font-family: var(--display); font-weight: 600; letter-spacing: -0.01em; line-height: 1.08; text-wrap: balance; margin: 0; }
+  h1 { font-size: clamp(2.6rem, 7vw, 5rem); }
+  h2 { font-size: clamp(2rem, 4.6vw, 3.2rem); }
+  h3 { font-size: 1.6rem; }
+  p { margin: 0; max-width: 42rem; }
+  .lede { font-size: 1.3rem; color: var(--ink-soft); }
+  .label { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--jade); }
+  .muted { color: var(--ink-soft); }
+  a { color: var(--jade); }
+
+  /* Cover */
+  .cover { padding-block: 56px 48px; border-bottom: 1px solid var(--line); display: grid; gap: 28px; }
+  .cover img.logo { height: 56px; width: auto; }
+  .cover .meta { display: flex; flex-wrap: wrap; gap: 24px 40px; color: var(--ink-soft); font-size: 1rem; }
+
+  /* Chapters */
+  .chapter { padding-block: 64px; border-bottom: 1px solid var(--line); display: grid; gap: 28px; }
+  .chapter-head { display: grid; gap: 12px; }
+  .num { font-family: var(--display); font-style: italic; font-size: 1.4rem; color: var(--periwinkle); }
+
+  /* Short version list */
+  .points { display: grid; gap: 14px; padding: 0; margin: 0; list-style: none; counter-reset: pt; max-width: 46rem; }
+  .points li { display: grid; grid-template-columns: 2.4rem 1fr; gap: 14px; align-items: start; counter-increment: pt; font-size: 1.15rem; }
+  .points li::before { content: counter(pt); font-family: var(--display); font-size: 1.8rem; line-height: 1; color: var(--periwinkle); }
+
+  /* Side-by-side plates */
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .plate { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; min-width: 0; }
+  .tag { display: inline-block; padding: 6px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+  .plate .tag { display: inline-block; padding: 6px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin: 16px 16px 0; }
+  .tag.today { background: var(--today-soft); color: var(--today); }
+  .tag.next { background: var(--jade-soft); color: var(--jade); }
+  .plate figure { margin: 14px 16px 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); }
+  .plate img { display: block; width: 100%; height: auto; }
+  .plate .notes { padding: 16px 18px 20px; display: grid; gap: 8px; }
+  .plate .notes p { font-size: 1rem; color: var(--ink-soft); max-width: none; }
+  .plate .notes p strong { color: var(--ink); font-weight: 600; }
+  .compare.phones .plate figure { max-width: 300px; margin-inline: auto; }
+
+  /* Depth strips */
+  .strips { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .strip { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 16px; display: grid; gap: 12px; }
+  .strip .frame { height: 420px; overflow: hidden; border-radius: 8px; border: 1px solid var(--line); position: relative; background: #fff; }
+  .strip .frame img { width: 100%; height: auto; display: block; }
+  .strip .frame::after { content: ""; position: absolute; inset: auto 0 0 0; height: 90px; background: linear-gradient(to bottom, transparent, var(--paper)); }
+  .strip .frame.short::after { display: none; }
+
+  /* Feature cards */
+  .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .feature { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; min-width: 0; }
+  .feature img { display: block; width: 100%; height: 220px; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); }
+  .feature .body { padding: 18px 20px 22px; display: grid; gap: 8px; align-content: start; }
+  .feature h3 { font-size: 1.45rem; }
+  .feature p { font-size: 1rem; color: var(--ink-soft); max-width: none; }
+
+  /* Numbers */
+  .numbers { display: grid; gap: 18px; }
+  .row { display: grid; grid-template-columns: 1fr; gap: 6px; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+  .row .what { font-weight: 600; }
+  .row .why { font-size: 0.95rem; color: var(--ink-soft); max-width: none; }
+  .bars { display: grid; gap: 8px; margin-top: 6px; }
+  .bar { display: grid; grid-template-columns: 5.5rem 1fr 6rem; align-items: center; gap: 12px; font-size: 0.95rem; font-variant-numeric: tabular-nums; }
+  .bar .track { display: block; height: 14px; background: var(--line); border-radius: 999px; overflow: hidden; }
+  .bar .fill { display: block; height: 100%; border-radius: 999px; }
+  .bar.today .fill { background: var(--today); }
+  .bar.next .fill { background: var(--jade); }
+  .bar .who { color: var(--ink-soft); }
+  .bar .val { font-weight: 600; text-align: right; }
+  .fine { font-size: 0.9rem; color: var(--ink-soft); max-width: 48rem; }
+
+  /* Simple tables */
+  table { border-collapse: collapse; width: 100%; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; font-size: 1rem; }
+  th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
+  tr:last-child td { border-bottom: 0; }
+  .pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
+  .pill.real { background: var(--jade-soft); color: var(--jade); }
+  .pill.concept { background: var(--today-soft); color: var(--today); }
+  .table-wrap { overflow-x: auto; }
+
+  /* Phases */
+  .phases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .phase { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 20px; display: grid; gap: 10px; align-content: start; }
+  .phase h3 { font-size: 1.4rem; }
+  .phase ul { margin: 0; padding-left: 1.1rem; color: var(--ink-soft); font-size: 1rem; display: grid; gap: 4px; }
+
+  /* Closing */
+  .closing { padding-block: 64px 24px; display: grid; gap: 18px; }
+  .closing .cta { display: inline-block; background: var(--jade); color: #fff; padding: 14px 24px; border-radius: 999px; font-weight: 600; text-decoration: none; }
+
+  @media (max-width: 760px) {
+    body { font-size: 17px; }
+    .compare, .strips, .features, .phases { grid-template-columns: 1fr; }
+    .bar { grid-template-columns: 4.5rem 1fr 4.5rem; }
+  }
+  @media print {
+    @page { size: A4 landscape; margin: 12mm; }
+    body { font-size: 12px; background: #fff; color: #1E2A44; }
+    .wrap { max-width: none; padding-inline: 0; padding-block: 0; }
+    .cover { padding-block: 24px 20px; break-after: page; }
+    .chapter { padding-block: 12px 0; border-bottom: 0; break-before: page; gap: 14px; }
+    .chapter-head { break-after: avoid; }
+    .compare, .strips { break-before: avoid; }
+    .chapter-head { gap: 6px; }
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2rem; }
+    .lede { font-size: 1.05rem; }
+    .plate, .feature, .strip, .row, .phase, .points li, tr { break-inside: avoid; }
+    .compare, .strips, .features, .phases { gap: 12px; }
+    .compare.phones .plate figure { max-width: 150px; }
+    .compare .plate figure { max-width: 440px; margin-inline: auto; }
+    .plate .notes { padding: 10px 12px 12px; gap: 4px; }
+    .plate .notes p, .feature p, .row .why { font-size: 0.85rem; }
+    .strip .frame { height: 300px; }
+    .features { grid-template-columns: repeat(4, 1fr); }
+    .feature img { height: 110px; }
+    .feature h3 { font-size: 1.1rem; }
+    .closing { padding-block: 24px; break-before: page; }
+    .closing .cta { border: 1px solid #157A73; }
+    a { text-decoration: none; color: inherit; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="cover">
+    <img class="logo" src="img/logo.png" alt="Depris Beauty">
+    <div>
+      <p class="label">A comparative case study</p>
+      <h1 style="margin-top:12px">Where deprisbeauty.com is today,<br>and where it could go.</h1>
+    </div>
+    <p class="lede">The products, the prices, the warehouse in Cheyenne and the WooCommerce store all stay. What changes is how a visitor feels in the first ten seconds, and how much the site does for them after that.</p>
+    <div class="meta">
+      <span>Prepared for the Depris Beauty team</span>
+      <span>9 October 2026</span>
+      <span>Screenshots and measurements taken the same day, in the same browser</span>
+    </div>
+  </header>
+
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">The short version</span>
+      <h2>Five things to know before you scroll</h2>
+    </div>
+    <ol class="points">
+      <li><span>The current site works. It sells real products and ships same day. The proposal keeps all of that and builds on it rather than replacing it.</span></li>
+      <li><span>The new design makes the signature product, GHK-Cu, the hero on the first screen, instead of a logo banner and a search box.</span></li>
+      <li><span>Pages are far lighter. The home page downloads about one fifth of the data and runs about one fifth of the scripts, which matters most on phones.</span></li>
+      <li><span>The site starts to work for the customer: a shelf that remembers them, six guides, an FAQ, a community, reviews on every product and a monthly newsletter.</span></li>
+      <li><span>Everything in this document is built and clickable. Three forms are front-end previews, clearly marked, until a backend is chosen.</span></li>
+    </ol>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">01</span>
+      <h2>What stays exactly the same</h2>
+      <p class="lede">This is a redesign, not a new business. These pieces carry straight across.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Kept</th><th>How</th></tr>
+        <tr><td><strong>Your products and prices</strong></td><td>Pulled live from the WooCommerce store. The preview carries one real product from each of the 15 categories; the full 145 import with one command.</td></tr>
+        <tr><td><strong>Your product photos</strong></td><td>Served from deprisbeauty.com as they are today.</td></tr>
+        <tr><td><strong>Your logo and name</strong></td><td>The real lock-up sits centred in the header. The colours of the whole site are taken from it.</td></tr>
+        <tr><td><strong>Your customer reviews</strong></td><td>The four verified reviews on the store appear on the new site and link back to it.</td></tr>
+        <tr><td><strong>Your promises</strong></td><td>Authorized retailer, sourced in Korea, stocked in the US, same-day dispatch before 3pm Mountain Time.</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">02</span>
+      <h2>The first screen</h2>
+      <p class="lede">Most visitors decide whether to stay here. On the left, the current home page. On the right, the proposed one.</p>
+    </div>
+    <div class="compare">
+      <div class="plate">
+        <span class="tag today">Today</span>
+        <figure><img src="img/cur-home.webp" alt="Current deprisbeauty.com home page at desktop size"></figure>
+        <div class="notes">
+          <p><strong>The hero is the logo again.</strong> A visitor sees the brand name three times before any product.</p>
+          <p><strong>Search box first.</strong> That asks the visitor to already know what they want.</p>
+          <p><strong>Category tiles use stock-style faces,</strong> so the page could belong to any skincare shop.</p>
+        </div>
+      </div>
+      <div class="plate">
+        <span class="tag next">Proposed</span>
+        <figure><img src="img/new-home.webp" alt="Proposed Depris Beauty home page at desktop size"></figure>
+        <div class="notes">
+          <p><strong>The product is the hero.</strong> The real GHK-Cu photo, lit like a specimen, with three true facts pinned to it.</p>
+          <p><strong>One headline, two buttons.</strong> Shop the signature, or build a routine in 60 seconds.</p>
+          <p><strong>Trust up front.</strong> Authorized retailer, stocked in the US, cruelty-free, before the first scroll.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">03</span>
+      <h2>On a phone</h2>
+      <p class="lede">Most skincare shopping happens on a phone, often in the evening. This is the same two pages at phone width.</p>
+    </div>
+    <div class="compare phones">
+      <div class="plate">
+        <span class="tag today">Today</span>
+        <figure><img src="img/cur-home-m.webp" alt="Current home page on a phone"></figure>
+        <div class="notes">
+          <p><strong>A newsletter pop-up covers the page</strong> the moment it loads, before the visitor has seen a product.</p>
+          <p><strong>The banner, the search box and a paragraph</strong> fill the first screen. The first product is two screens down.</p>
+        </div>
+      </div>
+      <div class="plate">
+        <span class="tag next">Proposed</span>
+        <figure><img src="img/new-home-m.webp" alt="Proposed home page on a phone"></figure>
+        <div class="notes">
+          <p><strong>Headline, promise, two buttons, product.</strong> Everything that matters fits on one phone screen.</p>
+          <p><strong>No pop-up.</strong> The newsletter has its own place at the end of the page, with preferences the visitor chooses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">04</span>
+      <h2>The product page</h2>
+      <p class="lede">This is where the sale happens. Same product, same price, same photo.</p>
+    </div>
+    <div class="compare">
+      <div class="plate">
+        <span class="tag today">Today</span>
+        <figure><img src="img/cur-pdp.webp" alt="Current GHK-Cu product page"></figure>
+        <div class="notes">
+          <p><strong>Title, price, a paragraph, a grey button.</strong> Nothing explains what the jar is or how to use it.</p>
+          <p><strong>No reviews, no reassurance,</strong> no link to anything else on the site.</p>
+        </div>
+      </div>
+      <div class="plate">
+        <span class="tag next">Proposed</span>
+        <figure><img src="img/new-pdp.webp" alt="Proposed GHK-Cu product page"></figure>
+        <div class="notes">
+          <p><strong>A proper stage.</strong> Tilt the photo, flick through the real gallery, see the lot number and verify it.</p>
+          <p><strong>Everything a careful buyer asks:</strong> ingredient chips that link to the science, a live same-day dispatch countdown, subscribe and save, a wishlist heart.</p>
+          <p><strong>Further down:</strong> reviews with a breakdown, the guides that mention this product, and the FAQ answers about it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">05</span>
+      <h2>The shop</h2>
+    </div>
+    <div class="compare">
+      <div class="plate">
+        <span class="tag today">Today</span>
+        <figure><img src="img/cur-shop.webp" alt="Current shop page"></figure>
+        <div class="notes">
+          <p><strong>145 products, 16 per page, one sort menu.</strong> No way to narrow by skin concern or ingredient.</p>
+        </div>
+      </div>
+      <div class="plate">
+        <span class="tag next">Proposed</span>
+        <figure><img src="img/new-shop.webp" alt="Proposed shop page with filters"></figure>
+        <div class="notes">
+          <p><strong>Filters that match how people think:</strong> skincare categories, professional categories, concern, ingredient, plus instant search.</p>
+          <p><strong>Add to bag from the grid.</strong> The bag opens as a drawer with real thumbnails and a free-shipping meter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">06</span>
+      <h2>How much the home page says</h2>
+      <p class="lede">Both pages, top to bottom, at the same scale. The current page is one screen of category tiles. The proposed page tells the story of the brand, then lets the visitor shop.</p>
+    </div>
+    <div class="strips">
+      <div class="strip">
+        <span class="tag today" style="margin:0;justify-self:start">Today</span>
+        <div class="frame short"><img src="img/cur-home-full.webp" alt="Full current home page"></div>
+        <p class="muted" style="font-size:1rem">Banner, search, 16 category tiles, a second search box, a subscribe form, footer.</p>
+      </div>
+      <div class="strip">
+        <span class="tag next" style="margin:0;justify-self:start">Proposed</span>
+        <div class="frame"><img src="img/new-home-full.webp" alt="Full proposed home page, first part"></div>
+        <p class="muted" style="font-size:1rem">The drop, the facts, the night routine, your personal shelf, the edit, concerns, guides, the look, the standard, FAQ, journal, the Circle, clinics, the Monthly Drop.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">07</span>
+      <h2>Seven things the new site does that the current one cannot</h2>
+      <p class="lede">Each one is built and working in the preview.</p>
+    </div>
+    <div class="features">
+      <article class="feature">
+        <img src="img/v18-shelf-quiz.webp" alt="Personal shelf picked for the visitor's concern">
+        <div class="body"><h3>A shelf that remembers you</h3><p>After the 60-second skin quiz, the home page greets the visitor by time of day and shows products picked for their concern. It also remembers what they looked at last time.</p></div>
+      </article>
+      <article class="feature">
+        <img src="img/v18-guides-teaser.webp" alt="Guides section with petal-shaped imagery">
+        <div class="body"><h3>Six guides, written to be followed</h3><p>From the first GHK-Cu dilution to a clinic's exosome aftercare sheet. Every step links the product it means, so reading turns into buying.</p></div>
+      </article>
+      <article class="feature">
+        <img src="img/v18-faq-home.webp" alt="FAQ section">
+        <div class="body"><h3>Answers before the email arrives</h3><p>Shipping, authenticity, cold chain, how to use the strong stuff. Each answer links to its guide or product. Google can read it too.</p></div>
+      </article>
+      <article class="feature">
+        <img src="img/v18-circle-home.webp" alt="The Depris Circle community section">
+        <div class="body"><h3>The Depris Circle</h3><p>Your real verified reviews, member rituals with the products tagged, upcoming lives, a clinic corner, and a form to share your own ritual.</p></div>
+      </article>
+      <article class="feature">
+        <img src="img/v18-pdp-reviews.webp" alt="Reviews panel with rating breakdown">
+        <div class="body"><h3>Reviews on every product</h3><p>A star breakdown, filters by skin type, a write-a-review form. Where there are none yet, it says so plainly and invites the first one.</p></div>
+      </article>
+      <article class="feature">
+        <img src="img/v18-drop.webp" alt="The Monthly Drop newsletter section">
+        <div class="body"><h3>The Monthly Drop</h3><p>One letter a month. Visitors pick what they want, skincare rituals, clinic notes or offers, and see the latest issue before they sign up.</p></div>
+      </article>
+      <article class="feature">
+        <img src="img/v18-pdp-featured.webp" alt="Featured-in links on a product page">
+        <div class="body"><h3>Everything connects</h3><p>Products link to guides, guides link to products, FAQ answers link to both, and the community tags the products it talks about. A visitor is never at a dead end.</p></div>
+      </article>
+      <article class="feature">
+        <img src="img/v17-hero.webp" alt="Hero with real product photo and glass callouts">
+        <div class="body"><h3>Your brand, made bigger</h3><p>Colours taken from the real logo, petal shapes drawn from its lotus, and the GHK-Cu photo lit like something precious. It looks like one brand from the first screen to the footer.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">08</span>
+      <h2>The numbers</h2>
+      <p class="lede">Measured on 9 October 2026 with the same browser. Lower is better on all three.</p>
+    </div>
+    <div class="numbers">
+      <div class="row">
+        <span class="what">Data downloaded to show the home page</span>
+        <p class="why">Less data means the page appears sooner on a phone signal, and Google treats faster pages more kindly.</p>
+        <div class="bars">
+          <div class="bar today"><span class="who">Today</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="val">8.8 MB</span></div>
+          <div class="bar next"><span class="who">Proposed</span><span class="track"><span class="fill" style="width:19%"></span></span><span class="val">1.7 MB</span></div>
+        </div>
+      </div>
+      <div class="row">
+        <span class="what">Scripts the browser has to run</span>
+        <p class="why">Each plugin on a WordPress site adds its own scripts. They slow the page and sometimes fight each other.</p>
+        <div class="bars">
+          <div class="bar today"><span class="who">Today</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="val">114</span></div>
+          <div class="bar next"><span class="who">Proposed</span><span class="track"><span class="fill" style="width:21%"></span></span><span class="val">24</span></div>
+        </div>
+      </div>
+      <div class="row">
+        <span class="what">Separate requests to load the home page</span>
+        <p class="why">Fewer round trips, fewer things that can stall.</p>
+        <div class="bars">
+          <div class="bar today"><span class="who">Today</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="val">190</span></div>
+          <div class="bar next"><span class="who">Proposed</span><span class="track"><span class="fill" style="width:23%"></span></span><span class="val">43</span></div>
+        </div>
+      </div>
+      <div class="row">
+        <span class="what">Two smaller things search engines notice</span>
+        <p class="why">The current home page has no main headline for Google to read, and it loads five different typeface families. The proposed page has one clear headline and three faces chosen to match the logo.</p>
+      </div>
+    </div>
+    <p class="fine">Figures are what one browser downloaded and ran for the home page on that day. The current product page was heavier still, at about 15 MB and 134 scripts. Load times are not compared because the preview ran on a local machine, which would flatter it unfairly.</p>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">09</span>
+      <h2>What this means for the business</h2>
+      <p class="lede">In plain terms, and without inventing numbers.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Change</th><th>Why it should matter</th></tr>
+        <tr><td><strong>Product first, trust first</strong></td><td>A visitor who understands what GHK-Cu is, and believes it is genuine, is far closer to buying than one looking at a logo.</td></tr>
+        <tr><td><strong>Lighter pages</strong></td><td>Fewer people give up while a phone page loads. Faster pages also help search ranking.</td></tr>
+        <tr><td><strong>Guides and FAQ</strong></td><td>Fewer "how do I use this" emails, and more confident first purchases of the strong products.</td></tr>
+        <tr><td><strong>Reviews everywhere</strong></td><td>Your four real reviews are currently hard to find. On the new site they are on the home page, the Circle and the products.</td></tr>
+        <tr><td><strong>The Monthly Drop</strong></td><td>A reason to come back each month, and a list you own, segmented by interest from day one.</td></tr>
+        <tr><td><strong>A clinic corner</strong></td><td>Professionals are a different customer. They get their own entry point, their own guides and a pro account path.</td></tr>
+        <tr><td><strong>A shelf that remembers</strong></td><td>Returning visitors see their concern and their recent products first. It feels like a shop that knows them.</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">10</span>
+      <h2>What is real and what is a preview</h2>
+      <p class="lede">We would rather you know exactly which parts are wired and which are showing the idea.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Part</th><th>Status</th><th>Note</th></tr>
+        <tr><td>Products, prices, photos, categories</td><td><span class="pill real">Real</span></td><td>From your WooCommerce store.</td></tr>
+        <tr><td>Verified customer reviews</td><td><span class="pill real">Real</span></td><td>The four on the store today, linked back to it.</td></tr>
+        <tr><td>Facts: authorized retailer, Wyoming dispatch, 3pm cutoff, 145+ products</td><td><span class="pill real">Real</span></td><td>Taken from your site and store.</td></tr>
+        <tr><td>Checkout</td><td><span class="pill concept">Preview</span></td><td>The bag works. Payment would route to WooCommerce or Shopify at build.</td></tr>
+        <tr><td>Sample reviews, member rituals, newsletter issues</td><td><span class="pill concept">Preview</span></td><td>Written to show the experience. Each one is visibly tagged "Sample".</td></tr>
+        <tr><td>Review, ritual and newsletter forms</td><td><span class="pill concept">Preview</span></td><td>They work on the page and say which system they connect to at build.</td></tr>
+        <tr><td>Lot verification and certificates</td><td><span class="pill concept">Preview</span></td><td>Shows how a lot code lookup would read. Needs your batch records.</td></tr>
+        <tr><td>Journal and guide imagery</td><td><span class="pill concept">Preview</span></td><td>Generated for the concept, to be replaced with your own photography.</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">11</span>
+      <h2>How we would get there</h2>
+      <p class="lede">Three steps. Each one leaves you with something you can use.</p>
+    </div>
+    <div class="phases">
+      <div class="phase">
+        <span class="label">Step one</span>
+        <h3>Foundations</h3>
+        <ul>
+          <li>Import all 145 products and keep them in sync with WooCommerce</li>
+          <li>Connect checkout and payments (Afterpay and Klarna stay)</li>
+          <li>Put the preview on a real address for the team to test</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="label">Step two</span>
+        <h3>Content and email</h3>
+        <ul>
+          <li>Your photography into the journal and guides</li>
+          <li>Connect the Monthly Drop to your email platform</li>
+          <li>Review the guide and FAQ copy with you</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="label">Step three</span>
+        <h3>Community and launch</h3>
+        <ul>
+          <li>Sync reviews both ways with the store</li>
+          <li>Moderated ritual submissions and the clinic account path</li>
+          <li>Redirects from every old address, then switch over</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <span class="num">Next step</span>
+    <h2>A 30-minute walkthrough</h2>
+    <p class="lede">We will click through the preview together on a laptop and a phone, answer anything in this document, and agree what step one should include.</p>
+    <p class="muted">Depris Beauty · 1910 Thomes Avenue, Cheyenne, WY 82001 · info@deprisbeauty.com</p>
+  </section>
+
+</div>

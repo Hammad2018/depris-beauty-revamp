@@ -1,0 +1,161 @@
+{
+  "cur-home": {
+    "url": "https://deprisbeauty.com/",
+    "width": 1440,
+    "loadMs": 60015,
+    "requests": 190,
+    "images": 24,
+    "scripts": 114,
+    "kb": 8817,
+    "dom": 692,
+    "title": "Luxury Korean Skincare | Depris Beauty",
+    "h1": "",
+    "fonts": [
+      "Inter",
+      "Newsreader",
+      "Arial",
+      "Montserrat",
+      "Cardo"
+    ],
+    "links": 55,
+    "hasPersonal": false
+  },
+  "cur-home-m": {
+    "url": "https://deprisbeauty.com/",
+    "width": 390,
+    "loadMs": 60022,
+    "requests": 178,
+    "images": 12,
+    "scripts": 114,
+    "kb": 9421,
+    "dom": 692,
+    "title": "Luxury Korean Skincare | Depris Beauty",
+    "h1": "",
+    "fonts": [
+      "Inter",
+      "Newsreader",
+      "Arial",
+      "Montserrat",
+      "Cardo"
+    ],
+    "links": 55,
+    "hasPersonal": false
+  },
+  "cur-shop": {
+    "url": "https://deprisbeauty.com/shop/",
+    "width": 1440,
+    "loadMs": 60007,
+    "requests": 204,
+    "images": 25,
+    "scripts": 117,
+    "kb": 9348,
+    "dom": 926,
+    "title": "Shop - Depris Beauty",
+    "h1": "Shop",
+    "fonts": [
+      "Inter",
+      "Newsreader",
+      "Cardo",
+      "Montserrat",
+      "Arial"
+    ],
+    "links": 76,
+    "hasPersonal": false
+  },
+  "cur-pdp": {
+    "url": "https://deprisbeauty.com/product/ghk-cu-topical-cosmetic-1g/",
+    "width": 1440,
+    "loadMs": 60020,
+    "requests": 263,
+    "images": 35,
+    "scripts": 134,
+    "kb": 15514,
+    "dom": 872,
+    "title": "GHK-Cu Topical Cosmetic (1g) | Depris Beauty",
+    "h1": "GHK-Cu – Topical Cosmetic (1g)",
+    "fonts": [
+      "Inter",
+      "Newsreader",
+      "Cardo",
+      "Montserrat",
+      "Arial"
+    ],
+    "links": 57,
+    "hasPersonal": false
+  },
+  "new-home": {
+    "url": "http://localhost:3000/",
+    "width": 1440,
+    "loadMs": 1559,
+    "requests": 43,
+    "images": 3,
+    "scripts": 24,
+    "kb": 1697,
+    "dom": 1276,
+    "title": "Depris Beauty · Turning back the clock, one drop at a time.",
+    "h1": "Turn back the clock,one drop at a time.",
+    "fonts": [
+      "__Hanken_Grotesk_fd3dff",
+      "__IBM_Plex_Mono_9f0762",
+      "__Cormorant_Garamond_967f48"
+    ],
+    "links": 97,
+    "hasPersonal": true
+  },
+  "new-home-m": {
+    "url": "http://localhost:3000/",
+    "width": 390,
+    "loadMs": 1597,
+    "requests": 32,
+    "images": 4,
+    "scripts": 18,
+    "kb": 1444,
+    "dom": 1275,
+    "title": "Depris Beauty · Turning back the clock, one drop at a time.",
+    "h1": "Turn back the clock,one drop at a time.",
+    "fonts": [
+      "__Hanken_Grotesk_fd3dff",
+      "__IBM_Plex_Mono_9f0762",
+      "__Cormorant_Garamond_967f48"
+    ],
+    "links": 97,
+    "hasPersonal": true
+  },
+  "new-shop": {
+    "url": "http://localhost:3000/shop",
+    "width": 1440,
+    "loadMs": 3659,
+    "requests": 65,
+    "images": 17,
+    "scripts": 25,
+    "kb": 2595,
+    "dom": 616,
+    "title": "Shop all · Depris Beauty",
+    "h1": "Every active, one shelf",
+    "fonts": [
+      "__Hanken_Grotesk_fd3dff",
+      "__Cormorant_Garamond_967f48"
+    ],
+    "links": 60,
+    "hasPersonal": true
+  },
+  "new-pdp": {
+    "url": "http://localhost:3000/products/ghk-cu-topical-cosmetic-1g",
+    "width": 1440,
+    "loadMs": 1014,
+    "requests": 49,
+    "images": 9,
+    "scripts": 23,
+    "kb": 1574,
+    "dom": 748,
+    "title": "GHK-Cu – Topical Cosmetic (1g) · Depris Beauty",
+    "h1": "GHK-Cu – Topical Cosmetic (1g)",
+    "fonts": [
+      "__Hanken_Grotesk_fd3dff",
+      "__Cormorant_Garamond_967f48",
+      "__IBM_Plex_Mono_9f0762"
+    ],
+    "links": 51,
+    "hasPersonal": true
+  }
+}
