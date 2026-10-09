@@ -7,6 +7,7 @@ import { skinTypeLabels } from "@/lib/taxonomy";
 import { summarize, type SourcedReview } from "@/lib/reviews";
 import { StarRating } from "@/components/ui/StarRating";
 import { VoiceCard } from "@/components/community/VoiceCard";
+import { ConceptNote } from "@/components/ui/ConceptNote";
 
 const SKIN: SkinType[] = ["dry", "oily", "combination", "normal", "sensitive"];
 
@@ -84,10 +85,14 @@ export function ReviewsPanel({ reviews, productTitle }: { reviews: SourcedReview
                 <textarea name="body" required rows={4} className="mt-1 w-full rounded-2xl border border-sand bg-cream px-4 py-2.5 text-ink focus:border-camellia focus:outline-none" />
               </label>
               <button type="submit" className="btn-primary mt-5">Submit review</button>
+              <ConceptNote connects="WooCommerce product reviews on deprisbeauty.com, so verified-buyer status and moderation stay in your existing store" />
             </form>
           )}
           {sent && (
-            <p className="mb-8 inline-flex items-center gap-2 rounded-full bg-camellia/10 px-4 py-2 text-sm text-ink"><Check size={16} weight="bold" className="text-camellia" /> Thank you. Reviews appear after a quick check.</p>
+            <div className="mb-8">
+              <p className="inline-flex items-center gap-2 rounded-full bg-camellia/10 px-4 py-2 text-sm text-ink"><Check size={16} weight="bold" className="text-camellia" /> Thank you. Reviews appear after a quick check.</p>
+              <ConceptNote connects="WooCommerce product reviews on deprisbeauty.com, so verified-buyer status and moderation stay in your existing store" />
+            </div>
           )}
 
           {s.count > 0 && (

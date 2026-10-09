@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Check } from "@phosphor-icons/react";
 import { prefOptions } from "@/lib/newsletter";
 import { usePersonal, writePersonal, type NewsletterPref } from "@/lib/personal";
+import { ConceptNote } from "@/components/ui/ConceptNote";
 
 /** Monthly Drop signup with preference chips. Remembers the subscription in the browser. */
 export function NewsletterSignup({ tone = "dark", id = "drop" }: { tone?: "dark" | "light"; id?: string }) {
@@ -28,6 +29,7 @@ export function NewsletterSignup({ tone = "dark", id = "drop" }: { tone?: "dark"
         <button type="button" onClick={() => writePersonal({ newsletter: undefined })} className={`mt-3 text-xs underline-offset-4 hover:underline ${dark ? "text-white/60" : "text-ink-soft"}`}>
           Change preferences
         </button>
+        <ConceptNote tone={tone} connects="your email platform (Klaviyo or Mailchimp), with the preference chips mapped to list segments" />
       </div>
     );
   }
@@ -67,6 +69,7 @@ export function NewsletterSignup({ tone = "dark", id = "drop" }: { tone?: "dark"
         <button type="submit" className="btn-primary whitespace-nowrap">Join the Drop</button>
       </div>
       <p className={`mt-2 text-xs ${dark ? "text-white/50" : "text-ink-soft/70"}`}>One issue a month. Unsubscribe in one tap.</p>
+      <ConceptNote tone={tone} connects="your email platform (Klaviyo or Mailchimp), with the preference chips mapped to list segments" />
     </form>
   );
 }

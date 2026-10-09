@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Check } from "@phosphor-icons/react";
+import { ConceptNote } from "@/components/ui/ConceptNote";
 
 /** "Share your ritual" form. Front-end only: confirms and keeps a local copy until a backend exists. */
 export function ShareRitualForm({ productTitles }: { productTitles: { handle: string; title: string }[] }) {
@@ -12,6 +13,7 @@ export function ShareRitualForm({ productTitles }: { productTitles: { handle: st
       <div className="r-petal-alt bg-porcelain p-8 text-center shadow-soft">
         <p className="inline-flex items-center gap-2 font-display text-2xl text-ink"><Check size={20} weight="bold" className="text-camellia" /> Thank you.</p>
         <p className="mt-2 text-ink-soft">We read every ritual. If yours is featured, you will hear from us first.</p>
+        <ConceptNote className="text-left" connects="a moderated submissions inbox (email or your CRM), with photo upload and consent capture" />
       </div>
     );
   }
@@ -53,6 +55,7 @@ export function ShareRitualForm({ productTitles }: { productTitles: { handle: st
       </div>
       <button type="submit" className="btn-primary mt-6">Share my ritual</button>
       <p className="mt-2 text-xs text-ink-soft/70">By sharing you agree we may feature it, first name and city only.</p>
+      <ConceptNote connects="a moderated submissions inbox (email or your CRM), with photo upload and consent capture" />
     </form>
   );
 }
