@@ -91,7 +91,7 @@ export default async function ProductPage({ params }: { params: { handle: string
       <section className="celestial relative overflow-hidden text-white">
         <div className="shell pt-5">
           <nav className="text-xs text-white/60">
-            <Link href="/shop" className="hover:text-white">Shop</Link> / <span className="text-white/90">{product.title}</span>
+            <Link href="/shop" className="inline-block py-2 pr-1 hover:text-white">Shop</Link> / <span className="text-white/90">{product.title}</span>
           </nav>
         </div>
         <div className="shell grid items-start gap-10 py-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:py-12">
@@ -133,6 +133,7 @@ export default async function ProductPage({ params }: { params: { handle: string
         <PetalSeam position="top" />
         <div className="shell grid gap-10 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <Reveal>
+            <h2 className="sr-only">Ingredients and how to use</h2>
             <IngredientDossier ingredients={product.heroIngredients} />
             <div className="mt-8">
               <Accordion title="How to use" defaultOpen>{product.howToUse}</Accordion>

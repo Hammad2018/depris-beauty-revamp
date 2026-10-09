@@ -10,7 +10,7 @@ export function LabTicker({ items = defaults, tone = "dark", className = "" }: {
   const color = tone === "dark" ? "text-white/60" : "text-ink-soft";
   const dot = tone === "dark" ? "bg-teal-glow" : "bg-camellia";
   return (
-    <div className={`border-y ${tone === "dark" ? "border-white/10" : "border-ink/10"} py-3 ${className}`}>
+    <div className={`w-full max-w-full overflow-hidden border-y ${tone === "dark" ? "border-white/10" : "border-ink/10"} py-3 ${className}`}>
       <Marquee className="mask-fade-x [&>div]:gap-10 [&>div]:[animation-duration:48s]">
         {items.map((t) => (
           <span key={t} className={`mono-label mono-label-plain flex items-center gap-3 whitespace-nowrap ${color}`}>

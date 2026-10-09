@@ -30,7 +30,7 @@ export default async function CollectionPage({ params }: { params: { handle: str
   ]);
 
   const special = specialTitles[params.handle];
-  if (!col && !special && products.length === 0) notFound();
+  if (!col && !special) notFound();
 
   const title = col?.title ?? special?.title ?? "Collection";
   const description = col?.description ?? special?.description ?? "";

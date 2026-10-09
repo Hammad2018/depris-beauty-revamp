@@ -24,9 +24,9 @@ export function VerifyLot({ initial = "" }: { initial?: string }) {
         <form onSubmit={(e) => { e.preventDefault(); setQuery(code.trim().toUpperCase()); }} className="glass-strong rounded-3xl p-6">
           <label htmlFor="lot" className="mono-label text-camellia">Lot code</label>
           <p className="mt-1 text-sm text-ink-soft">Printed on the carton base and the bottle shoulder, e.g. <button type="button" onClick={() => { setCode("2611-D"); setQuery("2611-D"); }} className="font-mono text-ink underline-offset-4 hover:underline">2611-D</button>.</p>
-          <div className="mt-4 flex gap-2">
+          <div className="mt-4 flex flex-wrap gap-2">
             <input id="lot" value={code} onChange={(e) => setCode(e.target.value)} placeholder="2611-D" className="min-w-0 flex-1 rounded-full border border-ink/15 bg-white px-5 py-3 font-mono uppercase tracking-widest text-ink outline-none focus:border-camellia" />
-            <button className="btn-primary">Verify</button>
+            <button className="btn-primary w-full sm:w-auto">Verify</button>
           </div>
         </form>
 

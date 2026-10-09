@@ -20,10 +20,10 @@ export function Footer() {
           {footerGroups.map((g) => (
             <div key={g.title}>
               <p className="eyebrow mb-3">{g.title}</p>
-              <ul className="space-y-2">
+              <ul className="space-y-0.5">
                 {g.links.map((l) => (
                   <li key={l.href + l.label}>
-                    <Link href={l.href} className="text-sm text-ink-soft hover:text-ink">
+                    <Link href={l.href} className="inline-block py-1.5 text-sm text-ink-soft hover:text-ink">
                       {l.label}
                     </Link>
                   </li>

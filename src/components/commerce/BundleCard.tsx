@@ -43,9 +43,9 @@ export function BundleCard({
 
   return (
     <article className="flex flex-col overflow-hidden rounded-3xl bg-porcelain shadow-soft">
-      <div className={`flex items-center gap-3 bg-gradient-to-br ${toneClass[tone]} p-6`}>
+      <div className={`flex items-center gap-3 overflow-x-auto bg-gradient-to-br ${toneClass[tone]} p-6 no-scrollbar`}>
         {products.slice(0, 4).map((p) => (
-          <ProductMediaMini key={p.id} tone={p.tone} alt={p.title} />
+          <ProductMediaMini key={p.id} tone={p.tone} alt={p.title} image={p.images[0]?.url} size={72} />
         ))}
       </div>
       <div className="flex flex-1 flex-col p-6">

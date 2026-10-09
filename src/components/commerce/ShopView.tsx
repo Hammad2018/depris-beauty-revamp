@@ -113,6 +113,7 @@ export function ShopView({ products, categories = [], lockedCategory }: { produc
 
   return (
     <div className="shell grid gap-10 py-12 lg:grid-cols-[17rem_1fr]">
+      <h2 className="sr-only">Products</h2>
       <aside className="hidden lg:block">
         <div className="sticky top-28 max-h-[calc(100vh-8rem)] overflow-auto pr-2">{Filters}</div>
       </aside>

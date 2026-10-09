@@ -31,7 +31,7 @@ export function RoutineResult({ routine, onRestart }: { routine: RoutineItem[]; 
         {routine.map((item, i) => (
           <li key={item.step} className="flex items-center gap-4 rounded-3xl bg-porcelain p-4 shadow-soft">
             <span className="font-display text-xl text-bronze">{String(i + 1).padStart(2, "0")}</span>
-            <ProductMediaMini tone={item.product.tone} alt={item.product.title} />
+            <ProductMediaMini tone={item.product.tone} alt={item.product.title} image={item.product.images[0]?.url} />
             <div className="flex-1">
               <p className="eyebrow text-bronze-deep">{item.reason}</p>
               <Link href={`/products/${item.product.handle}`} className="font-display text-lg text-ink hover:text-camellia">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Tone } from "@/lib/commerce/types";
 
 const toneGradient: Record<Tone, string> = {
@@ -8,10 +9,19 @@ const toneGradient: Record<Tone, string> = {
   ink: "from-[#2E3C9E] to-[#2FA39A]",
 };
 
-export function ProductMediaMini({ tone, alt }: { tone: Tone; alt: string }) {
+/** Small product thumbnail: the real photo when there is one, otherwise an on-brand gradient. */
+export function ProductMediaMini({ tone, alt, image, size = 64 }: { tone: Tone; alt: string; image?: string; size?: number }) {
+  if (image) {
+    return (
+      <span className="relative block shrink-0 overflow-hidden rounded-xl bg-sand" style={{ width: size, height: size }}>
+        <Image src={image} alt={alt} fill sizes={`${size}px`} className="object-cover" />
+      </span>
+    );
+  }
   return (
     <div
-      className={`h-16 w-16 shrink-0 rounded-xl bg-gradient-to-br ${toneGradient[tone]}`}
+      className={`shrink-0 rounded-xl bg-gradient-to-br ${toneGradient[tone]}`}
+      style={{ width: size, height: size }}
       role="img"
       aria-label={alt}
     />

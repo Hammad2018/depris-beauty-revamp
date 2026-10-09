@@ -98,7 +98,7 @@ export function CartDrawer({ recommendations = [] }: { recommendations?: NavProd
                             <Image src={item.image} alt={item.title} fill sizes="80px" className="object-cover" />
                           </Link>
                         ) : (
-                          <ProductMediaMini tone={item.tone} alt={item.title} />
+                          <ProductMediaMini tone={item.tone} alt={item.title} image={item.image} />
                         )}
                         <div className="flex-1">
                           <p className="eyebrow text-bronze-deep">{item.brand}</p>
@@ -187,7 +187,7 @@ export function CartDrawer({ recommendations = [] }: { recommendations?: NavProd
                     <span className="font-display text-xl">{money(cart.subtotal)}</span>
                   </div>
                   <button className="btn-primary w-full" disabled={!shopifyLive}>
-                    {shopifyLive ? "Checkout" : "Checkout (connect Shopify to enable)"}
+                    {shopifyLive ? "Checkout" : "Checkout (connect WooCommerce to enable)"}
                   </button>
                   <div className="flex items-center justify-center gap-3 text-xs text-ink-soft">
                     <span>Shop Pay</span>

@@ -20,7 +20,10 @@ export function QuizFlow({ products }: { products: Product[] }) {
 
   return (
     <section className="shell max-w-2xl py-16">
-      <div className="mb-8 flex items-center gap-2" aria-hidden>
+      <p className="mono-label text-camellia">Skin quiz · step {step + 1} of {totalSteps}</p>
+      <h1 className="mt-2 font-display text-4xl text-ink sm:text-5xl">Build my ritual</h1>
+      <p className="mt-3 text-ink-soft">Two questions. Sixty seconds. A routine built for your skin, remembered on this device.</p>
+      <div className="mb-8 mt-8 flex items-center gap-2" aria-hidden>
         {Array.from({ length: totalSteps }).map((_, i) => (
           <span key={i} className={`h-1.5 flex-1 rounded-full ${i <= step ? "bg-camellia" : "bg-sand"}`} />
         ))}

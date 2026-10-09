@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const tiles = [
   { k: "PRIMARY ACTIVE", name: "Copper peptides", sub: "GHK-Cu · AHK-Cu", img: "/renders/crystal.webp", href: "/collections/cosmetic-peps", copy: "Signal peptides that support collagen, firmness and renewal." },
-  { k: "BOOSTER", name: "Exosomes", sub: "2XSOME · skin boosters", img: "/renders/swirl.webp", href: "/collections/skin-boosters", copy: "Cell-signalling vesicles for radiance and post-procedure recovery." },
+  { k: "BOOSTER", name: "Exosomes", sub: "2XSOME · skin boosters", img: "/renders/swirl.webp", href: "/collections/mesotherapy-skin-boosters", copy: "Cell-signalling vesicles for radiance and post-procedure recovery." },
   { k: "BOTANICAL", name: "Lotus & centella", sub: "Nelumbo nucifera · cica", img: "/renders/lotus.webp", href: "/collections/concern-redness", copy: "Antioxidant, calming botanicals that keep the barrier happy." },
 ];
 

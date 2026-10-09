@@ -14,7 +14,7 @@ export default function AccountPage() {
       <section className="shell max-w-md py-14">
         <div className="rounded-3xl bg-porcelain p-8 shadow-soft">
           <p className="text-ink-soft">
-            Accounts are powered by Shopify once connected. In this concept preview, sign-in and order history will
+            Accounts connect to your WooCommerce customer accounts at build. In this concept preview, sign-in and order history will
             appear here.
           </p>
           <div className="mt-6 flex gap-3">
