@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * Animated iridescent aurora — soft blurred color blobs that drift.
+ * Animated iridescent aurora, soft blurred color blobs that drift.
  * Pure CSS transforms (GPU), paused for reduced-motion via the global rule.
  */
 export function AuroraBackground({

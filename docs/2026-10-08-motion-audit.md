@@ -35,3 +35,16 @@ parallax (decorative) and the PDP drop-in (first-time moment).
 
 Feel-checks to do with fresh eyes: slow-motion the mega menu and cart drawer; confirm the
 blur-masked view switch on the PDP reads as one object; test drawers on a real phone.
+
+## Atelier pass (2026-10-09)
+
+Design read: redesign (preserve) of a luxury K-beauty + pro-aesthetics storefront; dials 8 / 8 / 4.
+Pre-flight items fixed: Cormorant Garamond display (echoes the engraved wordmark; Fraunces retired),
+eyebrows cut from 28 to 4 across the home page and decorative label dots removed, section numbering
+and scroll cue removed, zero em-dashes in our copy, one marquee per page, three-act dark → light → dark
+home rhythm (two theme switches), hero reduced to four elements with a two-line headline, invented
+study stats and sample reviews replaced by verifiable facts (sample imagery tagged), CTA intents
+unified (Build my ritual / Shop GHK-Cu / Verify your serum / For clinics), italic descender clearance,
+real lotus mark replaces the hand-drawn SVG, Phosphor icons replace unicode glyphs, loading skeletons
+and a tidier 404, pinned stages on 100dvh, scroll listeners replaced with Motion useScroll/useVelocity.
+Kept deliberately: step numerals inside the ritual sections (content order, not section labels).

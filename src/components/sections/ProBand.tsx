@@ -18,10 +18,10 @@ export function ProBand({ products }: { products: Product[] }) {
           <p className="mono-label text-teal-glow">For professionals</p>
           <h2 className="h-display mt-3 font-display">The clinic shelf, <span className="italic text-metallic text-metallic-dark">shipped cold.</span></h2>
           <p className="mt-5 max-w-md text-white/75">
-            Mesotherapy, exosome boosters, PLLA, fillers and devices — the Korean lines medspas already trust, stocked in the US and dispatched the same day on ice.
+            Mesotherapy, exosome boosters, PLLA, fillers and devices, the Korean lines medspas already trust, stocked in the US and dispatched the same day on ice.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <MagneticLink href="/pro" variant="primary">Explore the pro range</MagneticLink>
+            <MagneticLink href="/pro" variant="primary">For clinics</MagneticLink>
             <MagneticLink href="/contact" variant="light">Open a trade account</MagneticLink>
           </div>
         </Reveal>

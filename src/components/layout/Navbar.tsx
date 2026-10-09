@@ -7,6 +7,7 @@ import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-
 import { useCart } from "@/lib/cart/CartContext";
 import { announcements } from "@/lib/content";
 import type { NavData } from "@/lib/nav";
+import { MagnifyingGlass, X, CaretDown, List } from "@phosphor-icons/react";
 import { Logo } from "./Logo";
 import { MegaMenu } from "./MegaMenu";
 import { SearchOverlay } from "./SearchOverlay";
@@ -63,12 +64,12 @@ export function Navbar({ data }: { data: NavData }) {
         <nav className={`shell grid grid-cols-[1fr_auto_1fr] items-center transition-[padding] duration-300 ${condensed ? "py-2" : "py-3.5"}`} aria-label="Primary">
           {/* left */}
           <div className="flex items-center gap-1">
-            <button className="mr-2 flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full hover:bg-sand/70 lg:hidden" onClick={() => setMobile(true)} aria-label="Open menu" aria-expanded={mobile}>
-              <span className="block h-0.5 w-5 bg-ink" /><span className="block h-0.5 w-5 bg-ink" /><span className="block h-0.5 w-3 bg-ink" />
+            <button className="mr-2 flex h-10 w-10 items-center justify-center rounded-full hover:bg-sand/70 lg:hidden" onClick={() => setMobile(true)} aria-label="Open menu" aria-expanded={mobile}>
+              <List size={22} weight="regular" />
             </button>
             <div className="relative hidden lg:block" onMouseEnter={() => setShopOpen(true)} onMouseLeave={() => setShopOpen(false)}>
               <button className={`${navLink} ${shopOpen ? "bg-sand/70 text-camellia" : ""}`} aria-expanded={shopOpen} aria-haspopup="true" onClick={() => setShopOpen((v) => !v)} onFocus={() => setShopOpen(true)}>
-                Shop <span aria-hidden className="ml-1 inline-block text-[10px] transition-transform" style={{ transform: shopOpen ? "rotate(180deg)" : "none" }}>▾</span>
+                Shop <CaretDown size={12} weight="bold" aria-hidden className="ml-1 inline-block transition-transform duration-200 ease-out" style={{ transform: shopOpen ? "rotate(180deg)" : "none" }} />
               </button>
               <AnimatePresence>{shopOpen && <MegaMenu data={data} onNavigate={() => setShopOpen(false)} />}</AnimatePresence>
             </div>
@@ -87,10 +88,10 @@ export function Navbar({ data }: { data: NavData }) {
           {/* right */}
           <div className="flex items-center justify-end gap-1">
             <button onClick={() => setSearch(true)} className={`${navLink} hidden items-center gap-2 sm:inline-flex`} aria-label="Search (⌘K)">
-              <span aria-hidden>⌕</span> Search
+              <MagnifyingGlass size={16} weight="regular" aria-hidden /> Search
               <kbd className="mono-label mono-label-plain hidden rounded border border-ink/15 px-1 text-[9px] text-ink-soft xl:inline">⌘K</kbd>
             </button>
-            <button onClick={() => setSearch(true)} className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-sand/70 sm:hidden" aria-label="Search">⌕</button>
+            <button onClick={() => setSearch(true)} className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-sand/70 sm:hidden" aria-label="Search"><MagnifyingGlass size={20} /></button>
             <Link href="/account" className={`${navLink} hidden md:inline-flex`}>Account</Link>
             <button
               onClick={cart.openCart}
@@ -120,8 +121,8 @@ export function Navbar({ data }: { data: NavData }) {
               initial={{ transform: "translateX(-100%)" }} animate={{ transform: "translateX(0%)" }} exit={{ transform: "translateX(-100%)", transition: { duration: 0.25, ease: [0.32, 0.72, 0, 1] } }} transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
               className="h-full w-[88vw] max-w-sm overflow-auto bg-cream p-6" onClick={(e) => e.stopPropagation()} aria-label="Menu"
             >
-              <div className="flex items-center justify-between"><Logo height={34} /><button onClick={() => setMobile(false)} className="rounded-full px-3 py-1 text-sm text-ink-soft hover:bg-sand" aria-label="Close menu">Close ✕</button></div>
-              <button onClick={() => { setMobile(false); setSearch(true); }} className="mt-5 flex w-full items-center gap-2 rounded-full border border-ink/15 px-4 py-3 text-left text-sm text-ink-soft"><span aria-hidden>⌕</span> Search products…</button>
+              <div className="flex items-center justify-between"><Logo height={34} /><button onClick={() => setMobile(false)} className="inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm text-ink-soft hover:bg-sand" aria-label="Close menu">Close <X size={14} /></button></div>
+              <button onClick={() => { setMobile(false); setSearch(true); }} className="mt-5 flex w-full items-center gap-2 rounded-full border border-ink/15 px-4 py-3 text-left text-sm text-ink-soft"><MagnifyingGlass size={16} aria-hidden /> Search products…</button>
               <p className="mono-label mt-6 text-camellia">Skincare</p>
               <ul className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1">
                 {data.categories.map((c) => (

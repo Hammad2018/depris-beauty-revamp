@@ -23,7 +23,7 @@ export function RoutineResult({ routine, onRestart }: { routine: RoutineItem[]; 
         <p className="eyebrow text-camellia">Your custom routine</p>
         <h1 className="mt-3 font-display text-4xl text-ink">Here&apos;s your Depris ritual</h1>
         <p className="mt-3 text-ink-soft">
-          {routine.length} steps, chosen for your skin. Add the full routine in one tap — or pick and choose.
+          {routine.length} steps, chosen for your skin. Add the full routine in one tap, or pick and choose.
         </p>
       </div>
 

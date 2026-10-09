@@ -1,9 +1,9 @@
 import { RevealGroup, RevealItem } from "./Reveal";
 
 const pills = [
-  { k: "Derm-tested", v: "Independent panel, 12 weeks" },
-  { k: "Clinically dosed", v: "GHK-Cu at 3.0%, pH 5.5" },
-  { k: "Formulated in Korea", v: "Shipped same-day from the US" },
+  { k: "Authorized retailer", v: "Sourced directly from Korea" },
+  { k: "Stocked in the US", v: "Ships same-day from Wyoming" },
+  { k: "Cruelty-free", v: "Korea bans cosmetic animal testing" },
 ];
 
 /** Three glass trust cards that overlap the hero's bottom edge. */

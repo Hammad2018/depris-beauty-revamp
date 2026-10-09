@@ -2,7 +2,7 @@ import { LotusMark } from "./LotusMark";
 
 /** Circular rotating "verified" seal: text on a path, chrome ring, lotus core. Pauses on hover. */
 export function RotatingSeal({
-  text = "DERMATOLOGIST TESTED · pH 5.5 · FORMULATED IN KOREA · ",
+  text = "AUTHORIZED RETAILER · SOURCED IN KOREA · STOCKED IN THE US · ",
   size = 150,
   className = "",
   light = false,

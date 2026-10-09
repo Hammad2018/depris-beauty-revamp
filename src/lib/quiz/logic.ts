@@ -55,8 +55,8 @@ export function recommendRoutine(products: Product[], answers: QuizAnswers): Rou
       step,
       product: best,
       reason: matched.length
-        ? `${STEP_LABEL[step]} — targets ${matched.join(" & ")}`
-        : `${STEP_LABEL[step]} — a gentle everyday essential`,
+        ? `${STEP_LABEL[step]}, targets ${matched.join(" & ")}`
+        : `${STEP_LABEL[step]}, a gentle everyday essential`,
     });
   }
   return routine;

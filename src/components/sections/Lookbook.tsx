@@ -5,13 +5,12 @@ import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useReducedMotion } from "@/lib/useReducedMotion";
 import { DuotoneImage } from "@/components/ui/DuotoneImage";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 
 type Palette = "cool" | "warm" | "lilac" | "jade";
 
 const panels: { n: string; title: string; copy: string; product: string; href: string; palette: Palette }[] = [
   { n: "01", title: "Prep", copy: "A low-pH glutathione + PDRN toner that preps skin for actives.", product: "Glutanex Glow Therapy Toner", href: "/products/glutanex-glow-therapy-toner", palette: "jade" },
-  { n: "02", title: "Treat", copy: "Copper tripeptides that support collagen and firmness — the signature.", product: "GHK-Cu Topical Cosmetic", href: "/products/ghk-cu-topical-cosmetic-1g", palette: "cool" },
+  { n: "02", title: "Treat", copy: "Copper tripeptides that support collagen and firmness, the signature.", product: "GHK-Cu Topical Cosmetic", href: "/products/ghk-cu-topical-cosmetic-1g", palette: "cool" },
   { n: "03", title: "Boost", copy: "Exosome-powered radiance for a next-level, clinic-grade glow.", product: "2XSOME Skin Booster", href: "/products/2xsome-skin-booster", palette: "lilac" },
   { n: "04", title: "Protect", copy: "Luminous daily SPF that evens tone and locks the ritual in.", product: "Bellmona CC Cream Sunscreen", href: "/products/bellmona-cc-cream-sunscreen-50ml", palette: "warm" },
 ];
@@ -31,7 +30,7 @@ export function Lookbook({ media = {} }: { media?: Record<string, string> }) {
           key={p.n}
           className="group relative h-[68vh] w-[86vw] shrink-0 overflow-hidden rounded-[2rem] shadow-lift sm:w-[72vw]"
         >
-          <DuotoneImage src={media[p.href.replace("/products/", "")]} alt={`${p.title} — ${p.product}`} palette={p.palette} className="liquid absolute inset-0" />
+          <DuotoneImage src={media[p.href.replace("/products/", "")]} alt={`${p.title}, ${p.product}`} palette={p.palette} className="liquid absolute inset-0" />
           <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/70 via-navy-deep/10 to-transparent" />
           <div className="relative flex h-full flex-col justify-between p-7 text-white sm:p-10">
             <span className="index-num font-display italic" style={{ WebkitTextStroke: "1.2px rgba(255,255,255,0.6)" }}>
@@ -58,8 +57,7 @@ export function Lookbook({ media = {} }: { media?: Record<string, string> }) {
     return (
       <section className="mesh-tint py-20">
         <div className="shell mb-8">
-          <Eyebrow className="text-camellia">The ritual</Eyebrow>
-          <h2 className="h-display mt-3 font-display text-ink">Four steps to <span className="italic text-gradient">glass skin</span></h2>
+          <h2 className="h-display font-display text-ink">Four steps to <span className="italic text-gradient">glass skin</span></h2>
         </div>
         <div className="no-scrollbar overflow-x-auto">{rail}</div>
       </section>
@@ -68,10 +66,9 @@ export function Lookbook({ media = {} }: { media?: Record<string, string> }) {
 
   return (
     <section ref={ref} className="mesh-tint relative" style={{ height: `${panels.length * 70}vh` }}>
-      <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden">
+      <div className="sticky top-0 flex h-[100dvh] flex-col justify-center overflow-hidden">
         <div className="shell mb-6">
-          <Eyebrow className="text-camellia">The ritual</Eyebrow>
-          <h2 className="h-display mt-2 font-display text-ink">
+          <h2 className="h-display font-display text-ink">
             Four steps to <span className="italic text-gradient">glass skin</span>
           </h2>
         </div>

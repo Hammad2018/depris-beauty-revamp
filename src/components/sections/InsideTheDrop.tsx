@@ -25,8 +25,7 @@ function OfferCard({ product }: { product: Product }) {
   const v = product.variants[0];
   return (
     <div className="glass-dark rounded-3xl p-6 text-white shadow-lift">
-      <p className="mono-label text-teal-glow">The signature</p>
-      <h3 className="mt-2 font-display text-2xl leading-tight">{product.title}</h3>
+      <h3 className="font-display text-2xl leading-tight">{product.title}</h3>
       <div className="mt-2"><StarRating rating={product.rating} count={product.reviewCount} /></div>
       <p className="mt-3 text-sm text-white/70">{product.tagline}</p>
       <div className="mt-5 flex items-center justify-between gap-3">
@@ -67,7 +66,6 @@ export function InsideTheDrop({ product }: { product: Product }) {
   const offerOpacity = useTransform(p, [0.8, 0.94], [0, 1]);
   const offerX = useTransform(p, [0.8, 0.94], [48, 0]);
   const labelsOpacity = useTransform(p, [0.7, 0.8], [1, 0]);
-  const hintOpacity = useTransform(p, [0, 0.08], [1, 0]);
 
   // leader lines: staggered draw
   const d1 = useTransform(p, [0.28, 0.44], [0, 1]);
@@ -80,8 +78,7 @@ export function InsideTheDrop({ product }: { product: Product }) {
       <section className="relative overflow-hidden bg-navy-deep py-20 text-white">
         <Starfield />
         <div className="shell relative">
-          <p className="mono-label text-teal-glow">Inside the drop</p>
-          <h2 className="h-display mt-3 font-display">What&apos;s inside <span className="italic text-metallic text-metallic-dark">one drop</span></h2>
+          <h2 className="h-display font-display">What&apos;s inside <span className="italic text-metallic text-metallic-dark">one drop</span></h2>
           <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_1.2fr_1fr] lg:items-center">
             <ul className="space-y-6">
               {labels.map((l) => (
@@ -102,14 +99,13 @@ export function InsideTheDrop({ product }: { product: Product }) {
 
   return (
     <section ref={ref} className="relative bg-navy-deep text-white" style={{ height: "340vh" }}>
-      <div className="sticky top-0 flex h-screen flex-col overflow-hidden">
+      <div className="sticky top-0 flex h-[100dvh] flex-col overflow-hidden">
         <Starfield />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_55%,rgba(92,195,184,0.16),transparent_70%)]" />
 
         {/* heading */}
         <motion.div style={{ opacity: headOpacity, y: headY }} className="shell relative z-10 pt-10 text-center lg:pt-14">
-          <p className="mono-label text-teal-glow">Inside the drop</p>
-          <h2 className="h-display mt-3 font-display">
+          <h2 className="h-display font-display">
             What&apos;s inside <span className="italic text-metallic text-metallic-dark">one drop</span>
           </h2>
         </motion.div>
@@ -161,9 +157,6 @@ export function InsideTheDrop({ product }: { product: Product }) {
           </motion.div>
         </div>
 
-        <motion.p style={{ opacity: hintOpacity }} className="mono-label mono-label-plain relative z-10 pb-6 text-center text-white/50">
-          Scroll to open the drop
-        </motion.p>
       </div>
     </section>
   );

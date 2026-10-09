@@ -11,7 +11,7 @@ export const collections: Collection[] = [
   { handle: "concern-dryness", title: "Hydrate & Plump", description: "Deep, lasting moisture for a dewy, glass-skin finish.", concern: "dryness", tone: "blush" },
 
   // Category (real)
-  { handle: "cosmetic-peps", title: "Cosmetic Peptides", description: "Copper peptides and advanced actives — the Depris signature.", tone: "bronze" },
+  { handle: "cosmetic-peps", title: "Cosmetic Peptides", description: "Copper peptides and advanced actives, the Depris signature.", tone: "bronze" },
   { handle: "serums", title: "Serums & Ampoules", description: "Concentrated treatments for every concern.", tone: "blush" },
   { handle: "cleansers-toners", title: "Cleansers & Toners", description: "Gentle, balancing first steps.", tone: "sage" },
   { handle: "sheet-masks", title: "Sheet Masks", description: "Ten-minute rituals for an instant glow.", tone: "sand" },

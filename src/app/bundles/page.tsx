@@ -7,13 +7,13 @@ import { ButtonLink } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
   title: "Bundles & Routines",
-  description: "Curated Korean skincare routines and sets — save when you shop the full ritual.",
+  description: "Curated Korean skincare routines and sets, save when you shop the full ritual.",
 };
 
 const bundleSpecs: { title: string; description: string; tone: Tone; discountPct: number; handles: string[] }[] = [
   {
     title: "The Glass-Skin Ritual",
-    description: "Our hero routine for dewy, bouncy skin — cleanse to protect.",
+    description: "Our hero routine for dewy, bouncy skin, cleanse to protect.",
     tone: "blush",
     discountPct: 15,
     handles: ["glutanex-glow-therapy-toner", "ghk-cu-topical-cosmetic-1g", "glutanex-snow-white-cream-50ml", "bellmona-cc-cream-sunscreen-50ml"],
@@ -27,7 +27,7 @@ const bundleSpecs: { title: string; description: string; tone: Tone; discountPct
   },
   {
     title: "Glow Reset Kit",
-    description: "Prep, brighten and glow — a gentle weekly reset.",
+    description: "Prep, brighten and glow, a gentle weekly reset.",
     tone: "sage",
     discountPct: 12,
     handles: ["glutanex-glow-therapy-toner", "medisco-skin-glow-mask-100ml", "glutanex-snow-white-cream-50ml"],
@@ -55,7 +55,7 @@ export default async function BundlesPage() {
       <PageHero
         eyebrow="Bundles & routines"
         title="Shop the whole ritual, save on every step"
-        intro="Pre-curated routines built by our skin experts — add the full set to your bag in one tap."
+        intro="Pre-curated routines built by our skin experts, add the full set to your bag in one tap."
       />
       <section className="shell grid gap-6 py-14 lg:grid-cols-2">
         {bundles.map((b) => (

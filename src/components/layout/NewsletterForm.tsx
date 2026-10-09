@@ -7,7 +7,7 @@ export function NewsletterForm() {
   const [done, setDone] = useState(false);
 
   if (done) {
-    return <p className="text-sm text-sage">You&apos;re on the list — welcome to the glow. ✨</p>;
+    return <p className="text-sm text-sage">You&apos;re on the list. Welcome to the glow.</p>;
   }
 
   return (

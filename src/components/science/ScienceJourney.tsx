@@ -8,7 +8,7 @@ import { Starfield } from "@/components/ui/Starfield";
 import { signature } from "@/lib/brand";
 
 const stages = [
-  { k: "molecule", label: "01 · The molecule", title: "Three amino acids, one copper ion.", body: "GHK-Cu is a tripeptide — glycine, histidine, lysine — carrying a copper ion. Small enough to reach where it matters, specific enough to act like a message." },
+  { k: "molecule", label: "01 · The molecule", title: "Three amino acids, one copper ion.", body: "GHK-Cu is a tripeptide, glycine, histidine, lysine, carrying a copper ion. Small enough to reach where it matters, specific enough to act like a message." },
   { k: "cell", label: "02 · The signal", title: "It tells fibroblasts to get back to work.", body: "In skin, GHK-Cu is read as a repair signal: collagen and elastin production rises, and the enzymes that break them down settle. Night is when that signal lands best." },
   { k: "drop", label: "03 · The drop", title: "High-purity, topical grade, lot-tested.", body: "GHK-Cu – Topical Cosmetic (1g) is the real Depris signature: a cosmetic-grade copper peptide you fold into your nightly routine. The lot certificate proves what is in the tube." },
 ];
@@ -94,7 +94,7 @@ export function ScienceJourney() {
 
   return (
     <section ref={ref} className="relative bg-navy-deep text-white" style={{ height: `${stages.length * 110}vh` }}>
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+      <div className="sticky top-0 flex h-[100dvh] items-center overflow-hidden">
         <Starfield />
         <div className="shell relative grid w-full items-center gap-10 lg:grid-cols-2">
           <div className="relative aspect-[5/4] w-full">

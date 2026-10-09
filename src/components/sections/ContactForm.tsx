@@ -7,7 +7,7 @@ export function ContactForm() {
   if (sent) {
     return (
       <div className="rounded-3xl bg-sage/10 p-8">
-        <p className="font-display text-xl text-ink">Thanks — message received ✨</p>
+        <p className="font-display text-xl text-ink">Thanks. Message received.</p>
         <p className="mt-2 text-ink-soft">Our team will get back to you within one business day.</p>
       </div>
     );

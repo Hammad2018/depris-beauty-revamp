@@ -6,11 +6,8 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useReducedMotion } from "@/lib/useReducedMotion";
 import { MagneticLink } from "@/components/ui/MagneticButton";
 import { WordReveal } from "@/components/ui/WordReveal";
-import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
-import { StarRating } from "@/components/ui/StarRating";
 import { Constellation } from "@/components/ui/Constellation";
 import { LightRays } from "@/components/ui/LightRays";
-import { LotusMark } from "@/components/ui/LotusMark";
 import { TrustPills } from "@/components/ui/TrustPills";
 
 const callouts = [
@@ -49,17 +46,17 @@ export function Hero({ image, imageAlt = "GHK-Cu Topical Cosmetic" }: { image: s
       <div className="shell relative grid items-center gap-8 pb-10 pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:pb-14 lg:pt-20">
         <div className="relative z-10">
           <motion.p initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mono-label text-teal-glow">
-            Luxury Korean skincare · Peptides · Boosters · Pro aesthetics
+            Luxury Korean skincare · Pro aesthetics
           </motion.p>
 
-          <h1 className="mt-6 text-5xl leading-[1.0] sm:text-6xl xl:text-[5.4rem]">
-            <WordReveal text="Turn back the clock," className="block font-display text-white" />
-            <span className="block overflow-hidden pb-1">
+          <h1 className="mt-6 text-5xl leading-[1.04] sm:text-6xl xl:text-[4rem]">
+            <WordReveal text="Turn back the clock," className="block font-display text-white lg:whitespace-nowrap" />
+            <span className="block overflow-hidden pb-2">
               <motion.span
-                className="block font-display italic text-metallic text-metallic-dark"
-                initial={reduce ? false : { y: "110%", opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ type: "spring", stiffness: 140, damping: 18, delay: 0.3 }}
+                className="block font-display italic text-metallic text-metallic-dark lg:whitespace-nowrap"
+                initial={reduce ? false : { transform: "translateY(110%)", opacity: 0 }}
+                animate={{ transform: "translateY(0%)", opacity: 1 }}
+                transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1], delay: 0.3 }}
               >
                 one drop at a time.
               </motion.span>
@@ -72,8 +69,7 @@ export function Hero({ image, imageAlt = "GHK-Cu Topical Cosmetic" }: { image: s
             transition={{ delay: 0.5, duration: 0.6 }}
             className="mt-6 max-w-md text-lg leading-relaxed text-white/75"
           >
-            Copper peptides, exosomes and skin boosters — clinic-grade actives in a ritual built for the night your
-            skin does its repair work.
+            Copper peptides, exosomes and skin boosters: clinic-grade actives for the night your skin repairs itself.
           </motion.p>
 
           <motion.div
@@ -86,12 +82,6 @@ export function Hero({ image, imageAlt = "GHK-Cu Topical Cosmetic" }: { image: s
             <MagneticLink href="/quiz" variant="light">Build my ritual</MagneticLink>
           </motion.div>
 
-          <div className="mt-8 flex items-center gap-3 text-sm text-white/75">
-            <StarRating rating={4.8} showValue={false} />
-            <span>
-              Loved by <AnimatedCounter value={12000} suffix="+" className="font-semibold text-white" /> skintellectuals
-            </span>
-          </div>
         </div>
 
         {/* The drop: lit render, parallax tilt, mono callouts */}
@@ -134,19 +124,6 @@ export function Hero({ image, imageAlt = "GHK-Cu Topical Cosmetic" }: { image: s
             </motion.div>
           ))}
 
-          <motion.div
-            initial={reduce ? false : { opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1.5, duration: 0.6 }}
-            className="absolute bottom-[6%] right-[4%] rounded-2xl glass-dark px-5 py-3 text-center"
-          >
-            <p className="font-display text-2xl text-white"><AnimatedCounter value={145} suffix="+" /></p>
-            <p className="mono-label mono-label-plain text-[9px] text-white/70">products · 15 categories</p>
-          </motion.div>
-
-          <div className="absolute left-1/2 top-[6%] -translate-x-1/2 opacity-80">
-            <LotusMark size={28} />
-          </div>
         </div>
       </div>
 

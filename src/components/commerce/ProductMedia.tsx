@@ -17,7 +17,7 @@ const toneBottle: Record<Tone, string> = {
   ink: "#CBD6DA",
 };
 
-/** A product bottle silhouette — reads as "product" without needing photography. */
+/** A product bottle silhouette, reads as "product" without needing photography. */
 function Bottle({ color }: { color: string }) {
   return (
     <svg width="84" height="124" viewBox="0 0 84 124" fill="none" aria-hidden className="drop-shadow-[0_12px_24px_rgba(46,40,34,0.12)]">

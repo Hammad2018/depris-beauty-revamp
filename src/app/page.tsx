@@ -10,10 +10,8 @@ import { Lookbook } from "@/components/sections/Lookbook";
 import { DeprisStandard } from "@/components/sections/DeprisStandard";
 import { ProBand } from "@/components/sections/ProBand";
 import { PRO_CATEGORIES } from "@/lib/nav";
-import { SocialProof } from "@/components/sections/SocialProof";
 import { EditorialTeasers } from "@/components/sections/EditorialTeasers";
 import { FinaleCTA } from "@/components/sections/FinaleCTA";
-import { LotusDivider } from "@/components/ui/LotusDivider";
 
 export default async function HomePage() {
   const commerce = getCommerce();
@@ -30,22 +28,21 @@ export default async function HomePage() {
     .filter((p): p is NonNullable<typeof p> => Boolean(p) && PRO_CATEGORIES.includes(p!.category));
   const media = Object.fromEntries(all.filter((p) => p.images[0]?.url).map((p) => [p.handle, p.images[0].url as string]));
 
-  // Story spine: the drop → what's inside → the edit → proof → the night ritual → the standard.
+  // Three acts: dark (the drop, the facts, the night) → light (the shelf, concerns, the ritual,
+  // the standard, the journal) → dark (professionals, finale). One deliberate theme switch each way.
   return (
     <>
       <Hero image={hero.images[0]?.url ?? "/renders/sky.webp"} imageAlt={hero.title} />
       <MarqueeRibbon />
       <InsideTheDrop product={hero} />
-      <BentoShowcase featured={hero} products={bestsellers} />
-      <ShopByConcern collections={collections} />
       <ProofBlock />
       <NightProtocol media={media} />
+      <BentoShowcase featured={hero} products={bestsellers} />
+      <ShopByConcern collections={collections} />
       <Lookbook media={media} />
       <DeprisStandard />
-      <ProBand products={pro} />
-      <LotusDivider />
-      <SocialProof />
       <EditorialTeasers />
+      <ProBand products={pro} />
       <FinaleCTA />
     </>
   );

@@ -21,8 +21,6 @@ export function ShopByConcern({ collections }: { collections: Collection[] }) {
     <section className="mesh-light">
       <div className="shell py-20 lg:py-28">
         <SectionHeading
-          index="01"
-          eyebrow="Start with your skin"
           title={<>Shop by <span className="italic text-gradient">concern</span></>}
           intro="Tell us what your skin needs and we'll point you to the right actives."
           size="xl"

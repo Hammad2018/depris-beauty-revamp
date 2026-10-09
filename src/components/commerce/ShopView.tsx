@@ -6,6 +6,7 @@ import type { Product, Concern, Ingredient } from "@/lib/commerce/types";
 import { filterProducts, sortProducts, type Facets, type SortKey } from "@/lib/filter";
 import { concernLabels, ingredientLabels } from "@/lib/taxonomy";
 import { PRO_CATEGORIES } from "@/lib/nav";
+import { X } from "@phosphor-icons/react";
 import { ProductGrid } from "./ProductGrid";
 
 const concernKeys = Object.keys(concernLabels) as Concern[];
@@ -139,9 +140,9 @@ export function ShopView({ products, categories = [], lockedCategory }: { produc
 
         {(cats.length > 0 || query) && (
           <div className="mb-5 flex flex-wrap gap-2">
-            {query && <button onClick={() => setQuery("")} className="rounded-full bg-ink px-3 py-1 text-xs text-porcelain">“{query}” ✕</button>}
+            {query && <button onClick={() => setQuery("")} className="inline-flex items-center gap-1 rounded-full bg-ink px-3 py-1 text-xs text-porcelain">“{query}” <X size={10} /></button>}
             {cats.map((c) => (
-              <button key={c} onClick={() => setCats((v) => toggle(v, c))} className="rounded-full bg-ink px-3 py-1 text-xs text-porcelain">{categories.find((x) => x.handle === c)?.title ?? c} ✕</button>
+              <button key={c} onClick={() => setCats((v) => toggle(v, c))} className="inline-flex items-center gap-1 rounded-full bg-ink px-3 py-1 text-xs text-porcelain">{categories.find((x) => x.handle === c)?.title ?? c} <X size={10} /></button>
             ))}
           </div>
         )}
@@ -162,7 +163,7 @@ export function ShopView({ products, categories = [], lockedCategory }: { produc
           <div className="absolute bottom-0 left-0 right-0 max-h-[85vh] overflow-y-auto rounded-t-3xl bg-cream p-6">
             <div className="mb-5 flex items-center justify-between">
               <h2 className="font-display text-xl">Filters</h2>
-              <button onClick={() => setMobileFiltersOpen(false)} aria-label="Close">✕</button>
+              <button onClick={() => setMobileFiltersOpen(false)} aria-label="Close"><X size={18} /></button>
             </div>
             {Filters}
             <button className="btn-primary mt-6 w-full" onClick={() => setMobileFiltersOpen(false)}>Show {visible.length} products</button>

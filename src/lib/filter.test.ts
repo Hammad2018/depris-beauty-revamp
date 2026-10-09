@@ -37,7 +37,7 @@ describe("sortProducts", () => {
   });
 });
 
-describe("filterProducts — category + query (real catalog)", () => {
+describe("filterProducts, category + query (real catalog)", () => {
   it("filters by category and free-text query", async () => {
     const { createWooSource } = await import("./commerce/wooSource");
     const all = await createWooSource().getProducts();

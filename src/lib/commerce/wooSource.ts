@@ -174,7 +174,7 @@ export function wooCollections(snap: WooSnapshot): Collection[] {
 }
 
 const CATEGORY_BLURB: Record<string, string> = {
-  "cosmetic-peps": "Copper peptides and advanced actives — the Depris signature.",
+  "cosmetic-peps": "Copper peptides and advanced actives, the Depris signature.",
   serums: "Concentrated treatments for every concern.",
   "cleansers-toners": "Gentle, balancing first steps.",
   sheetmasks: "Ten-minute rituals for an instant glow.",

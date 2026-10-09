@@ -6,7 +6,7 @@ import { PageHero } from "@/components/sections/PageHero";
 
 export const metadata: Metadata = {
   title: "Brands",
-  description: "The Korean skincare brands we carry — Bellmona, 2XSOME and the Depris labs.",
+  description: "The Korean skincare brands we carry, Bellmona, 2XSOME and the Depris labs.",
 };
 
 export default async function BrandsPage() {

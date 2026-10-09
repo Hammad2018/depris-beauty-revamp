@@ -2,6 +2,7 @@
 
 import { useReducedMotion } from "@/lib/useReducedMotion";
 import { useEffect, useRef } from "react";
+import { useScroll, useVelocity } from "framer-motion";
 
 type Node = { x: number; y: number; vx: number; vy: number; r: number; hx: number; hy: number };
 
@@ -22,6 +23,8 @@ export function Constellation({
 }) {
   const ref = useRef<HTMLCanvasElement>(null);
   const reduce = useReducedMotion();
+  const { scrollY } = useScroll();
+  const scrollVelocity = useVelocity(scrollY);
 
   useEffect(() => {
     const canvas = ref.current;
@@ -34,7 +37,7 @@ export function Constellation({
     let w = 0, h = 0, raf = 0, t0 = performance.now();
     let nodes: Node[] = [];
     const pointer = { x: -9999, y: -9999, active: false };
-    let lastY = window.scrollY, vel = 0;
+    let vel = 0;
 
     // Lotus target points (six petal tips + inner ring + core), centred on the canvas.
     function lotusPoints(n: number) {
@@ -77,14 +80,14 @@ export function Constellation({
       pointer.x = e.clientX - r.left; pointer.y = e.clientY - r.top; pointer.active = true;
     };
     const onLeave = () => { pointer.active = false; };
-    const onScroll = () => { const y = window.scrollY; vel = Math.max(-40, Math.min(40, y - lastY)); lastY = y; };
     const parent = cv.parentElement ?? cv;
     parent.addEventListener("pointermove", onMove, { passive: true });
     parent.addEventListener("pointerleave", onLeave);
-    window.addEventListener("scroll", onScroll, { passive: true });
 
     function draw(elapsed: number) {
       c.clearRect(0, 0, w, h);
+      // Motion's velocity is px/s; fold it into the per-frame nudge the sim expects
+      vel = Math.max(-40, Math.min(40, scrollVelocity.get() / 60));
       // gather phase: 0.4s → 2.6s pull toward lotus, then release
       const gather = elapsed < 2600 ? Math.min(1, Math.max(0, (elapsed - 400) / 1400)) * (elapsed < 2200 ? 1 : 1 - (elapsed - 2200) / 400) : 0;
       for (const n of nodes) {
@@ -104,7 +107,6 @@ export function Constellation({
           if (n.y < -10) n.y = h + 10; if (n.y > h + 10) n.y = -10;
         }
       }
-      vel *= 0.9;
       // bonds
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
@@ -140,9 +142,8 @@ export function Constellation({
     return () => {
       cancelAnimationFrame(raf); ro.disconnect();
       parent.removeEventListener("pointermove", onMove); parent.removeEventListener("pointerleave", onLeave);
-      window.removeEventListener("scroll", onScroll);
     };
-  }, [reduce, count, linkDist]);
+  }, [reduce, count, linkDist, scrollVelocity]);
 
   return <canvas ref={ref} aria-hidden className={`pointer-events-none absolute inset-0 h-full w-full ${className}`} />;
 }

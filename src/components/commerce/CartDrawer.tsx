@@ -9,6 +9,7 @@ import { shipTiers, samples } from "@/lib/content";
 import { FreeShipProgress } from "./FreeShipProgress";
 import { ProductMediaMini } from "./ProductMediaMini";
 import Image from "next/image";
+import { X } from "@phosphor-icons/react";
 import type { NavProduct } from "@/lib/nav";
 import { quickAddItem } from "@/lib/cart/item";
 
@@ -61,7 +62,7 @@ export function CartDrawer({ recommendations = [] }: { recommendations?: NavProd
             <header className="flex items-center justify-between border-b border-sand px-6 py-5">
               <h2 className="font-display text-xl text-ink">Your bag ({cart.count})</h2>
               <button onClick={cart.closeCart} className="rounded-full p-2 text-ink-soft hover:bg-sand" aria-label="Close">
-                ✕
+                <X size={18} />
               </button>
             </header>
 

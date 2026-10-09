@@ -5,7 +5,7 @@ export function ClinicalClaim({ claim }: { claim: string }) {
   return (
     <div className="flex items-center gap-4 rounded-2xl bg-sage/10 p-5">
       {stat && <span className="font-display text-3xl text-sage">{stat}</span>}
-      <p className="text-sm leading-relaxed text-ink">{rest.replace(/^—\s*/, "")}</p>
+      <p className="text-sm leading-relaxed text-ink">{rest.replace(/^[—–-]\s*/, "")}</p>
     </div>
   );
 }

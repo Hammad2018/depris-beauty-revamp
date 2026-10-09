@@ -17,7 +17,7 @@ export function RoutineStrip() {
             <Eyebrow className="text-camellia">No guesswork</Eyebrow>
             <h2 className="mt-3 font-display text-3xl leading-tight text-ink">Build your routine in four steps</h2>
             <p className="mt-3 text-ink-soft">
-              Take the 60-second skin quiz and we&apos;ll build a routine tailored to your skin — add it to your bag in one tap.
+              Take the 60-second skin quiz and we&apos;ll build a routine tailored to your skin, add it to your bag in one tap.
             </p>
             <div className="mt-6">
               <ButtonLink href="/quiz" variant="primary">

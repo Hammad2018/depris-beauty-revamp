@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const COLORS = ["#5CC3B8", "#E3B34C", "#B9A3DE", "#E79A90", "#8E9FE6", "#2FA39A"];
 
-/** One-shot sparkle burst (8 particles) — mount with a changing `burstKey` to fire. */
+/** One-shot sparkle burst (8 particles), mount with a changing `burstKey` to fire. */
 export function SparkleBurst({ burstKey }: { burstKey: number }) {
   return (
     <AnimatePresence>

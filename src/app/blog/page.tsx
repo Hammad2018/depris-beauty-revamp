@@ -14,7 +14,7 @@ const toneClass: Record<Tone, string> = {
 
 export const metadata: Metadata = {
   title: "The Journal",
-  description: "Skincare, decoded — ingredient guides, routines and K-beauty know-how from Depris Beauty.",
+  description: "Skincare, decoded, ingredient guides, routines and K-beauty know-how from Depris Beauty.",
 };
 
 export default function BlogPage() {

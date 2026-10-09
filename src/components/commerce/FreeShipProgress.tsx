@@ -5,7 +5,7 @@ export function FreeShipProgress({ subtotal, tiers }: { subtotal: number; tiers:
   const progress = freeShipProgress(subtotal, tiers);
   const message = progress.nextTier
     ? `Add ${money(progress.remaining)} to unlock ${progress.nextTier.label}`
-    : "You've unlocked every perk — nice! 🎉";
+    : "Every perk unlocked.";
 
   return (
     <div className="rounded-2xl bg-sand/50 p-4">

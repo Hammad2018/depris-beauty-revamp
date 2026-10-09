@@ -43,7 +43,7 @@ const config: Config = {
         pewter: "#8CA0A3",
       },
       fontFamily: {
-        display: ["var(--font-fraunces)", "Georgia", "serif"],
+        display: ["var(--font-display)", "Cormorant Garamond", "Georgia", "serif"],
         sans: ["var(--font-hanken)", "ui-sans-serif", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "monospace"],
       },

@@ -70,7 +70,7 @@ export function VerifyLot({ initial = "" }: { initial?: string }) {
           {lot ? (
             <motion.div key={lot.lot} initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }}>
               <div className="mb-4 flex items-center gap-3 rounded-full bg-camellia/10 px-4 py-2 text-sm text-camellia">
-                <span className="h-2 w-2 rounded-full bg-camellia shadow-[0_0_10px_rgba(21,122,115,0.8)]" /> Genuine product — lot matched the Depris database.
+                <span className="h-2 w-2 rounded-full bg-camellia shadow-[0_0_10px_rgba(21,122,115,0.8)]" /> Genuine product, lot matched the Depris database.
               </div>
               <PotencyCertificate lot={lot} />
               <Link href={`/products/${lot.handle}`} className="mt-4 inline-block text-sm text-camellia underline-offset-4 hover:underline">Reorder {lot.product} →</Link>

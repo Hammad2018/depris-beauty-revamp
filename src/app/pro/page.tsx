@@ -9,7 +9,7 @@ import { MagneticLink } from "@/components/ui/MagneticButton";
 
 export const metadata: Metadata = {
   title: "For professionals",
-  description: "Mesotherapy, skin boosters, microneedling, fillers, exosomes and clinic supplies — Depris Beauty's professional range.",
+  description: "Mesotherapy, skin boosters, microneedling, fillers, exosomes and clinic supplies, Depris Beauty's professional range.",
 };
 
 const pillars = [
@@ -34,11 +34,11 @@ export default async function ProPage() {
             <p className="mono-label text-teal-glow">For professionals</p>
             <h1 className="h-hero mt-4 font-display">Clinic-grade, <span className="italic text-metallic text-metallic-dark">clinic-fast.</span></h1>
             <p className="mt-6 max-w-lg text-lg text-white/75">
-              The same Korean mesotherapy, booster and device lines you use in-clinic — stocked in the US, shipped cold the same day.
+              The same Korean mesotherapy, booster and device lines you use in-clinic, stocked in the US, shipped cold the same day.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <MagneticLink href="/contact" variant="primary">Open a trade account</MagneticLink>
-              <MagneticLink href="/collections/mesotherapy-skin-boosters" variant="light">Browse boosters</MagneticLink>
+              <MagneticLink href="/collections/mesotherapy-skin-boosters" variant="light">Skin boosters</MagneticLink>
             </div>
           </div>
           <RevealGroup className="grid gap-3">
@@ -70,7 +70,7 @@ export default async function ProPage() {
               </div>
             </Reveal>
           ))}
-          <p className="text-xs text-ink-soft/70">Professional products are intended for trained practitioners. Illustrative pitch build — trade terms to be confirmed by Depris Beauty.</p>
+          <p className="text-xs text-ink-soft/70">Professional products are intended for trained practitioners. Illustrative pitch build, trade terms to be confirmed by Depris Beauty.</p>
         </div>
       </section>
     </>

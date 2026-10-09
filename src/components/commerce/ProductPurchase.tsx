@@ -67,7 +67,7 @@ export function ProductPurchase({ product }: { product: Product }) {
           <label className="flex cursor-pointer items-center gap-3 text-sm">
             <input type="radio" name="purchase" checked={subscribe} onChange={() => setSubscribe(true)} className="accent-camellia" />
             <span>
-              Subscribe &amp; Save 10% <span className="text-ink-soft">— delivered every 1–3 months, cancel anytime</span>
+              Subscribe &amp; Save 10% <span className="text-ink-soft">delivered every 1–3 months, cancel anytime</span>
             </span>
           </label>
         </fieldset>

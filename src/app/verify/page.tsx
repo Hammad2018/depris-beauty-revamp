@@ -14,7 +14,7 @@ export default function VerifyPage({ searchParams }: { searchParams: { lot?: str
         <div className="shell py-16 lg:py-20">
           <p className="mono-label text-teal-glow">Verify your serum</p>
           <h1 className="h-display mt-3 max-w-3xl font-display">Every bottle has a <span className="italic text-metallic text-metallic-dark">paper trail.</span></h1>
-          <p className="mt-5 max-w-lg text-white/75">Type the lot code from your carton to read the certificate behind it — assay, pH, bottling date — and see how much of its potency window is left.</p>
+          <p className="mt-5 max-w-lg text-white/75">Type the lot code from your carton to read the certificate behind it, assay, pH, bottling date, and see how much of its potency window is left.</p>
         </div>
         <LabTicker />
       </section>

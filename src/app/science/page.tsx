@@ -11,13 +11,13 @@ import { scienceIngredients } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "The Science",
-  description: "The advanced actives behind Depris Beauty — copper peptides, exosomes and skin boosters, explained one drop at a time.",
+  description: "The advanced actives behind Depris Beauty, copper peptides, exosomes and skin boosters, explained one drop at a time.",
 };
 
 const stats = [
-  { v: 3, suffix: ".0%", label: "GHK-Cu, the studied dose" },
-  { v: 84, suffix: "", label: "participants, 12-week panel" },
-  { v: 5, suffix: ".5", label: "pH — barrier-friendly" },
+  { v: 1, suffix: " g", label: "GHK-Cu topical, high purity" },
+  { v: 145, suffix: "+", label: "products across the range" },
+  { v: 15, suffix: "", label: "categories, skincare to clinic" },
 ];
 
 export default function SciencePage() {
@@ -27,12 +27,11 @@ export default function SciencePage() {
         <Image src="/renders/drop.webp" alt="" fill priority sizes="100vw" className="object-cover opacity-80" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/50 to-transparent" />
         <div className="shell relative flex min-h-[80vh] flex-col justify-center py-24">
-          <p className="mono-label text-teal-glow">The science</p>
-          <h1 className="h-hero mt-4 max-w-3xl font-display">
+          <h1 className="h-hero max-w-3xl font-display">
             The science of <span className="italic text-metallic text-metallic-dark">one drop.</span>
           </h1>
           <p className="mt-6 max-w-lg text-lg text-white/75">
-            We lead with the ingredients that move the needle — and show you the molecule, the signal and the certificate behind every claim.
+            We lead with the ingredients that move the needle, and show you the molecule, the signal and the certificate behind every claim.
           </p>
           <RevealGroup className="mt-10 grid max-w-xl grid-cols-3 gap-4">
             {stats.map((s) => (
@@ -52,8 +51,7 @@ export default function SciencePage() {
       <section className="mesh-light">
         <div className="shell py-20">
           <Reveal>
-            <p className="mono-label text-camellia">The dossier index</p>
-            <h2 className="h-display mt-3 font-display text-ink">Every active, <span className="italic text-gradient">explained simply.</span></h2>
+            <h2 className="h-display font-display text-ink">Every active, <span className="italic text-gradient">explained simply.</span></h2>
           </Reveal>
           <RevealGroup className="mt-10 grid gap-5 sm:grid-cols-2">
             {scienceIngredients.map((ing, i) => (
@@ -76,7 +74,7 @@ export default function SciencePage() {
           <h2 className="h-display font-display">Proof you can <span className="italic text-metallic text-metallic-dark">look up.</span></h2>
           <p className="max-w-md text-white/75">Every carton carries a lot code. Type it in and read the certificate behind your bottle.</p>
           <div className="flex flex-wrap justify-center gap-3">
-            <MagneticLink href="/verify" variant="primary">Verify a lot</MagneticLink>
+            <MagneticLink href="/verify" variant="primary">Verify your serum</MagneticLink>
             <MagneticLink href="/quiz" variant="light">Build my ritual</MagneticLink>
           </div>
         </div>

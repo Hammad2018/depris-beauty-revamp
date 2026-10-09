@@ -5,7 +5,7 @@ import { site } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "About & Authenticity",
-  description: "Why Depris Beauty — authentic Korean skincare, sourced from Korea, stocked in the US, cruelty-free.",
+  description: "Why Depris Beauty, authentic Korean skincare, sourced from Korea, stocked in the US, cruelty-free.",
 };
 
 export default function AboutPage() {
@@ -21,12 +21,12 @@ export default function AboutPage() {
         <div>
           <h2 className="font-display text-2xl text-ink">The Depris story</h2>
           <p className="mt-4 leading-relaxed text-ink-soft">
-            We started Depris Beauty to bring the cutting edge of Korean skincare to the US — the advanced actives, like
+            We started Depris Beauty to bring the cutting edge of Korean skincare to the US, the advanced actives, like
             copper peptides and exosomes, that usually take weeks to import. Everything is fully stocked in Cheyenne,
             Wyoming, so it ships the same day. No long waits, no grey-market guesswork.
           </p>
           <p className="mt-4 leading-relaxed text-ink-soft">
-            We&apos;re an authorized retailer sourcing directly from Korea, where cosmetic animal testing is banned — so
+            We&apos;re an authorized retailer sourcing directly from Korea, where cosmetic animal testing is banned, so
             our lines are cruelty-free by design. Clinical where it counts, luxurious to use.
           </p>
         </div>

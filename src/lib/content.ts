@@ -4,7 +4,7 @@ export const site = {
   name: "Depris Beauty",
   tagline: "Turning back the clock, one drop at a time.",
   description:
-    "Advanced Korean skincare — copper peptides, exosomes and skin boosters — stocked in the US for immediate shipping. Clinical results, approachable luxury.",
+    "Advanced Korean skincare, copper peptides, exosomes and skin boosters, stocked in the US for immediate shipping. Clinical results, approachable luxury.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://deprisbeauty.com",
   email: "info@deprisbeauty.com",
   phone: "(508) 630-6625",
@@ -13,7 +13,7 @@ export const site = {
 };
 
 export const announcements = [
-  "Free US shipping over $50 — ships same-day from Wyoming",
+  "Free US shipping over $50, ships same-day from Wyoming",
   "New: 2XSOME exosome skin boosters are here",
   "Authorized retailer · Sourced from Korea · Cruelty-free",
 ];
@@ -68,9 +68,9 @@ export const shopMenu: { title: string; links: { label: string; href: string }[]
 ];
 
 export const trustPoints = [
-  { title: "Sourced from Korea", body: "Authentic, authorized-retailer formulas — never grey-market." },
+  { title: "Sourced from Korea", body: "Authentic, authorized-retailer formulas, never grey-market." },
   { title: "Stocked in the US", body: "Fully stocked in Wyoming for same-day, no-long-wait shipping." },
-  { title: "Cruelty-free", body: "Korea banned cosmetic animal testing — our lines are cruelty-free." },
+  { title: "Cruelty-free", body: "Korea banned cosmetic animal testing, our lines are cruelty-free." },
   { title: "Results you can read", body: "Clinically-backed actives with real, measurable claims." },
 ];
 
@@ -80,7 +80,7 @@ export const scienceIngredients = [
   {
     name: "Copper Peptides (GHK-Cu / AHK-Cu)",
     tone: "bronze" as const,
-    body: "Our signature. Copper tripeptides support collagen, firmness and renewal — the advanced active most brands can't formulate well.",
+    body: "Our signature. Copper tripeptides support collagen, firmness and renewal, the advanced active most brands can't formulate well.",
   },
   {
     name: "Exosomes",
@@ -95,7 +95,7 @@ export const scienceIngredients = [
   {
     name: "Niacinamide & Centella",
     tone: "blush" as const,
-    body: "The everyday workhorses — brighten, refine pores and calm the barrier for balanced, healthy skin.",
+    body: "The everyday workhorses, brighten, refine pores and calm the barrier for balanced, healthy skin.",
   },
 ];
 
@@ -141,7 +141,7 @@ export const blogPosts = [
   {
     slug: "copper-peptides-explained",
     title: "Copper peptides, explained: why GHK-Cu is the active to know",
-    excerpt: "The science behind our signature ingredient — and how to add it to your routine.",
+    excerpt: "The science behind our signature ingredient, and how to add it to your routine.",
     tone: "bronze" as const,
     date: "2026-09-18",
     readMins: 6,
@@ -149,7 +149,7 @@ export const blogPosts = [
   {
     slug: "build-your-k-beauty-routine",
     title: "How to build a K-beauty routine that actually fits your skin",
-    excerpt: "Cleanse to SPF — a simple framework for choosing the right steps.",
+    excerpt: "Cleanse to SPF, a simple framework for choosing the right steps.",
     tone: "blush" as const,
     date: "2026-09-02",
     readMins: 8,

@@ -38,11 +38,11 @@ export function FeatureBand() {
             <span className="block italic text-metallic text-metallic-dark">one drop at a time.</span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/75">
-            Clinic-grade peptides, exosomes and skin boosters — the advanced actives that make time
+            Clinic-grade peptides, exosomes and skin boosters, the advanced actives that make time
             feel optional, in a routine built around your skin.
           </p>
           <div className="mt-8">
-            <MagneticLink href="/quiz" variant="primary">Find your ritual</MagneticLink>
+            <MagneticLink href="/quiz" variant="primary">Build my ritual</MagneticLink>
           </div>
         </motion.div>
       </div>

@@ -5,7 +5,7 @@ export function ProductGrid({ products, priorityCount = 0 }: { products: Product
   if (products.length === 0) {
     return (
       <div className="rounded-3xl bg-porcelain/60 p-12 text-center">
-        <p className="font-display text-xl text-ink">No matches — yet.</p>
+        <p className="font-display text-xl text-ink">No matches yet.</p>
         <p className="mt-2 text-ink-soft">Try removing a filter or take the skin quiz for tailored picks.</p>
       </div>
     );

@@ -7,10 +7,10 @@ import { LotusMark } from "@/components/ui/LotusMark";
 import { MagneticLink } from "@/components/ui/MagneticButton";
 
 const steps = [
-  { n: "01", title: "Tell us about your skin", body: "Two quick questions — skin type and your top concerns. Sixty seconds, no account needed.", grad: "from-[#C9EAE3] to-[#E8F4F6]", accent: "#157A73" },
+  { n: "01", title: "Tell us about your skin", body: "Two quick questions, skin type and your top concerns. Sixty seconds, no account needed.", grad: "from-[#C9EAE3] to-[#E8F4F6]", accent: "#157A73" },
   { n: "02", title: "We match the actives", body: "Our taxonomy maps concerns to clinically-loved ingredients: copper peptides, exosomes, niacinamide, centella.", grad: "from-[#DBE4FB] to-[#EFF2FE]", accent: "#4E6AD0" },
   { n: "03", title: "Your routine, in order", body: "Cleanse → treat → boost → moisturize → protect. Built around you, priced as a set.", grad: "from-[#EADBF5] to-[#F6EFFB]", accent: "#B9A3DE" },
-  { n: "04", title: "Add it in one tap", body: "The whole ritual goes to your bag at once — and ships same-day from Wyoming.", grad: "from-[#F6E0A6] to-[#FBF2D9]", accent: "#E3B34C" },
+  { n: "04", title: "Add it in one tap", body: "The whole ritual goes to your bag at once, and ships same-day from Wyoming.", grad: "from-[#F6E0A6] to-[#FBF2D9]", accent: "#E3B34C" },
 ];
 
 function Step({ i, onActive }: { i: number; onActive: (i: number) => void }) {
@@ -68,7 +68,7 @@ export function StickySteps() {
             </AnimatePresence>
           </div>
           <div className="mt-6">
-            <MagneticLink href="/quiz" variant="primary">Start the 60-second quiz</MagneticLink>
+            <MagneticLink href="/quiz" variant="primary">Build my ritual</MagneticLink>
           </div>
         </div>
 

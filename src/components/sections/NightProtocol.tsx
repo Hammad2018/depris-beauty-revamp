@@ -38,12 +38,11 @@ export function NightProtocol({ media = {} }: { media?: Record<string, string> }
 
       <div className="shell relative grid gap-12 py-24 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div className="lg:sticky lg:top-20 lg:self-start">
-          <p className="mono-label text-teal-glow">The night protocol</p>
-          <h2 className="mt-3 font-display text-4xl leading-[1.02] sm:text-5xl xl:text-6xl">
+          <h2 className="font-display text-4xl leading-[1.02] sm:text-5xl xl:text-6xl">
             Your night, <span className="italic text-metallic text-metallic-dark">in four drops.</span>
           </h2>
           <p className="mt-4 max-w-md text-white/70">
-            Skin repairs on a clock. The ritual follows it — from the last light at 21:00 to the first at 07:00.
+            Skin repairs on a clock. The ritual follows it, from the last light at 21:00 to the first at 07:00.
           </p>
 
           <div className="mt-6 flex items-center gap-6">

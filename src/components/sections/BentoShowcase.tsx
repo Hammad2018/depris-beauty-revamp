@@ -17,14 +17,14 @@ export function BentoShowcase({ featured, products }: { featured: Product; produ
     <section className="mesh-tint">
       <div className="shell py-20 lg:py-24">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <SectionHeading index="02" eyebrow="Reach for these first" title={<>The <span className="italic text-gradient">edit</span></>} size="xl" />
+          <SectionHeading title={<>The <span className="italic text-gradient">edit</span></>} size="xl" />
           <ButtonLink href="/collections/bestsellers" variant="ghost" className="hidden sm:inline-flex">
             View all bestsellers
           </ButtonLink>
         </div>
 
         <RevealGroup className="mt-12 grid auto-rows-[minmax(0,1fr)] grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-12 lg:grid-rows-[repeat(2,minmax(0,1fr))]">
-          {/* Hero tile — dark celestial */}
+          {/* Hero tile, dark celestial */}
           <RevealItem className="lg:col-span-7 lg:row-span-2">
             <TiltCard className="h-full" max={4}>
               <Link
@@ -90,7 +90,7 @@ export function BentoShowcase({ featured, products }: { featured: Product; produ
               className="group flex h-full flex-col justify-between overflow-hidden rounded-3xl bg-gradient-to-br from-[#C9EAE3] via-[#D8F0EB] to-[#E8F4F6] p-6 shadow-soft transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-glow"
             >
               <p className="eyebrow">The science</p>
-              <p className="font-display text-2xl leading-tight text-ink">Copper peptides, exosomes &amp; skin boosters — explained.</p>
+              <p className="font-display text-2xl leading-tight text-ink">Copper peptides, exosomes &amp; skin boosters, explained.</p>
               <span className="text-sm font-semibold text-camellia">
                 Explore <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
               </span>

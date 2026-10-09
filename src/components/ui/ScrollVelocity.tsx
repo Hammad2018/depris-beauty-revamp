@@ -1,34 +1,38 @@
 "use client";
 
-import { useReducedMotion } from "@/lib/useReducedMotion";
 import { useEffect } from "react";
+import { useMotionValueEvent, useScroll, useSpring, useVelocity } from "framer-motion";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 
 /**
  * Publishes smoothed scroll velocity as CSS custom properties on <html>:
- *   --scroll-vel  (px/frame, signed, clamped ±40)
+ *   --scroll-vel  (signed, clamped, in px/frame-ish units)
  *   --liquid      (0–1 magnitude used by the liquid displacement filter)
- * and drives the shared SVG displacement filter's scale. One listener for the whole app.
+ * and drives the shared SVG displacement filter's scale. Built on Motion's useScroll
+ * + useVelocity so there is no window scroll listener of our own.
  */
 export function ScrollVelocity() {
   const reduce = useReducedMotion();
-  useEffect(() => {
+  const { scrollY } = useScroll();
+  const velocity = useVelocity(scrollY); // px per second
+  const smooth = useSpring(velocity, { stiffness: 120, damping: 30, mass: 0.6 });
+
+  useMotionValueEvent(smooth, "change", (v) => {
     if (reduce) return;
     const root = document.documentElement;
-    let last = window.scrollY, vel = 0, raf = 0;
-    const disp = document.getElementById("liquid-disp") as SVGFEDisplacementMapElement | null;
-    const tick = () => {
-      const y = window.scrollY;
-      const dv = Math.max(-40, Math.min(40, y - last));
-      last = y;
-      vel += (dv - vel) * 0.18;
-      const mag = Math.min(1, Math.abs(vel) / 28);
-      root.style.setProperty("--scroll-vel", vel.toFixed(2));
-      root.style.setProperty("--liquid", mag.toFixed(3));
-      if (disp) disp.setAttribute("scale", (mag * 26).toFixed(1));
-      raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
+    const perFrame = Math.max(-40, Math.min(40, v / 60));
+    const mag = Math.min(1, Math.abs(perFrame) / 28);
+    root.style.setProperty("--scroll-vel", perFrame.toFixed(2));
+    root.style.setProperty("--liquid", mag.toFixed(3));
+    const disp = document.getElementById("liquid-disp");
+    if (disp) disp.setAttribute("scale", (mag * 26).toFixed(1));
+  });
+
+  useEffect(() => {
+    if (!reduce) return;
+    const root = document.documentElement;
+    root.style.setProperty("--scroll-vel", "0");
+    root.style.setProperty("--liquid", "0");
   }, [reduce]);
 
   return (

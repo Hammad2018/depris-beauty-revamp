@@ -21,11 +21,11 @@ export function FinaleCTA() {
           <span className="block italic text-metallic text-metallic-dark">starts tonight.</span>
         </h2>
         <p className="mx-auto mt-5 max-w-lg text-lg text-white/75">
-          Early access to launches, ritual tips and members-only offers. No spam — just glow.
+          Early access to launches, ritual tips and members-only offers. No spam. Just glow.
         </p>
 
         {done ? (
-          <p className="mt-8 text-lg text-teal-glow">You&apos;re on the list — welcome to the glow. ✨</p>
+          <p className="mt-8 text-lg text-teal-glow">You&apos;re on the list. Welcome to the glow.</p>
         ) : (
           <form
             className="mt-8 flex w-full max-w-md gap-2"
@@ -47,9 +47,6 @@ export function FinaleCTA() {
             <button type="submit" className="btn-primary whitespace-nowrap">Join</button>
           </form>
         )}
-        <p className="mt-6 text-xs uppercase tracking-[0.15em] text-white/50">
-          Authorized retailer · Sourced from Korea · Cruelty-free
-        </p>
       </div>
     </section>
   );

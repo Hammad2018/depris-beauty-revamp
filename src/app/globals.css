@@ -25,8 +25,11 @@
 
   h1, h2, h3 {
     @apply font-display;
+    font-weight: 600;
+    letter-spacing: -0.012em;
     text-wrap: balance;
   }
+  .font-display { font-weight: 600; }
 
   ::selection {
     background: #afc3f2;
@@ -148,18 +151,7 @@
     @apply font-mono text-[11px] font-medium uppercase tracking-[0.16em];
     font-variant-numeric: tabular-nums;
   }
-  .mono-label::before {
-    content: "";
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-radius: 9999px;
-    background: currentColor;
-    margin-right: 0.6em;
-    vertical-align: 0.1em;
-    opacity: 0.9;
-  }
-  .mono-label-plain::before { display: none; }
+  .mono-label-plain { }
 
   /* Hero bottle render: fade the render's own backdrop into the section */
   .render-fade {
@@ -223,14 +215,16 @@
 
   /* Oversized editorial section header */
   .h-display {
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    line-height: 0.98;
+    font-size: clamp(2.75rem, 6.4vw, 5.4rem);
+    line-height: 1.06;
     letter-spacing: -0.015em;
+    padding-bottom: 0.08em; /* italic descender reserve */
   }
   .h-hero {
-    font-size: clamp(3rem, 8vw, 7rem);
-    line-height: 0.96;
+    font-size: clamp(3.25rem, 8.4vw, 7.4rem);
+    line-height: 1.04;
     letter-spacing: -0.02em;
+    padding-bottom: 0.08em;
   }
 
   /* Outline / stroked display text */

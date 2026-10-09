@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { dispatchState, formatLeft } from "@/lib/dispatch";
 
-/** "Order within 2h 14m for same-day cold dispatch" — ticks every 30s. */
+/** "Order within 2h 14m for same-day cold dispatch", ticks every 30s. */
 export function DispatchCountdown({ className = "" }: { className?: string }) {
   const [s, setS] = useState(() => dispatchState(new Date()));
   useEffect(() => {

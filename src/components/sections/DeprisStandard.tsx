@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Reveal } from "@/components/ui/Reveal";
 
 const rows = [
-  { k: "Clinically dosed", body: "Actives at the concentrations the studies used — GHK-Cu at 3.0%, not a label flourish. pH 5.5 so the barrier stays intact.", tag: "3.0% · pH 5.5" },
+  { k: "Lab-grade actives", body: "High-purity cosmetic peptides sold as the real ingredient, not a trace on a label. The listing tells you exactly what is in the tube.", tag: "High purity" },
   { k: "Lot-tested", body: "Every batch is assayed for peptide concentration and stability before it ships. Your carton's lot code opens its certificate.", tag: "Verify by lot" },
   { k: "Cold-chain shipped", body: "Peptides and exosomes travel in an insulated mailer with a frozen pack. Same-day from Wyoming; arrives cold or we replace it.", tag: "Arrives cold" },
   { k: "Fragrance-free, always", body: "No added fragrance, essential oils or dyes. Formulated in Korea for sensitive skin first.", tag: "0 fragrance" },
@@ -20,11 +20,10 @@ export function DeprisStandard() {
       <div className="grid lg:grid-cols-[42%_58%]">
         <div className="mesh-tint relative min-h-[26rem] lg:min-h-[44rem]">
           <Reveal className="shell relative z-10 py-16 lg:pr-0">
-            <p className="mono-label text-camellia">The Depris standard</p>
-            <h2 className="h-display mt-3 font-display text-ink">
+            <h2 className="h-display font-display text-ink">
               Quality you can <span className="italic text-gradient">open.</span>
             </h2>
-            <p className="mt-5 max-w-sm text-ink-soft">Transparency, cold-chain care and clinical dosing — packed into every order.</p>
+            <p className="mt-5 max-w-sm text-ink-soft">Transparency, cold-chain care and clinical dosing, packed into every order.</p>
           </Reveal>
           {/* box crossing the seam */}
           <motion.div

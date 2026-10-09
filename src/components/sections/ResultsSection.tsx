@@ -40,7 +40,7 @@ export function ResultsSection() {
           </div>
           <p className="mt-4 text-[11px] text-ink-soft/60">*Illustrative figures for concept pitch.</p>
           <div className="mt-8">
-            <ButtonLink href="/products/ghk-cu-copper-peptide-serum" variant="primary">Shop the signature serum</ButtonLink>
+            <ButtonLink href="/products/ghk-cu-copper-peptide-serum" variant="primary">Shop GHK-Cu</ButtonLink>
           </div>
         </div>
         <Reveal>

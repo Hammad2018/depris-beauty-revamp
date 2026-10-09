@@ -24,7 +24,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <article className="shell max-w-2xl space-y-5 py-14 text-ink-soft">
         <p className="leading-relaxed">
           At Depris Beauty, we believe great skincare starts with understanding what you&apos;re putting on your skin. In
-          this guide, we break it down in plain language — no jargon, just what works and why.
+          this guide, we break it down in plain language, no jargon, just what works and why.
         </p>
         <p className="leading-relaxed">
           Korean skincare has always led on innovation, from gentle double-cleansing to advanced actives like copper
@@ -34,7 +34,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         <h2 className="font-display text-2xl text-ink">Where to start</h2>
         <p className="leading-relaxed">
           If you&apos;re not sure which products are right for you, our 60-second skin quiz builds a personalized routine
-          from your skin type and concerns — a simple way to cut through the noise.
+          from your skin type and concerns, a simple way to cut through the noise.
         </p>
         <div className="pt-4">
           <ButtonLink href="/quiz" variant="primary">

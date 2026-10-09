@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { fraunces, hanken, plexMono } from "@/lib/fonts";
+import { display, hanken, plexMono } from "@/lib/fonts";
 import { site } from "@/lib/content";
 import { CartProvider } from "@/lib/cart/CartContext";
 import { Navbar } from "@/components/layout/Navbar";
@@ -15,12 +15,12 @@ import { ScrollVelocity } from "@/components/ui/ScrollVelocity";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — ${site.tagline}`,
+    default: `${site.name} · ${site.tagline}`,
     template: `%s · ${site.name}`,
   },
   description: site.description,
   openGraph: {
-    title: `${site.name} — ${site.tagline}`,
+    title: `${site.name} · ${site.tagline}`,
     description: site.description,
     url: site.url,
     siteName: site.name,
@@ -35,7 +35,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const nav = buildNavData(products, collections);
   const recommendations = nav.index.filter((p) => ["ghk-cu-topical-cosmetic-1g", "glutanex-glow-therapy-toner", "bellmona-cc-cream-sunscreen-50ml", "glutanex-night-serum-30ml"].includes(p.handle));
   return (
-    <html lang="en" className={`${fraunces.variable} ${hanken.variable} ${plexMono.variable}`}>
+    <html lang="en" className={`${display.variable} ${hanken.variable} ${plexMono.variable}`}>
       <body className="grain flex min-h-screen flex-col">
         <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-porcelain">
           Skip to content

@@ -1,4 +1,4 @@
-/** Shared commerce taxonomy — powers quiz, filters, PDP cross-sell and review filtering. */
+/** Shared commerce taxonomy, powers quiz, filters, PDP cross-sell and review filtering. */
 
 export type Concern =
   | "dryness"

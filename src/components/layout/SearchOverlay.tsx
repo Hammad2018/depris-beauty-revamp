@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { AnimatePresence } from "framer-motion";
+import { MagnifyingGlass } from "@phosphor-icons/react";
 import { money } from "@/lib/format";
 import { searchIndex, type NavProduct } from "@/lib/nav";
 
@@ -58,7 +59,7 @@ export function SearchOverlay({ open, onClose, index }: { open: boolean; onClose
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center gap-3 border-b border-ink/10 px-5 py-4">
-              <span aria-hidden className="text-ink-soft">⌕</span>
+              <MagnifyingGlass size={18} aria-hidden className="text-ink-soft" />
               <input
                 ref={inputRef}
                 value={q}

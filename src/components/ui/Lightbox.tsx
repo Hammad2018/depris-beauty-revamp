@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import type { ReactNode } from "react";
+import { X } from "@phosphor-icons/react";
 
 /** Minimal accessible lightbox: Escape / backdrop closes, focus on close button. */
 export function Lightbox({ open, onClose, children, label = "Preview" }: { open: boolean; onClose: () => void; children: ReactNode; label?: string }) {
@@ -38,7 +39,7 @@ export function Lightbox({ open, onClose, children, label = "Preview" }: { open:
             onClick={(e) => e.stopPropagation()}
           >
             <button onClick={onClose} autoFocus aria-label="Close" className="absolute right-3 top-3 z-10 rounded-full bg-white/90 px-3 py-1 text-sm text-ink shadow-soft hover:bg-white">
-              Close ✕
+              Close <X size={14} className="ml-1 inline-block" />
             </button>
             {children}
           </motion.div>

@@ -3,7 +3,7 @@ import type { lots } from "@/lib/renders";
 
 type Lot = (typeof lots)[string];
 
-/** Branded, legible "Potency Certificate" — the COA, designed to be read. */
+/** Branded, legible "Potency Certificate", the COA, designed to be read. */
 export function PotencyCertificate({ lot, compact = false }: { lot: Lot; compact?: boolean }) {
   const rows = [
     ["Product", lot.product],

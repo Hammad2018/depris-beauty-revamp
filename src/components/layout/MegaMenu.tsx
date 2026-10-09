@@ -37,7 +37,7 @@ export function MegaMenu({ data, onNavigate }: { data: NavData; onNavigate: () =
             {data.concerns.map((c) => (
               <li key={c.handle}><Link href={`/collections/${c.handle}`} onClick={onNavigate} className={link}>{c.title}</Link></li>
             ))}
-            <li><Link href="/quiz" onClick={onNavigate} className={`${link} font-medium text-ink`}>Not sure? Take the quiz →</Link></li>
+            <li><Link href="/quiz" onClick={onNavigate} className={`${link} font-medium text-ink`}>Not sure? Build my ritual →</Link></li>
           </ul>
         </div>
         <div>

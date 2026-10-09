@@ -36,7 +36,7 @@ export function ActivesSpotlight() {
             Actives most brands <span className="italic text-gradient">can&apos;t formulate</span>
           </h2>
           <p className="mt-5 text-lg text-cream/70">
-            Copper peptides, exosomes and pro-grade skin boosters — clinic-level science, made for your bathroom shelf.
+            Copper peptides, exosomes and pro-grade skin boosters, clinic-level science, made for your bathroom shelf.
           </p>
         </div>
 
