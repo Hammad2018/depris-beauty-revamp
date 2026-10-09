@@ -3,27 +3,30 @@ import type { Product } from "@/lib/commerce/types";
 import { ProductCard } from "@/components/commerce/ProductCard";
 import { ProductMedia } from "@/components/commerce/ProductMedia";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
+import { DispatchCountdown } from "@/components/product/DispatchCountdown";
+import { Clock, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { StarRating } from "@/components/ui/StarRating";
 import { ButtonLink } from "@/components/ui/Button";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { money } from "@/lib/format";
 
-/** Mixed-size bento: one hero product tile, product tiles, a stat tile and a review tile. */
+/** Mixed-size bento: one hero product tile, product tiles, a live dispatch tile and a pairing tile. */
 export function BentoShowcase({ featured, products }: { featured: Product; products: Product[] }) {
-  const small = products.filter((p) => p.handle !== featured.handle).slice(0, 2);
+  const others = products.filter((p) => p.handle !== featured.handle);
+  const shelf = others[0];
+  const pair = others[1] ?? others[0];
   return (
     <section className="mesh-tint">
       <div className="shell py-20 lg:py-24">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <SectionHeading title={<>The <span className="italic text-gradient">edit</span></>} size="xl" />
+          <SectionHeading title={<>The <span className="italic text-gradient">edit</span></>} size="xl" fill />
           <ButtonLink href="/collections/bestsellers" variant="ghost" className="hidden sm:inline-flex">
             View all bestsellers
           </ButtonLink>
         </div>
 
-        <RevealGroup className="mt-12 grid auto-rows-[minmax(0,1fr)] grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-12 lg:grid-rows-[repeat(2,minmax(0,1fr))]">
+        <RevealGroup className="mt-12 grid grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-12 lg:grid-rows-[repeat(2,minmax(0,1fr))_minmax(15rem,auto)]">
           {/* Hero tile, dark celestial */}
           <RevealItem className="lg:col-span-7 lg:row-span-2">
             <TiltCard className="h-full" max={4}>
@@ -36,7 +39,7 @@ export function BentoShowcase({ featured, products }: { featured: Product; produ
                   <span className="rounded-full glass-dark px-3 py-1 text-xs font-semibold uppercase tracking-wide">The signature</span>
                   <StarRating rating={featured.rating} count={featured.reviewCount} className="text-white/80" />
                 </div>
-                <div className="relative mx-auto my-6 w-44 sm:w-56">
+                <div className="relative mx-auto my-6 w-52 sm:w-64">
                   <div className="aspect-square overflow-hidden rounded-3xl shadow-lift">
                     <ProductMedia product={featured} className="h-full w-full" />
                   </div>
@@ -54,40 +57,48 @@ export function BentoShowcase({ featured, products }: { featured: Product; produ
             </TiltCard>
           </RevealItem>
 
-          {/* Product tiles */}
-          {small.map((p) => (
-            <RevealItem key={p.id} className="lg:col-span-5">
-              <ProductCard product={p} />
+          {/* One shelf product beside the signature, same height */}
+          {shelf && (
+            <RevealItem className="lg:col-span-5 lg:row-span-2">
+              <ProductCard product={shelf} />
             </RevealItem>
-          ))}
+          )}
 
-          {/* Stat tile */}
+          {/* Live dispatch tile: real cutoff, ticks every 30s */}
           <RevealItem className="lg:col-span-4">
-            <div className="ring-gradient group flex h-full flex-col justify-between rounded-3xl bg-ink p-6 text-white shadow-soft">
-              <p className="eyebrow text-teal-glow">Clinically loved</p>
-              <p className="font-display text-6xl leading-none">
-                <AnimatedCounter value={92} suffix="%" />
-              </p>
-              <p className="text-sm text-white/70">saw firmer-looking skin in 4 weeks*</p>
+            <div className="ring-gradient group flex h-full min-h-[15rem] flex-col justify-between rounded-3xl bg-ink p-6 text-white shadow-soft">
+              <Clock size={22} weight="light" className="text-teal-glow" />
+              <p className="mt-6 font-display text-3xl leading-tight">Order by 3pm MT, it ships today.</p>
+              <DispatchCountdown className="mt-4 [&_span]:text-white/90 text-white/60" />
             </div>
           </RevealItem>
 
-          {/* Review tile */}
-          <RevealItem className="lg:col-span-4">
-            <figure className="flex h-full flex-col justify-between rounded-3xl glass-strong p-6 shadow-soft">
-              <StarRating rating={5} showValue={false} />
-              <blockquote className="mt-3 font-display text-lg leading-snug text-ink">
-                “Four weeks in and my skin looks plumper and smoother. The copper tint feels luxe.”
-              </blockquote>
-              <figcaption className="mt-4 text-sm text-ink-soft">Mina K. · Combination · Firmness</figcaption>
-            </figure>
-          </RevealItem>
+          {/* Pairing tile: a real second product from the shelf */}
+          {pair && (
+            <RevealItem className="lg:col-span-4">
+              <Link href={`/products/${pair.handle}`} className="group flex h-full min-h-[15rem] flex-col justify-between rounded-3xl glass-strong p-6 shadow-soft transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-glow">
+                <p className="eyebrow">Pairs with the signature</p>
+                <div className="mt-4 flex items-center gap-4">
+                  <div className="h-20 w-20 shrink-0 overflow-hidden rounded-2xl bg-porcelain">
+                    <ProductMedia product={pair} className="h-full w-full" />
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="font-display text-xl leading-snug text-ink">{pair.title}</h3>
+                    <p className="mt-1 text-sm text-ink-soft">{money(pair.price, pair.currency)}</p>
+                  </div>
+                </div>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-camellia">
+                  View <ArrowRight size={14} className="transition-transform duration-200 ease-out group-hover:translate-x-1" />
+                </span>
+              </Link>
+            </RevealItem>
+          )}
 
           {/* Ingredient tile */}
           <RevealItem className="lg:col-span-4">
             <Link
               href="/science"
-              className="group flex h-full flex-col justify-between overflow-hidden rounded-3xl bg-gradient-to-br from-[#C9EAE3] via-[#D8F0EB] to-[#E8F4F6] p-6 shadow-soft transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-glow"
+              className="group flex h-full min-h-[15rem] flex-col justify-between overflow-hidden rounded-3xl bg-gradient-to-br from-[#C9EAE3] via-[#D8F0EB] to-[#E8F4F6] p-6 shadow-soft transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:shadow-glow"
             >
               <p className="eyebrow">The science</p>
               <p className="font-display text-2xl leading-tight text-ink">Copper peptides, exosomes &amp; skin boosters, explained.</p>

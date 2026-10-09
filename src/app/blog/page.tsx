@@ -1,16 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageHero } from "@/components/sections/PageHero";
 import { blogPosts } from "@/lib/content";
-import type { Tone } from "@/lib/commerce/types";
-
-const toneClass: Record<Tone, string> = {
-  blush: "from-[#F4D7D2] to-[#E7E9FA]",
-  bronze: "from-[#C7E9E3] to-[#E3EAFB]",
-  sage: "from-[#C9EAE3] to-[#E8F4F6]",
-  sand: "from-[#DBE4FB] to-[#EFF2FE]",
-  ink: "from-[#2E3C9E] to-[#2FA39A]",
-};
 
 export const metadata: Metadata = {
   title: "The Journal",
@@ -24,7 +16,9 @@ export default function BlogPage() {
       <section className="shell grid gap-6 py-14 sm:grid-cols-2 lg:grid-cols-3">
         {blogPosts.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-            <div className={`aspect-[3/2] rounded-3xl bg-gradient-to-br ${toneClass[post.tone]}`} />
+            <div className="relative aspect-[3/2] overflow-hidden rounded-3xl shadow-soft">
+              <Image src={post.image} alt="" fill sizes="(max-width: 640px) 92vw, 33vw" className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" />
+            </div>
             <p className="eyebrow mt-4">{post.readMins} min read</p>
             <h2 className="mt-1 font-display text-lg leading-snug text-ink group-hover:text-camellia">{post.title}</h2>
             <p className="mt-1.5 text-sm text-ink-soft">{post.excerpt}</p>

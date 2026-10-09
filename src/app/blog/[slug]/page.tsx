@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { PageHero } from "@/components/sections/PageHero";
 import { ButtonLink } from "@/components/ui/Button";
@@ -21,6 +22,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   return (
     <>
       <PageHero eyebrow={`${post.readMins} min read`} title={post.title} intro={post.excerpt} />
+      <div className="shell -mt-6 mb-4">
+        <div className="relative aspect-[21/9] overflow-hidden rounded-[2rem] shadow-lift">
+          <Image src={post.image} alt="" fill priority sizes="92vw" className="object-cover" />
+        </div>
+      </div>
       <article className="shell max-w-2xl space-y-5 py-14 text-ink-soft">
         <p className="leading-relaxed">
           At Depris Beauty, we believe great skincare starts with understanding what you&apos;re putting on your skin. In

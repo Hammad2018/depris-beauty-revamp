@@ -237,6 +237,33 @@
     -webkit-text-stroke: 1.4px rgba(255, 255, 255, 0.45);
   }
 
+  /* Outline copy under a scroll-filled heading: every descendant stroked, nothing painted */
+  .outline-layer, .outline-layer * {
+    color: transparent !important;
+    background-image: none !important;
+    -webkit-text-stroke: 1.2px rgba(30, 42, 68, 0.32);
+  }
+  .text-white .outline-layer, .text-white .outline-layer * {
+    -webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.4);
+  }
+
+  /* Pointer-following spotlight on a card border (background set inline per card) */
+  .spot-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity var(--dur-ui) ease;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .group:hover > .spot-ring, .group:hover .spot-ring { opacity: 1; }
+  }
+
   /* Big index numeral for section markers */
   .index-num {
     font-size: clamp(2rem, 4vw, 3.25rem);

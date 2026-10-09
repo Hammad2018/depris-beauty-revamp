@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import type { Product } from "@/lib/commerce/types";
 import { useCart } from "@/lib/cart/CartContext";
 import { toLineItem } from "@/lib/cart/item";
@@ -19,6 +19,16 @@ export function ProductCard({ product, priority = false }: { product: Product; p
   const [added, setAdded] = useState(false);
   const [burst, setBurst] = useState(0);
 
+  // pointer-following spotlight on the card border (hover-gated in CSS)
+  const sx = useMotionValue(50);
+  const sy = useMotionValue(0);
+  const spot = useMotionTemplate`radial-gradient(220px circle at ${sx}% ${sy}%, rgba(47,163,154,0.9), rgba(78,106,208,0.55) 45%, transparent 70%)`;
+  function onMove(e: React.PointerEvent<HTMLElement>) {
+    const r = e.currentTarget.getBoundingClientRect();
+    sx.set(((e.clientX - r.left) / r.width) * 100);
+    sy.set(((e.clientY - r.top) / r.height) * 100);
+  }
+
   function add() {
     cart.add(toLineItem(product, variant));
     setAdded(true);
@@ -28,7 +38,11 @@ export function ProductCard({ product, priority = false }: { product: Product; p
 
   return (
     <TiltCard className="group h-full [transform-style:preserve-3d]">
-      <article className="ring-gradient relative flex h-full flex-col overflow-hidden rounded-3xl bg-porcelain shadow-soft transition-[transform,box-shadow] duration-200 ease-out group-hover:-translate-y-1.5 group-hover:shadow-glow">
+      <article
+        onPointerMove={onMove}
+        className="relative flex h-full flex-col overflow-hidden rounded-3xl bg-porcelain shadow-soft transition-[transform,box-shadow] duration-200 ease-out group-hover:-translate-y-1.5 group-hover:shadow-[0_28px_48px_-22px_rgba(78,106,208,0.45)]"
+      >
+        <motion.span aria-hidden className="spot-ring" style={{ background: spot }} />
         <Link href={`/products/${product.handle}`} className="block" aria-label={product.title}>
           <div className="relative aspect-square overflow-hidden">
             <ProductMedia product={product} priority={priority} className="h-full w-full" />

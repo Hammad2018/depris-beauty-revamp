@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
+import { ScrollFill } from "./ScrollFill";
 
 export function SectionHeading({
   eyebrow,
@@ -10,6 +11,7 @@ export function SectionHeading({
   align = "left",
   size = "md",
   tone = "ink",
+  fill = false,
   className = "",
 }: {
   eyebrow?: string;
@@ -19,6 +21,8 @@ export function SectionHeading({
   align?: "left" | "center";
   size?: "md" | "xl";
   tone?: "ink" | "light";
+  /** outline-to-fill treatment as the heading enters the viewport */
+  fill?: boolean;
   className?: string;
 }) {
   const alignCls = align === "center" ? "mx-auto max-w-3xl items-center text-center" : "max-w-3xl";
@@ -33,7 +37,7 @@ export function SectionHeading({
           {eyebrow && <Eyebrow className={tone === "light" ? "text-teal-glow" : "text-camellia"}>{eyebrow}</Eyebrow>}
         </div>
       )}
-      <h2 className={`${titleCls} ${titleColor}`}>{title}</h2>
+      <h2 className={`${titleCls} ${titleColor}`}>{fill ? <ScrollFill>{title}</ScrollFill> : title}</h2>
       {intro && <p className={`mt-5 max-w-2xl text-lg leading-relaxed ${introColor}`}>{intro}</p>}
     </Reveal>
   );

@@ -24,6 +24,7 @@ export function ShopByConcern({ collections }: { collections: Collection[] }) {
           title={<>Shop by <span className="italic text-gradient">concern</span></>}
           intro="Tell us what your skin needs and we'll point you to the right actives."
           size="xl"
+          fill
         />
         <RevealGroup className="mt-12 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-3">
         {concerns.map((c, i) => (
