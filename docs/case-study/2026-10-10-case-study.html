@@ -114,6 +114,16 @@
   .pill.concept { background: var(--today-soft); color: var(--today); }
   .table-wrap { overflow-x: auto; }
 
+  /* Gallery */
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .gal { margin: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .gal .gal-img { aspect-ratio: 16 / 10; overflow: hidden; border-bottom: 1px solid var(--line); background: #fff; }
+  .gal.tall .gal-img { aspect-ratio: 16 / 10; }
+  .gal img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+  .gal figcaption { padding: 10px 14px; font-size: 0.9rem; color: var(--ink-soft); }
+  .gallery.phones { grid-template-columns: repeat(6, 1fr); margin-top: 18px; }
+  .gal.phone .gal-img { aspect-ratio: 9 / 16; }
+  @media (max-width: 760px) { .gallery, .gallery.phones { grid-template-columns: repeat(2, 1fr); } }
   /* Phases */
   .phases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   .phase { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 20px; display: grid; gap: 10px; align-content: start; }
@@ -151,6 +161,11 @@
     .features { grid-template-columns: repeat(4, 1fr); }
     .feature img { height: 110px; }
     .feature h3 { font-size: 1.1rem; }
+    .gallery { grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .gallery.phones { grid-template-columns: repeat(6, 1fr); }
+    .gal figcaption { font-size: 0.75rem; padding: 6px 10px; }
+    .compare + .compare { break-before: page; padding-top: 8px; }
+    .gallery.phones { break-before: page; padding-top: 8px; }
     .closing { padding-block: 24px; break-before: page; }
     .closing .cta { border: 1px solid #157A73; }
     a { text-decoration: none; color: inherit; }
@@ -168,7 +183,7 @@
     <p class="lede">The products, the prices, the warehouse in Cheyenne and the WooCommerce store all stay. What changes is how a visitor feels in the first ten seconds, and how much the site does for them after that.</p>
     <div class="meta">
       <span>Prepared for the Depris Beauty team</span>
-      <span>9 October 2026 · revised after QA</span>
+      <span>10 October 2026 · second draft, after client feedback</span>
       <span>Screenshots and measurements taken the same day, in the same browser</span>
     </div>
   </header>
@@ -180,7 +195,7 @@
     </div>
     <ol class="points">
       <li><span>The current site works. It sells real products and ships same day. The proposal keeps all of that and builds on it rather than replacing it.</span></li>
-      <li><span>The new design makes the signature product, GHK-Cu, the hero on the first screen, instead of a logo banner and a search box.</span></li>
+      <li><span>The new design opens on the women the products are for: six faces, 34 to 45, each with her concern and her ritual, instead of a logo banner and a search box.</span></li>
       <li><span>Pages are far lighter. The home page downloads about one fifth of the data and runs about one fifth of the scripts, which matters most on phones.</span></li>
       <li><span>The site starts to work for the customer: a shelf that remembers them, six guides, an FAQ, a community, reviews on every product and a monthly newsletter.</span></li>
       <li><span>Everything in this document is built and clickable, and every page has been checked at four screen widths. Three forms are front-end previews, clearly marked, until a backend is chosen.</span></li>
@@ -225,8 +240,8 @@
         <span class="tag next">Proposed</span>
         <figure><img src="img/new-home.webp" alt="Proposed Depris Beauty home page at desktop size"></figure>
         <div class="notes">
-          <p><strong>The product is the hero.</strong> The real GHK-Cu photo, lit like a specimen, with three true facts pinned to it.</p>
-          <p><strong>One headline, two buttons.</strong> Shop the signature, or build a routine in 60 seconds.</p>
+          <p><strong>A woman, not a bottle.</strong> Mira, 42, and her line about peptide nights. Six faces to switch between, each with her concern.</p>
+          <p><strong>One headline, two buttons.</strong> Build a routine in 60 seconds, or shop the signature, which now sits small beside the words.</p>
           <p><strong>Trust up front.</strong> Authorized retailer, stocked in the US, cruelty-free, before the first scroll.</p>
         </div>
       </div>
@@ -252,7 +267,7 @@
         <span class="tag next">Proposed</span>
         <figure><img src="img/new-home-m.webp" alt="Proposed home page on a phone"></figure>
         <div class="notes">
-          <p><strong>Headline, promise, two buttons, product.</strong> Everything that matters fits on one phone screen.</p>
+          <p><strong>Headline, promise, two buttons, then her.</strong> The portrait and the six faces follow on the next swipe.</p>
           <p><strong>No pop-up.</strong> The newsletter has its own place at the end of the page, with preferences the visitor chooses.</p>
         </div>
       </div>
@@ -342,7 +357,7 @@
         <div class="body"><h3>A shelf that remembers you</h3><p>After the 60-second skin quiz, the home page greets the visitor by time of day and shows products picked for their concern. It also remembers what they looked at last time.</p></div>
       </article>
       <article class="feature">
-        <img src="img/v18-guides-teaser.webp" alt="Guides section with petal-shaped imagery">
+        <img src="img/new-guides.webp" alt="Guides section">
         <div class="body"><h3>Six guides, written to be followed</h3><p>From the first GHK-Cu dilution to a clinic's exosome aftercare sheet. Every step links the product it means, so reading turns into buying.</p></div>
       </article>
       <article class="feature">
@@ -366,15 +381,60 @@
         <div class="body"><h3>Everything connects</h3><p>Products link to guides, guides link to products, FAQ answers link to both, and the community tags the products it talks about. A visitor is never at a dead end.</p></div>
       </article>
       <article class="feature">
-        <img src="img/v17-hero.webp" alt="Hero with real product photo and glass callouts">
-        <div class="body"><h3>Your brand, made bigger</h3><p>Colours taken from the real logo, petal shapes drawn from its lotus, and the GHK-Cu photo lit like something precious. It looks like one brand from the first screen to the footer.</p></div>
+        <img src="img/new-home.webp" alt="Hero with Mira, 42">
+        <div class="body"><h3>Your brand, made bigger</h3><p>Colours taken from the real logo, petal details drawn from its lotus, and women with real skin on the first screen. It looks like one brand from the first screen to the footer.</p></div>
       </article>
     </div>
   </section>
 
+
   <section class="chapter">
     <div class="chapter-head">
       <span class="num">08</span>
+      <h2>What changed after the first review</h2>
+      <p class="lede">The first draft led with the serum. The feedback was fair: people buy skin, not bottles. Three things moved.</p>
+    </div>
+    <div class="compare">
+      <div class="plate">
+        <span class="tag today">First draft</span>
+        <figure><img src="img/old-hero.webp" alt="First-draft hero with the GHK-Cu bottle"></figure>
+        <div class="notes"><p><strong>The bottle as hero.</strong> Handsome, but it talks about the product before the person.</p></div>
+      </div>
+      <div class="plate">
+        <span class="tag next">Now</span>
+        <figure><img src="img/new-home-camila.webp" alt="New hero with Camila, 40"></figure>
+        <div class="notes"><p><strong>Six women, 34 to 45.</strong> East Asian, Middle Eastern, Latina, Black, Irish, Scandinavian. Each one speaks for a concern and links to its shelf. Rotates slowly, pauses when you touch it.</p></div>
+      </div>
+    </div>
+    <div class="compare">
+      <div class="plate">
+        <span class="tag today">First draft</span>
+        <figure><img src="img/old-concern.webp" alt="First-draft concern tiles as colour gradients"></figure>
+        <div class="notes"><p><strong>Concerns as coloured tiles.</strong> Pretty, but abstract.</p></div>
+      </div>
+      <div class="plate">
+        <span class="tag next">Now</span>
+        <figure><img src="img/new-concern.webp" alt="Concern tiles with a woman for each concern"></figure>
+        <div class="notes"><p><strong>Concerns as people.</strong> Leila for glow, Mira for fine lines, Fiona for redness. The photo does the explaining.</p></div>
+      </div>
+    </div>
+    <div class="compare">
+      <div class="plate">
+        <span class="tag today">First draft</span>
+        <figure><img src="img/old-guides.webp" alt="First-draft guides with petal-shaped photos"></figure>
+        <div class="notes"><p><strong>Petal-shaped photos.</strong> Clever, but the shapes fought the pictures.</p></div>
+      </div>
+      <div class="plate">
+        <span class="tag next">Now</span>
+        <figure><img src="img/new-guides.webp" alt="Guides with a lead story and three rows"></figure>
+        <div class="notes"><p><strong>One lead story, three rows.</strong> Straight photos, a card that overlaps the lead image, more room to read.</p></div>
+      </div>
+    </div>
+    <p class="fine">The portraits are generated campaign previews and are labelled as such on the site. They show the casting direction; the real campaign would be photographed.</p>
+  </section>
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">09</span>
       <h2>The numbers</h2>
       <p class="lede">Measured on 9 October 2026 with the same browser. Lower is better on all three.</p>
     </div>
@@ -413,7 +473,7 @@
 
   <section class="chapter">
     <div class="chapter-head">
-      <span class="num">09</span>
+      <span class="num">10</span>
       <h2>What this means for the business</h2>
       <p class="lede">In plain terms, and without inventing numbers.</p>
     </div>
@@ -433,7 +493,7 @@
 
   <section class="chapter">
     <div class="chapter-head">
-      <span class="num">10</span>
+      <span class="num">11</span>
       <h2>What is real and what is a preview</h2>
       <p class="lede">We would rather you know exactly which parts are wired and which are showing the idea.</p>
     </div>
@@ -447,15 +507,25 @@
         <tr><td>Sample reviews, member rituals, newsletter issues</td><td><span class="pill concept">Preview</span></td><td>Written to show the experience. Each one is visibly tagged "Sample".</td></tr>
         <tr><td>Review, ritual and newsletter forms</td><td><span class="pill concept">Preview</span></td><td>They work on the page and say which system they connect to at build.</td></tr>
         <tr><td>Lot verification and certificates</td><td><span class="pill concept">Preview</span></td><td>Shows how a lot code lookup would read. Needs your batch records.</td></tr>
-        <tr><td>Journal and guide imagery</td><td><span class="pill concept">Preview</span></td><td>Generated for the concept, to be replaced with your own photography.</td></tr>
+        <tr><td>Campaign portraits, journal and guide imagery</td><td><span class="pill concept">Preview</span></td><td>Generated for the concept and labelled on the site. They set the casting and lighting direction for a real shoot.</td></tr>
         <tr><td>Quality check</td><td><span class="pill real">Done</span></td><td>All 49 pages tested at phone, tablet, laptop and desktop widths with no errors, no sideways scrolling, one headline per page and finger-sized links.</td></tr>
       </table>
     </div>
   </section>
 
+
   <section class="chapter">
     <div class="chapter-head">
-      <span class="num">11</span>
+      <span class="num">12</span>
+      <h2>Every page, as it stands today</h2>
+      <p class="lede">So nothing in this proposal is left to the imagination. Desktop first, then the same site on a phone.</p>
+    </div>
+    <div class="gallery"><figure class="gal tall"><div class="gal-img"><img src="img/new-home-full.webp" alt="Home, top to bottom"></div><figcaption>Home, top to bottom</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-shop.webp" alt="Shop with filters"></div><figcaption>Shop with filters</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-pdp.webp" alt="Product page"></div><figcaption>Product page</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-pdp-reviews.webp" alt="Reviews"></div><figcaption>Reviews</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-pdp-featured.webp" alt="Read it in context"></div><figcaption>Read it in context</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-shelf.webp" alt="Your personal shelf"></div><figcaption>Your personal shelf</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-guides-page.webp" alt="Guides hub"></div><figcaption>Guides hub</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-guide.webp" alt="A guide"></div><figcaption>A guide</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-faq.webp" alt="FAQ"></div><figcaption>FAQ</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-community.webp" alt="The Circle"></div><figcaption>The Circle</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-newsletter.webp" alt="The Monthly Drop"></div><figcaption>The Monthly Drop</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-bundles.webp" alt="Bundles"></div><figcaption>Bundles</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-brands.webp" alt="Brands"></div><figcaption>Brands</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-verify.webp" alt="Verify a lot"></div><figcaption>Verify a lot</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-pro.webp" alt="For clinics"></div><figcaption>For clinics</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-science.webp" alt="The Science"></div><figcaption>The Science</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-quiz.webp" alt="Skin quiz"></div><figcaption>Skin quiz</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-cart.webp" alt="The bag"></div><figcaption>The bag</figcaption></figure><figure class="gal"><div class="gal-img"><img src="img/new-mega.webp" alt="Shop menu"></div><figcaption>Shop menu</figcaption></figure></div>
+    <div class="gallery phones"><figure class="gal phone"><div class="gal-img"><img src="img/new-home-m.webp" alt="Home"></div><figcaption>Home</figcaption></figure><figure class="gal phone"><div class="gal-img"><img src="img/new-m-concern.webp" alt="Concerns"></div><figcaption>Concerns</figcaption></figure><figure class="gal phone"><div class="gal-img"><img src="img/new-m-guides.webp" alt="Guides"></div><figcaption>Guides</figcaption></figure><figure class="gal phone"><div class="gal-img"><img src="img/new-m-shop.webp" alt="Shop"></div><figcaption>Shop</figcaption></figure><figure class="gal phone"><div class="gal-img"><img src="img/new-m-pdp.webp" alt="Product"></div><figcaption>Product</figcaption></figure><figure class="gal phone"><div class="gal-img"><img src="img/new-m-menu.webp" alt="Menu"></div><figcaption>Menu</figcaption></figure></div>
+  </section>
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">13</span>
       <h2>How we would get there</h2>
       <p class="lede">Three steps. Each one leaves you with something you can use.</p>
     </div>
@@ -473,7 +543,7 @@
         <span class="label">Step two</span>
         <h3>Content and email</h3>
         <ul>
-          <li>Your photography into the journal and guides</li>
+          <li>A campaign shoot for the six faces, plus journal and guide photography</li>
           <li>Connect the Monthly Drop to your email platform</li>
           <li>Review the guide and FAQ copy with you</li>
         </ul>
