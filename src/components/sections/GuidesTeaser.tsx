@@ -4,15 +4,13 @@ import { guides } from "@/lib/guides";
 import { GuideCard } from "@/components/guides/GuideCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { Petal } from "@/components/petals/Petal";
+import { PetalBullet } from "@/components/petals/Petal";
 
-/** Guides on the home page: a staggered trio with petal-cut imagery, not three equal cards. */
+/** Guides on the home page: one lead story with its card overlapping the photo, three rows beside it. */
 export function GuidesTeaser() {
-  const [lead, second, third] = guides;
+  const [lead, ...rest] = guides;
   return (
     <section className="relative overflow-hidden">
-      <Petal tone="lilac" size={120} shape="leaf" opacity={0.35} className="absolute -left-10 top-24 rotate-[20deg]" />
-      <Petal tone="blush" size={80} shape="lotus" opacity={0.4} className="absolute right-[8%] top-10 -rotate-12" />
       <div className="shell relative py-24 lg:py-32">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading
@@ -24,19 +22,23 @@ export function GuidesTeaser() {
             All six guides <ArrowRight size={14} />
           </Link>
         </div>
-        <RevealGroup className="mt-14 grid gap-12 lg:grid-cols-12 lg:gap-8">
-          <RevealItem className="lg:col-span-5">
-            <GuideCard guide={lead} shape="petal" size="lg" />
+
+        <RevealGroup className="mt-14 grid gap-14 lg:grid-cols-12 lg:gap-10">
+          <RevealItem className="lg:col-span-7">
+            <GuideCard guide={lead} layout="lead" />
           </RevealItem>
-          <RevealItem className="lg:col-span-3 lg:col-start-7 lg:mt-24">
-            <GuideCard guide={second} shape="lotus" />
-          </RevealItem>
-          <RevealItem className="relative lg:col-span-3 lg:-mt-6">
-            <span className="sticker absolute -right-2 -top-4 z-10 rounded-full bg-gold px-3 py-1 font-mono text-[10px] uppercase tracking-wide text-ink shadow-soft">
-              For clinics
-            </span>
-            <GuideCard guide={third} shape="leaf" />
-          </RevealItem>
+          <div className="grid content-start gap-9 lg:col-span-5 lg:pt-6">
+            {rest.slice(0, 3).map((g) => (
+              <RevealItem key={g.slug}><GuideCard guide={g} layout="row" /></RevealItem>
+            ))}
+            <RevealItem>
+              <ul className="flex flex-wrap gap-x-5 gap-y-1.5 border-t border-sand pt-5 text-sm text-ink-soft">
+                <li className="flex items-center gap-1.5"><PetalBullet tone="jade" className="mt-0" />Every step links its product</li>
+                <li className="flex items-center gap-1.5"><PetalBullet tone="blush" className="mt-0" />Written for first-timers and clinics</li>
+                <li className="flex items-center gap-1.5"><PetalBullet tone="lilac" className="mt-0" />Reviewed with you before launch</li>
+              </ul>
+            </RevealItem>
+          </div>
         </RevealGroup>
       </div>
     </section>

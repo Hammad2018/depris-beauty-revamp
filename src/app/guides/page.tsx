@@ -11,7 +11,6 @@ export const metadata: Metadata = {
   description: "Step-by-step skincare and clinic guides from Depris Beauty, with the products linked where they belong.",
 };
 
-const shapes = ["petal", "lotus", "leaf", "lotus", "leaf", "petal"] as const;
 
 export default function GuidesPage() {
   return (
@@ -22,7 +21,7 @@ export default function GuidesPage() {
         <RevealGroup className="shell grid gap-x-8 gap-y-16 py-20 sm:grid-cols-2 lg:grid-cols-3">
           {guides.map((g, i) => (
             <RevealItem key={g.slug} className={i % 3 === 1 ? "lg:mt-16" : i % 3 === 2 ? "lg:-mt-6" : ""}>
-              <GuideCard guide={g} shape={shapes[i % shapes.length]} />
+              <GuideCard guide={g} layout="stack" />
             </RevealItem>
           ))}
         </RevealGroup>

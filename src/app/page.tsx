@@ -1,4 +1,5 @@
 import { getCommerce } from "@/lib/commerce";
+import { money } from "@/lib/format";
 import { Hero } from "@/components/sections/Hero";
 import { MarqueeRibbon } from "@/components/ui/MarqueeRibbon";
 import { InsideTheDrop } from "@/components/sections/InsideTheDrop";
@@ -38,7 +39,7 @@ export default async function HomePage() {
   // the standard, the journal) → dark (professionals, finale). One deliberate theme switch each way.
   return (
     <>
-      <Hero image={hero.images[0]?.url ?? "/renders/sky.webp"} imageAlt={hero.title} />
+      <Hero product={{ handle: hero.handle, title: hero.title, image: hero.images[0]?.url, price: money(hero.price, hero.currency) }} />
       <MarqueeRibbon />
       <InsideTheDrop product={hero} />
       <ProofBlock />

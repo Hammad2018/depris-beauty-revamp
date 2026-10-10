@@ -102,7 +102,7 @@ export default async function GuidePage({ params }: { params: { slug: string } }
             <h2 className="font-display text-3xl text-ink sm:text-4xl">Keep reading</h2>
             <ul className="mt-2 flex items-center gap-2 text-sm text-ink-soft"><PetalBullet tone="blush" />Chosen for the same concerns.</ul>
             <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:w-2/3">
-              {related.map((r, i) => <GuideCard key={r.slug} guide={r} shape={i ? "leaf" : "lotus"} />)}
+              {related.map((r) => <GuideCard key={r.slug} guide={r} layout="stack" />)}
             </div>
             <Link href="/guides" className="mt-10 inline-flex items-center gap-1.5 text-sm font-medium text-camellia hover:underline">All guides <ArrowRight size={14} /></Link>
           </div>
