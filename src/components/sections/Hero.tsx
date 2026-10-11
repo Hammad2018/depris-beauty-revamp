@@ -19,8 +19,8 @@ const EASE = [0.23, 1, 0.32, 1] as const;
 const INTERVAL = 6000;
 
 /**
- * Hero: the women the products are for. One large portrait, a row of six faces to switch
- * between, each with her concern and a line in her voice. Rotates slowly on its own, pauses
+ * Hero: the customers the products are for. One large portrait, a row of faces to switch
+ * between, each with a concern and a line in their own voice. Rotates slowly on its own, pauses
  * on hover, focus, a tap, or when the visitor prefers reduced motion.
  */
 export function Hero({ product }: { product: { handle: string; title: string; image?: string; price: string } }) {
@@ -92,7 +92,7 @@ export function Hero({ product }: { product: { handle: string; title: string; im
             <MagneticLink href={`/products/${product.handle}`} variant="light">Shop GHK-Cu</MagneticLink>
           </motion.div>
 
-          {/* The signature, small and real, beside the words rather than instead of the woman */}
+          {/* The signature, small and real, beside the words rather than instead of the person */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -111,7 +111,7 @@ export function Hero({ product }: { product: { handle: string; title: string; im
           </motion.div>
         </div>
 
-        {/* The woman */}
+        {/* The customer */}
         <div className="relative z-10 mx-auto w-full max-w-[30rem] lg:mt-6 lg:max-w-none">
           <div className="relative aspect-[3/4] w-full max-w-[26rem] lg:ml-auto lg:max-w-[27rem]">
             {/* depth plate */}
@@ -147,7 +147,7 @@ export function Hero({ product }: { product: { handle: string; title: string; im
               <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-navy-deep/85 via-navy-deep/20 to-transparent" />
               <span className="absolute left-5 top-5 rounded-md bg-ink/60 px-2 py-1 font-mono text-[10px] uppercase tracking-wide text-white/75 backdrop-blur">Campaign preview</span>
 
-              {/* her line */}
+              {/* their line */}
               <div className="absolute inset-x-0 bottom-0 p-6">
                 <AnimatePresence mode="wait" initial={false}>
                   <motion.div
@@ -170,9 +170,9 @@ export function Hero({ product }: { product: { handle: string; title: string; im
             </div>
           </div>
 
-          {/* the six faces */}
+          {/* the faces */}
           <div className="relative z-20 mt-6 flex items-center gap-3 lg:absolute lg:-left-8 lg:bottom-10 lg:mt-0 lg:flex-col lg:items-start" role="group" aria-label="Choose a face">
-            <div className="flex items-center gap-2 lg:flex-col">
+            <div className="flex items-center gap-1.5 lg:flex-col">
               {faces.map((f, idx) => {
                 const on = idx === i;
                 return (
@@ -182,7 +182,7 @@ export function Hero({ product }: { product: { handle: string; title: string; im
                     onClick={() => { setI(idx); setUserPaused(true); }}
                     aria-pressed={on}
                     aria-label={`${f.name}, ${f.age}, ${concernLabels[f.concern]}`}
-                    className={`relative h-11 w-11 shrink-0 overflow-hidden rounded-full border-2 transition-[transform,border-color] duration-200 ease-out ${on ? "scale-110 border-teal-glow" : "border-white/30 hover:border-white/70"}`}
+                    className={`relative h-10 w-10 shrink-0 overflow-hidden rounded-full border-2 transition-[transform,border-color] duration-200 ease-out ${on ? "scale-110 border-teal-glow" : "border-white/30 hover:border-white/70"}`}
                   >
                     <Image src={f.thumb} alt="" fill sizes="44px" className="object-cover" />
                   </button>

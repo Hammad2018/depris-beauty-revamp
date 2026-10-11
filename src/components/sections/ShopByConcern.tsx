@@ -17,7 +17,7 @@ const concernTint: Record<Concern, string> = {
   pores: "from-[#2FA39A]/90 via-[#2FA39A]/40",
 };
 
-/** Shop by concern: six concerns, six women, one line each. The photo does the explaining. */
+/** Shop by concern: six concerns, six customers, one line each. The photo does the explaining. */
 export function ShopByConcern({ collections }: { collections: Collection[] }) {
   const concerns = collections.filter((c) => c.concern).slice(0, 6);
   return (
