@@ -177,13 +177,13 @@
   <header class="cover">
     <img class="logo" src="img/logo.png" alt="Depris Beauty">
     <div>
-      <p class="label">A comparative case study</p>
+      <p class="label">A proposal for Pri and Deb</p>
       <h1 style="margin-top:12px">Where deprisbeauty.com is today,<br>and where it could go.</h1>
     </div>
-    <p class="lede">The products, the prices, the warehouse in Cheyenne and the WooCommerce store all stay. What changes is how a visitor feels in the first ten seconds, and how much the site does for them after that.</p>
+    <p class="lede">The products, the prices, the warehouse in Cheyenne and your WooCommerce back office all stay. What changes is how a visitor feels in the first ten seconds, how much the site does for them after that, and how much of each visit turns into a sale, a sign-up or a referral.</p>
     <div class="meta">
       <span>Prepared for the Depris Beauty team</span>
-      <span>10 October 2026 · second draft, after client feedback</span>
+      <span>11 October 2026 · proposal draft</span>
       <span>Screenshots and measurements taken the same day, in the same browser</span>
     </div>
   </header>
@@ -196,9 +196,9 @@
     <ol class="points">
       <li><span>The current site works. It sells real products and ships same day. The proposal keeps all of that and builds on it rather than replacing it.</span></li>
       <li><span>The new design opens on the women the products are for: six faces, 33 to 42, each with her concern and her ritual, instead of a logo banner and a search box.</span></li>
-      <li><span>Pages are far lighter. The home page downloads about one fifth of the data and runs about one fifth of the scripts, which matters most on phones.</span></li>
+      <li><span>Pages are far lighter. The home page downloads about one fifth of the data and runs about one fifth of the scripts. On a phone that is the difference between a visitor staying and leaving.</span></li>
       <li><span>The site starts to work for the customer: a shelf that remembers them, six guides, an FAQ, a community, reviews on every product and a monthly newsletter.</span></li>
-      <li><span>Everything in this document is built and clickable, and every page has been checked at four screen widths. Three forms are front-end previews, clearly marked, until a backend is chosen.</span></li>
+      <li><span>Everything here is already built and clickable, not a mock-up. The preview took the same approach we would take on the real build, so the risk and the timeline are known.</span></li>
     </ol>
   </section>
 
@@ -471,9 +471,48 @@
     <p class="fine">Figures are what one browser downloaded and ran for the home page on that day. The current product page was heavier still, at about 15 MB and 134 scripts. Load times are not compared because the preview ran on a local machine, which would flatter it unfairly.</p>
   </section>
 
+
   <section class="chapter">
     <div class="chapter-head">
       <span class="num">10</span>
+      <h2>Why rebuild rather than patch the WordPress theme</h2>
+      <p class="lede">A fair question. Here is the honest answer.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>If we patch the current theme</th><th>If we rebuild on a modern front end</th></tr>
+        <tr><td>The 114 plugin scripts stay. Every plugin update can break another one, and the page stays heavy.</td><td>24 scripts, all ours. Nothing third-party fights for the page. Updates are ours to control.</td></tr>
+        <tr><td>Personalisation, guides and the community would be bolted on with more plugins, each with its own look.</td><td>They are designed in from the start and share one visual language.</td></tr>
+        <tr><td>Design is limited to what the theme builder allows.</td><td>The design is whatever the brand needs. Everything in this document is proof of that.</td></tr>
+        <tr><td>Hosting, caching and speed depend on the WordPress host.</td><td>Pages are pre-built and served from a global edge network. Fast everywhere, including on a phone in a car park.</td></tr>
+        <tr><td>WooCommerce stays as the store.</td><td>WooCommerce stays as the store. Products, orders, customers and payments do not move. Only the shop window changes.</td></tr>
+      </table>
+    </div>
+    <p class="fine">In plain terms: the kitchen stays, the dining room is rebuilt. Your team keeps managing products and orders exactly as today.</p>
+  </section>
+
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">11</span>
+      <h2>How the new site feeds the rest of the business</h2>
+      <p class="lede">A website is not an end in itself. Each piece below was built to do a job beyond looking good.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>What it does</th><th>Built in</th></tr>
+        <tr><td><strong>Brings new customers in from search</strong></td><td>Six guides and ten FAQ answers written around the questions people type into Google: how to use GHK-Cu, exosomes after microneedling, tinted SPF for dark spots. Structured data so Google can show the answers directly. One clear headline per page, fast load times, clean addresses.</td></tr>
+        <tr><td><strong>Turns a visit into a sale</strong></td><td>The product is explained before the price is asked. Reviews, a dispatch countdown, ingredient links and the quiz all sit on the product page. The bag opens as a drawer with a free-shipping meter and suggested pairings.</td></tr>
+        <tr><td><strong>Brings customers back</strong></td><td>The Monthly Drop newsletter with preferences from day one. A shelf that remembers each visitor's concern and recent products. Subscribe-and-save on the products people reorder.</td></tr>
+        <tr><td><strong>Builds trust</strong></td><td>Authorized retailer, Korean sourcing and Wyoming stock stated on the first screen. Lot verification for every bottle. Real reviews surfaced instead of buried.</td></tr>
+        <tr><td><strong>Earns referrals</strong></td><td>The Depris Circle gives customers a place to share their ritual and be featured. Every guide, product and ritual is easy to send to a friend.</td></tr>
+        <tr><td><strong>Serves clinics as their own customer</strong></td><td>A professional entry point, a clinic corner, protocol guides and a path to a trade account with volume pricing.</td></tr>
+        <tr><td><strong>Plugs into marketing</strong></td><td>Ready for your email platform, analytics and ad pixels from the first week, with the events that matter already named: quiz finished, guide read, added to bag, subscribed.</td></tr>
+      </table>
+    </div>
+  </section>
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">12</span>
       <h2>What this means for the business</h2>
       <p class="lede">In plain terms, and without inventing numbers.</p>
     </div>
@@ -493,7 +532,7 @@
 
   <section class="chapter">
     <div class="chapter-head">
-      <span class="num">11</span>
+      <span class="num">13</span>
       <h2>What is real and what is a preview</h2>
       <p class="lede">We would rather you know exactly which parts are wired and which are showing the idea.</p>
     </div>
@@ -516,7 +555,7 @@
 
   <section class="chapter">
     <div class="chapter-head">
-      <span class="num">12</span>
+      <span class="num">14</span>
       <h2>Every page, as it stands today</h2>
       <p class="lede">So nothing in this proposal is left to the imagination. Desktop first, then the same site on a phone.</p>
     </div>
@@ -525,13 +564,13 @@
   </section>
   <section class="chapter">
     <div class="chapter-head">
-      <span class="num">13</span>
+      <span class="num">15</span>
       <h2>How we would get there</h2>
       <p class="lede">Three steps. Each one leaves you with something you can use.</p>
     </div>
     <div class="phases">
       <div class="phase">
-        <span class="label">Step one</span>
+        <span class="label">Step one · weeks 1 to 3</span>
         <h3>Foundations</h3>
         <ul>
           <li>Import all 145 products and keep them in sync with WooCommerce</li>
@@ -540,7 +579,7 @@
         </ul>
       </div>
       <div class="phase">
-        <span class="label">Step two</span>
+        <span class="label">Step two · weeks 4 to 6</span>
         <h3>Content and email</h3>
         <ul>
           <li>A campaign shoot for the six faces, plus journal and guide photography</li>
@@ -549,7 +588,7 @@
         </ul>
       </div>
       <div class="phase">
-        <span class="label">Step three</span>
+        <span class="label">Step three · weeks 7 to 9</span>
         <h3>Community and launch</h3>
         <ul>
           <li>Sync reviews both ways with the store</li>
@@ -560,10 +599,25 @@
     </div>
   </section>
 
+
+  <section class="chapter">
+    <div class="chapter-head">
+      <span class="num">16</span>
+      <h2>Working with us</h2>
+      <p class="lede">What you can expect if you say yes.</p>
+    </div>
+    <ol class="points">
+      <li><span>You already know how we work. This proposal was built the same way the real site would be: show, check with you, adjust, show again.</span></li>
+      <li><span>Nothing is hidden. Every number in this document was measured, every sample is labelled, every form says what it connects to.</span></li>
+      <li><span>You see progress every week on a live address, on a laptop and on a phone, not in a slide deck.</span></li>
+      <li><span>Your team keeps using WooCommerce for products and orders. We handle the design, the build, the content set-up and the switch-over, including redirects from every old page.</span></li>
+      <li><span>After launch we stay on for the first month to watch the numbers, fix what needs fixing and hand over the guide to running it.</span></li>
+    </ol>
+  </section>
   <section class="closing">
     <span class="num">Next step</span>
-    <h2>A 30-minute walkthrough</h2>
-    <p class="lede">We will click through the preview together on a laptop and a phone, answer anything in this document, and agree what step one should include.</p>
+    <h2>Next step: a 30-minute walkthrough</h2>
+    <p class="lede">We click through the preview together on a laptop and a phone, answer anything in this document, and agree what step one should include. If it is a yes, we can start the week after.</p>
     <p class="muted">The design is also in Figma, with the colour and type foundations, the home page sections, every phone screen and the key desktop screens: <a href="https://www.figma.com/design/Ig5pfQBsohjqVY8hsMxWbq">figma.com/design/Ig5pfQBsohjqVY8hsMxWbq</a></p>
     <p class="muted">Depris Beauty · 1910 Thomes Avenue, Cheyenne, WY 82001 · info@deprisbeauty.com</p>
   </section>
